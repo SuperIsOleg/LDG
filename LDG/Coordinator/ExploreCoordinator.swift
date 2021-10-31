@@ -30,21 +30,24 @@ class ExploreCoordinator: CoordinatorType {
     
     func showSavedScreen() -> UIViewController {
         let viewController = SavedViewController()
-//        let viewModel = SavedViewModel()
+        let viewModel = SavedViewModel()
+        viewController.bind(viewModel: viewModel)
         
         return viewController
     }
     
     func showAlertsScreen() -> UIViewController {
         let viewController = AlertsViewController()
-//        let viewModel = AlertsViewModel()
+        let viewModel = AlertsViewModel()
+        viewController.bind(viewModel: viewModel)
         
         return viewController
     }
   
     func showProfileScreen() -> UIViewController {
         let viewController = ProfileViewController()
-//        let viewModel = ProfileViewModel()
+        let viewModel = ProfileViewModel()
+        viewController.bind(viewModel: viewModel)
         
         return viewController
     }

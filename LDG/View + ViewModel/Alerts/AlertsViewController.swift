@@ -14,6 +14,16 @@ import RAMAnimatedTabBarController
 
 final class AlertsViewController: BaseViewController {
     
+    private var viewModel: AlertsViewModel!
+    
+    func bind(viewModel: AlertsViewModel) {
+        self.viewModel = viewModel
+        
+        //            bottomButton.rx.tap
+        //                .bind(onNext: viewModel.buttonTapped)
+        //                .disposed(by: disposeBag)
+    }
+    
     override init() {
         super.init()
         self.tabBarItem = UITabBarItem(title: "Activity",

@@ -12,6 +12,16 @@ import RxSwiftExt
 import RAMAnimatedTabBarController
 
 final class SavedViewController: BaseViewController {
+   
+    private var viewModel: SavedViewModel!
+    
+    func bind(viewModel: SavedViewModel) {
+        self.viewModel = viewModel
+        
+        //            bottomButton.rx.tap
+        //                .bind(onNext: viewModel.buttonTapped)
+        //                .disposed(by: disposeBag)
+    }
     
     override init() {
         super.init()
