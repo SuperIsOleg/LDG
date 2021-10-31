@@ -12,21 +12,36 @@ import RxCocoa
 import RxSwiftExt
 import RAMAnimatedTabBarController
 
-final class ExploreViewController: UIViewController {
+final class ExploreViewController: BaseViewController {
     
-    override func viewDidLoad() {
-           super.viewDidLoad()
+    private var viewModel: ExploreViewModel!
+    
+    private let disposeBag = DisposeBag()
+    
+    func bind(viewModel: ExploreViewModel) {
+        self.viewModel = viewModel
         
-        func didTapButton() {
-               let tabBarVC = CustomTabBar()
-               present(tabBarVC, animated: true)
-           }
-//        view.backgroundColor = .red
-//        
-//        self.tabBarItem = RAMAnimatedTabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
-//        (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMBounceAnimation()
+        //            bottomButton.rx.tap
+        //                .bind(onNext: viewModel.buttonTapped)
+        //                .disposed(by: disposeBag)
+    }
+    
+    override init() {
+        super.init()
+        self.tabBarItem = UITabBarItem(title: "Home",
+                                       image: UIImage(systemName: "house"),
+                                       selectedImage: nil)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        navigationController?.navigationBar.isHidden = true
+        view.backgroundColor = .red
         
-      
-        
-       }
+    }
+    
 }
+
+
+
+

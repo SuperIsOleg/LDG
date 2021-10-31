@@ -11,21 +11,20 @@ import RxCocoa
 import RxSwiftExt
 import RAMAnimatedTabBarController
 
-final class ProfileViewController: UIViewController {
+final class ProfileViewController: BaseViewController {
     
-    override func viewDidLoad() {
-           super.viewDidLoad()
+    override init() {
+        super.init()
+        self.tabBarItem = UITabBarItem(title: "Flights",
+                                       image: UIImage(systemName: "airplane"),
+                                       selectedImage: nil)
+    }
+    
+    override func loadView() {
+        super.loadView()
+        navigationController?.navigationBar.isHidden = true
+        view.backgroundColor = .blue
         
-        func didTapButton() {
-               let tabBarVC = CustomTabBar()
-               present(tabBarVC, animated: true)
-           }
-        
-//        view.backgroundColor = .blue
-//        
-//        self.tabBarItem = RAMAnimatedTabBarItem(title: "Flights", image: UIImage(systemName: "airplane"), tag: 1)
-//        (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMFlipRightTransitionItemAnimations()
-//        
-//        present(self, animated: true)
-       }
+    }
+    
 }
