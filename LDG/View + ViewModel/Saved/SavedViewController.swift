@@ -33,7 +33,7 @@ final class SavedViewController: BaseViewController {
     override func loadView() {
         super.loadView()
         navigationController?.navigationBar.isHidden = true
-        view.backgroundColor = .green
+        view.backgroundColor = .white
     }
     
 }

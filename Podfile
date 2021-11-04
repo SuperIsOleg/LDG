@@ -6,10 +6,11 @@ target 'LDG' do
   use_frameworks!
 
   # Pods for LDG
-pod 'RxSwift'
+  pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxSwiftExt'
- pod 'RAMAnimatedTabBarController' 
+  pod 'RAMAnimatedTabBarController' 
+  pod 'RealmSwift'
 
 
   target 'LDGTests' do

@@ -36,7 +36,7 @@ final class ExploreViewController: BaseViewController {
     override func loadView() {
         super.loadView()
         navigationController?.navigationBar.isHidden = true
-        view.backgroundColor = .red
+        view.backgroundColor = .purple
         
     }
     

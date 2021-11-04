@@ -33,7 +33,7 @@ final class ProfileViewController: BaseViewController {
     override func loadView() {
         super.loadView()
         navigationController?.navigationBar.isHidden = true
-        view.backgroundColor = .blue
+        view.backgroundColor = .brown
         
     }
     
