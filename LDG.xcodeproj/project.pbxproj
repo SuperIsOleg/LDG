@@ -33,6 +33,14 @@
 		F450B8EB2721B02E007C37FA /* AlertsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8EA2721B02E007C37FA /* AlertsCoordinator.swift */; };
 		F450B8ED2721B04A007C37FA /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8EC2721B04A007C37FA /* ProfileCoordinator.swift */; };
 		F450B8EF2721B0CE007C37FA /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8EE2721B0CE007C37FA /* CoordinatorType.swift */; };
+		F4B284B22737E44D00675805 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B12737E44D00675805 /* Advertisement.swift */; };
+		F4B284B42737E4FE00675805 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B32737E4FE00675805 /* Address.swift */; };
+		F4B284B62737E50A00675805 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B52737E50A00675805 /* Contact.swift */; };
+		F4B284B82737E51800675805 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B72737E51800675805 /* Description.swift */; };
+		F4B284BA2737E52300675805 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B92737E52300675805 /* Image.swift */; };
+		F4B284BC2737E52D00675805 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BB2737E52D00675805 /* Like.swift */; };
+		F4B284BE2737E53B00675805 /* NumberOfRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BD2737E53B00675805 /* NumberOfRooms.swift */; };
+		F4B284C02737E54E00675805 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BF2737E54E00675805 /* Price.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +97,14 @@
 		F450B8EA2721B02E007C37FA /* AlertsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsCoordinator.swift; sourceTree = "<group>"; };
 		F450B8EC2721B04A007C37FA /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		F450B8EE2721B0CE007C37FA /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		F4B284B12737E44D00675805 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
+		F4B284B32737E4FE00675805 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		F4B284B52737E50A00675805 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F4B284B72737E51800675805 /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
+		F4B284B92737E52300675805 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		F4B284BB2737E52D00675805 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		F4B284BD2737E53B00675805 /* NumberOfRooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfRooms.swift; sourceTree = "<group>"; };
+		F4B284BF2737E54E00675805 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +249,14 @@
 		F42F3A92272199650020DEC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4B284B12737E44D00675805 /* Advertisement.swift */,
+				F4B284B32737E4FE00675805 /* Address.swift */,
+				F4B284B52737E50A00675805 /* Contact.swift */,
+				F4B284B72737E51800675805 /* Description.swift */,
+				F4B284B92737E52300675805 /* Image.swift */,
+				F4B284BB2737E52D00675805 /* Like.swift */,
+				F4B284BD2737E53B00675805 /* NumberOfRooms.swift */,
+				F4B284BF2737E54E00675805 /* Price.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -521,18 +545,26 @@
 			files = (
 				F4464278272EAE2300FF84E5 /* AlertsViewController.swift in Sources */,
 				F450B8D92721AA4E007C37FA /* ExploreViewModel.swift in Sources */,
+				F4B284BA2737E52300675805 /* Image.swift in Sources */,
 				F450B8EF2721B0CE007C37FA /* CoordinatorType.swift in Sources */,
 				F42F3A65272196630020DEC6 /* ViewController.swift in Sources */,
 				F450B8D52721A16B007C37FA /* CustomTabBar.swift in Sources */,
 				F40EDE2F272F15A600534A8F /* BaseViewController.swift in Sources */,
+				F4B284B82737E51800675805 /* Description.swift in Sources */,
+				F4B284B62737E50A00675805 /* Contact.swift in Sources */,
 				F450B8DB2721AA61007C37FA /* SavedViewController.swift in Sources */,
 				F450B8E72721B000007C37FA /* ExploreCoordinator.swift in Sources */,
+				F4B284B22737E44D00675805 /* Advertisement.swift in Sources */,
 				F42F3A61272196630020DEC6 /* AppDelegate.swift in Sources */,
 				F450B8E52721AABF007C37FA /* ProfileViewModel.swift in Sources */,
 				F450B8ED2721B04A007C37FA /* ProfileCoordinator.swift in Sources */,
+				F4B284BE2737E53B00675805 /* NumberOfRooms.swift in Sources */,
 				F42F3A63272196630020DEC6 /* SceneDelegate.swift in Sources */,
 				F450B8DD2721AA72007C37FA /* SavedViewModel.swift in Sources */,
+				F4B284B42737E4FE00675805 /* Address.swift in Sources */,
+				F4B284BC2737E52D00675805 /* Like.swift in Sources */,
 				F450B8D72721AA3E007C37FA /* ExploreViewController.swift in Sources */,
+				F4B284C02737E54E00675805 /* Price.swift in Sources */,
 				F450B8E32721AAB2007C37FA /* ProfileViewController.swift in Sources */,
 				F450B8E92721B019007C37FA /* SavedCoordinator.swift in Sources */,
 				F450B8E12721AA92007C37FA /* AlertsViewModel.swift in Sources */,
