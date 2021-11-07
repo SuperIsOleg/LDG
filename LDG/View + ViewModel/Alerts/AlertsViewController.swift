@@ -26,9 +26,12 @@ final class AlertsViewController: BaseViewController {
     
     override init() {
         super.init()
-        self.tabBarItem = UITabBarItem(title: "Activity",
-                                       image: UIImage(systemName: "bell"),
-                                       selectedImage: nil)
+//        self.tabBarItem = UITabBarItem(title: "Activity",
+//                                       image: UIImage(systemName: "bell"),
+//                                       selectedImage: nil)
+        
+        self.tabBarItem = RAMAnimatedTabBarItem(title: "Alerts", image: UIImage(systemName: "bell"), tag: 1)
+        (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMFlipTopTransitionItemAnimations()
     }
     
     override func loadView() {

@@ -28,9 +28,13 @@ final class ExploreViewController: BaseViewController {
     
     override init() {
         super.init()
-        self.tabBarItem = UITabBarItem(title: "Home",
-                                       image: UIImage(systemName: "house"),
-                                       selectedImage: nil)
+//        self.tabBarItem = UITabBarItem(title: "Home",
+//                                       image: UIImage(systemName: "house"),
+//                                       selectedImage: nil)
+//
+        self.tabBarItem = RAMAnimatedTabBarItem(title: "Explore", image: UIImage(systemName: "magnifyingglass"), tag: 1)
+        (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMRotationAnimation()
+        
     }
     
     override func loadView() {

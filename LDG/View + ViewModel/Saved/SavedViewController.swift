@@ -25,9 +25,12 @@ final class SavedViewController: BaseViewController {
     
     override init() {
         super.init()
-        self.tabBarItem = UITabBarItem(title: "Settings",
-                                       image: UIImage(systemName: "gear"),
-                                       selectedImage: nil)
+//        self.tabBarItem = UITabBarItem(title: "Settings",
+//                                       image: UIImage(systemName: "gear"),
+//                                       selectedImage: nil)
+        
+        self.tabBarItem = RAMAnimatedTabBarItem(title: "Saved", image: UIImage(systemName: "heart"), tag: 1)
+        (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMBounceAnimation()
     }
     
     override func loadView() {

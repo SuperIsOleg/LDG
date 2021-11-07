@@ -20,7 +20,6 @@
 		F42F3A82272196650020DEC6 /* LDGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A81272196650020DEC6 /* LDGUITests.swift */; };
 		F42F3A84272196650020DEC6 /* LDGUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A83272196650020DEC6 /* LDGUITestsLaunchTests.swift */; };
 		F4464278272EAE2300FF84E5 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464277272EAE2300FF84E5 /* AlertsViewController.swift */; };
-		F450B8D52721A16B007C37FA /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8D42721A16B007C37FA /* CustomTabBar.swift */; };
 		F450B8D72721AA3E007C37FA /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8D62721AA3E007C37FA /* ExploreViewController.swift */; };
 		F450B8D92721AA4E007C37FA /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8D82721AA4E007C37FA /* ExploreViewModel.swift */; };
 		F450B8DB2721AA61007C37FA /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8DA2721AA61007C37FA /* SavedViewController.swift */; };
@@ -84,7 +83,6 @@
 		F42F3A81272196650020DEC6 /* LDGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGUITests.swift; sourceTree = "<group>"; };
 		F42F3A83272196650020DEC6 /* LDGUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4464277272EAE2300FF84E5 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
-		F450B8D42721A16B007C37FA /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		F450B8D62721AA3E007C37FA /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		F450B8D82721AA4E007C37FA /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		F450B8DA2721AA61007C37FA /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 				F42F3A9927219A490020DEC6 /* Saved */,
 				F450B8D22721A116007C37FA /* Alerts */,
 				F450B8D12721A0D5007C37FA /* Profile */,
-				F450B8D32721A14C007C37FA /* CustomTabBar */,
 			);
 			path = "View + ViewModel";
 			sourceTree = "<group>";
@@ -295,14 +292,6 @@
 				F450B8E02721AA92007C37FA /* AlertsViewModel.swift */,
 			);
 			path = Alerts;
-			sourceTree = "<group>";
-		};
-		F450B8D32721A14C007C37FA /* CustomTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				F450B8D42721A16B007C37FA /* CustomTabBar.swift */,
-			);
-			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -548,7 +537,6 @@
 				F4B284BA2737E52300675805 /* Image.swift in Sources */,
 				F450B8EF2721B0CE007C37FA /* CoordinatorType.swift in Sources */,
 				F42F3A65272196630020DEC6 /* ViewController.swift in Sources */,
-				F450B8D52721A16B007C37FA /* CustomTabBar.swift in Sources */,
 				F40EDE2F272F15A600534A8F /* BaseViewController.swift in Sources */,
 				F4B284B82737E51800675805 /* Description.swift in Sources */,
 				F4B284B62737E50A00675805 /* Contact.swift in Sources */,

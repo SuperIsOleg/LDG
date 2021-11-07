@@ -25,9 +25,13 @@ final class ProfileViewController: BaseViewController {
     
     override init() {
         super.init()
-        self.tabBarItem = UITabBarItem(title: "Flights",
-                                       image: UIImage(systemName: "airplane"),
-                                       selectedImage: nil)
+//        self.tabBarItem = UITabBarItem(title: "Flights",
+//                                       image: UIImage(systemName: "airplane"),
+//                                       selectedImage: nil)
+        
+        self.tabBarItem = RAMAnimatedTabBarItem(title: "Profile", image: UIImage(systemName: "person"), tag: 1)
+        (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMFlipRightTransitionItemAnimations()
+  
     }
     
     override func loadView() {
