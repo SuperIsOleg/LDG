@@ -19,18 +19,13 @@
 		F42F3A78272196640020DEC6 /* LDGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A77272196640020DEC6 /* LDGTests.swift */; };
 		F42F3A82272196650020DEC6 /* LDGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A81272196650020DEC6 /* LDGUITests.swift */; };
 		F42F3A84272196650020DEC6 /* LDGUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A83272196650020DEC6 /* LDGUITestsLaunchTests.swift */; };
-		F4464278272EAE2300FF84E5 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464277272EAE2300FF84E5 /* AlertsViewController.swift */; };
 		F450B8D72721AA3E007C37FA /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8D62721AA3E007C37FA /* ExploreViewController.swift */; };
 		F450B8D92721AA4E007C37FA /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8D82721AA4E007C37FA /* ExploreViewModel.swift */; };
 		F450B8DB2721AA61007C37FA /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8DA2721AA61007C37FA /* SavedViewController.swift */; };
 		F450B8DD2721AA72007C37FA /* SavedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8DC2721AA72007C37FA /* SavedViewModel.swift */; };
-		F450B8E12721AA92007C37FA /* AlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E02721AA92007C37FA /* AlertsViewModel.swift */; };
-		F450B8E32721AAB2007C37FA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E22721AAB2007C37FA /* ProfileViewController.swift */; };
-		F450B8E52721AABF007C37FA /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E42721AABF007C37FA /* ProfileViewModel.swift */; };
+		F450B8E32721AAB2007C37FA /* CreatAdvertisementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E22721AAB2007C37FA /* CreatAdvertisementViewController.swift */; };
+		F450B8E52721AABF007C37FA /* CreatAdvertisementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E42721AABF007C37FA /* CreatAdvertisementViewModel.swift */; };
 		F450B8E72721B000007C37FA /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E62721B000007C37FA /* ExploreCoordinator.swift */; };
-		F450B8E92721B019007C37FA /* SavedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E82721B019007C37FA /* SavedCoordinator.swift */; };
-		F450B8EB2721B02E007C37FA /* AlertsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8EA2721B02E007C37FA /* AlertsCoordinator.swift */; };
-		F450B8ED2721B04A007C37FA /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8EC2721B04A007C37FA /* ProfileCoordinator.swift */; };
 		F450B8EF2721B0CE007C37FA /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8EE2721B0CE007C37FA /* CoordinatorType.swift */; };
 		F4B284B22737E44D00675805 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B12737E44D00675805 /* Advertisement.swift */; };
 		F4B284B42737E4FE00675805 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B32737E4FE00675805 /* Address.swift */; };
@@ -40,6 +35,14 @@
 		F4B284BC2737E52D00675805 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BB2737E52D00675805 /* Like.swift */; };
 		F4B284BE2737E53B00675805 /* NumberOfRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BD2737E53B00675805 /* NumberOfRooms.swift */; };
 		F4B284C02737E54E00675805 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BF2737E54E00675805 /* Price.swift */; };
+		F4B444F3273817A5002E6E86 /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444F1273817A5002E6E86 /* AdvertisementCollectionViewCell.swift */; };
+		F4B444F4273817A5002E6E86 /* AdvertisementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B444F2273817A5002E6E86 /* AdvertisementCollectionViewCell.xib */; };
+		F4B444F92738746C002E6E86 /* AddresRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444F82738746C002E6E86 /* AddresRepository.swift */; };
+		F4B444FB273874B4002E6E86 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444FA273874B4002E6E86 /* ContactRepository.swift */; };
+		F4B444FD273874D4002E6E86 /* DescriptionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444FC273874D4002E6E86 /* DescriptionRepository.swift */; };
+		F4B444FF273874E3002E6E86 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444FE273874E3002E6E86 /* ImageRepository.swift */; };
+		F4B4450127387501002E6E86 /* NumberOfRoomsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4450027387501002E6E86 /* NumberOfRoomsRepository.swift */; };
+		F4B445032738751D002E6E86 /* PriceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B445022738751D002E6E86 /* PriceRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,18 +85,13 @@
 		F42F3A7D272196650020DEC6 /* LDGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LDGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42F3A81272196650020DEC6 /* LDGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGUITests.swift; sourceTree = "<group>"; };
 		F42F3A83272196650020DEC6 /* LDGUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F4464277272EAE2300FF84E5 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		F450B8D62721AA3E007C37FA /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		F450B8D82721AA4E007C37FA /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		F450B8DA2721AA61007C37FA /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		F450B8DC2721AA72007C37FA /* SavedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewModel.swift; sourceTree = "<group>"; };
-		F450B8E02721AA92007C37FA /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
-		F450B8E22721AAB2007C37FA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		F450B8E42721AABF007C37FA /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F450B8E22721AAB2007C37FA /* CreatAdvertisementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatAdvertisementViewController.swift; sourceTree = "<group>"; };
+		F450B8E42721AABF007C37FA /* CreatAdvertisementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatAdvertisementViewModel.swift; sourceTree = "<group>"; };
 		F450B8E62721B000007C37FA /* ExploreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCoordinator.swift; sourceTree = "<group>"; };
-		F450B8E82721B019007C37FA /* SavedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedCoordinator.swift; sourceTree = "<group>"; };
-		F450B8EA2721B02E007C37FA /* AlertsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsCoordinator.swift; sourceTree = "<group>"; };
-		F450B8EC2721B04A007C37FA /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		F450B8EE2721B0CE007C37FA /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		F4B284B12737E44D00675805 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
 		F4B284B32737E4FE00675805 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -103,6 +101,14 @@
 		F4B284BB2737E52D00675805 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		F4B284BD2737E53B00675805 /* NumberOfRooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfRooms.swift; sourceTree = "<group>"; };
 		F4B284BF2737E54E00675805 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		F4B444F1273817A5002E6E86 /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4B444F2273817A5002E6E86 /* AdvertisementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertisementCollectionViewCell.xib; sourceTree = "<group>"; };
+		F4B444F82738746C002E6E86 /* AddresRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresRepository.swift; sourceTree = "<group>"; };
+		F4B444FA273874B4002E6E86 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
+		F4B444FC273874D4002E6E86 /* DescriptionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionRepository.swift; sourceTree = "<group>"; };
+		F4B444FE273874E3002E6E86 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		F4B4450027387501002E6E86 /* NumberOfRoomsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfRoomsRepository.swift; sourceTree = "<group>"; };
+		F4B445022738751D002E6E86 /* PriceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,8 @@
 		F42F3A5F272196630020DEC6 /* LDG */ = {
 			isa = PBXGroup;
 			children = (
+				F4B444F527386C1C002E6E86 /* Repository */,
+				F4B444EC27380596002E6E86 /* CollectionView */,
 				F40EDE2D272F158B00534A8F /* Types */,
 				F42F3A92272199650020DEC6 /* Models */,
 				F42F3A90272198F70020DEC6 /* View + ViewModel */,
@@ -225,8 +233,7 @@
 			children = (
 				F42F3A97272199E60020DEC6 /* Explore */,
 				F42F3A9927219A490020DEC6 /* Saved */,
-				F450B8D22721A116007C37FA /* Alerts */,
-				F450B8D12721A0D5007C37FA /* Profile */,
+				F450B8D12721A0D5007C37FA /* CreatAdvertisement */,
 			);
 			path = "View + ViewModel";
 			sourceTree = "<group>";
@@ -236,9 +243,6 @@
 			children = (
 				F450B8EE2721B0CE007C37FA /* CoordinatorType.swift */,
 				F450B8E62721B000007C37FA /* ExploreCoordinator.swift */,
-				F450B8E82721B019007C37FA /* SavedCoordinator.swift */,
-				F450B8EA2721B02E007C37FA /* AlertsCoordinator.swift */,
-				F450B8EC2721B04A007C37FA /* ProfileCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -276,22 +280,35 @@
 			path = Saved;
 			sourceTree = "<group>";
 		};
-		F450B8D12721A0D5007C37FA /* Profile */ = {
+		F450B8D12721A0D5007C37FA /* CreatAdvertisement */ = {
 			isa = PBXGroup;
 			children = (
-				F450B8E22721AAB2007C37FA /* ProfileViewController.swift */,
-				F450B8E42721AABF007C37FA /* ProfileViewModel.swift */,
+				F450B8E22721AAB2007C37FA /* CreatAdvertisementViewController.swift */,
+				F450B8E42721AABF007C37FA /* CreatAdvertisementViewModel.swift */,
 			);
-			path = Profile;
+			path = CreatAdvertisement;
 			sourceTree = "<group>";
 		};
-		F450B8D22721A116007C37FA /* Alerts */ = {
+		F4B444EC27380596002E6E86 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				F4464277272EAE2300FF84E5 /* AlertsViewController.swift */,
-				F450B8E02721AA92007C37FA /* AlertsViewModel.swift */,
+				F4B444F1273817A5002E6E86 /* AdvertisementCollectionViewCell.swift */,
+				F4B444F2273817A5002E6E86 /* AdvertisementCollectionViewCell.xib */,
 			);
-			path = Alerts;
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		F4B444F527386C1C002E6E86 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F4B444F82738746C002E6E86 /* AddresRepository.swift */,
+				F4B444FA273874B4002E6E86 /* ContactRepository.swift */,
+				F4B444FC273874D4002E6E86 /* DescriptionRepository.swift */,
+				F4B444FE273874E3002E6E86 /* ImageRepository.swift */,
+				F4B4450027387501002E6E86 /* NumberOfRoomsRepository.swift */,
+				F4B445022738751D002E6E86 /* PriceRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +422,7 @@
 			files = (
 				F42F3A6D272196640020DEC6 /* LaunchScreen.storyboard in Resources */,
 				F42F3A6A272196640020DEC6 /* Assets.xcassets in Resources */,
+				F4B444F4273817A5002E6E86 /* AdvertisementCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,31 +550,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4464278272EAE2300FF84E5 /* AlertsViewController.swift in Sources */,
 				F450B8D92721AA4E007C37FA /* ExploreViewModel.swift in Sources */,
 				F4B284BA2737E52300675805 /* Image.swift in Sources */,
+				F4B444FD273874D4002E6E86 /* DescriptionRepository.swift in Sources */,
+				F4B444F92738746C002E6E86 /* AddresRepository.swift in Sources */,
 				F450B8EF2721B0CE007C37FA /* CoordinatorType.swift in Sources */,
 				F42F3A65272196630020DEC6 /* ViewController.swift in Sources */,
 				F40EDE2F272F15A600534A8F /* BaseViewController.swift in Sources */,
 				F4B284B82737E51800675805 /* Description.swift in Sources */,
 				F4B284B62737E50A00675805 /* Contact.swift in Sources */,
 				F450B8DB2721AA61007C37FA /* SavedViewController.swift in Sources */,
+				F4B444F3273817A5002E6E86 /* AdvertisementCollectionViewCell.swift in Sources */,
 				F450B8E72721B000007C37FA /* ExploreCoordinator.swift in Sources */,
+				F4B444FF273874E3002E6E86 /* ImageRepository.swift in Sources */,
+				F4B445032738751D002E6E86 /* PriceRepository.swift in Sources */,
 				F4B284B22737E44D00675805 /* Advertisement.swift in Sources */,
 				F42F3A61272196630020DEC6 /* AppDelegate.swift in Sources */,
-				F450B8E52721AABF007C37FA /* ProfileViewModel.swift in Sources */,
-				F450B8ED2721B04A007C37FA /* ProfileCoordinator.swift in Sources */,
+				F450B8E52721AABF007C37FA /* CreatAdvertisementViewModel.swift in Sources */,
 				F4B284BE2737E53B00675805 /* NumberOfRooms.swift in Sources */,
+				F4B444FB273874B4002E6E86 /* ContactRepository.swift in Sources */,
 				F42F3A63272196630020DEC6 /* SceneDelegate.swift in Sources */,
+				F4B4450127387501002E6E86 /* NumberOfRoomsRepository.swift in Sources */,
 				F450B8DD2721AA72007C37FA /* SavedViewModel.swift in Sources */,
 				F4B284B42737E4FE00675805 /* Address.swift in Sources */,
 				F4B284BC2737E52D00675805 /* Like.swift in Sources */,
 				F450B8D72721AA3E007C37FA /* ExploreViewController.swift in Sources */,
 				F4B284C02737E54E00675805 /* Price.swift in Sources */,
-				F450B8E32721AAB2007C37FA /* ProfileViewController.swift in Sources */,
-				F450B8E92721B019007C37FA /* SavedCoordinator.swift in Sources */,
-				F450B8E12721AA92007C37FA /* AlertsViewModel.swift in Sources */,
-				F450B8EB2721B02E007C37FA /* AlertsCoordinator.swift in Sources */,
+				F450B8E32721AAB2007C37FA /* CreatAdvertisementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
