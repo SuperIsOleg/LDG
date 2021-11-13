@@ -19,6 +19,8 @@
 		F42F3A78272196640020DEC6 /* LDGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A77272196640020DEC6 /* LDGTests.swift */; };
 		F42F3A82272196650020DEC6 /* LDGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A81272196650020DEC6 /* LDGUITests.swift */; };
 		F42F3A84272196650020DEC6 /* LDGUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42F3A83272196650020DEC6 /* LDGUITestsLaunchTests.swift */; };
+		F442D552273FC3030088CDE9 /* TypeOfTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442D550273FC3030088CDE9 /* TypeOfTransactionTableViewCell.swift */; };
+		F442D553273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F442D551273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib */; };
 		F450B8D72721AA3E007C37FA /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8D62721AA3E007C37FA /* ExploreViewController.swift */; };
 		F450B8D92721AA4E007C37FA /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8D82721AA4E007C37FA /* ExploreViewModel.swift */; };
 		F450B8DB2721AA61007C37FA /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8DA2721AA61007C37FA /* SavedViewController.swift */; };
@@ -85,6 +87,8 @@
 		F42F3A7D272196650020DEC6 /* LDGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LDGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42F3A81272196650020DEC6 /* LDGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGUITests.swift; sourceTree = "<group>"; };
 		F42F3A83272196650020DEC6 /* LDGUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDGUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F442D550273FC3030088CDE9 /* TypeOfTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		F442D551273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeOfTransactionTableViewCell.xib; sourceTree = "<group>"; };
 		F450B8D62721AA3E007C37FA /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		F450B8D82721AA4E007C37FA /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		F450B8DA2721AA61007C37FA /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 		F42F3A5F272196630020DEC6 /* LDG */ = {
 			isa = PBXGroup;
 			children = (
+				F442D54F273FC1C10088CDE9 /* TableView */,
 				F4B444F527386C1C002E6E86 /* Repository */,
 				F4B444EC27380596002E6E86 /* CollectionView */,
 				F40EDE2D272F158B00534A8F /* Types */,
@@ -278,6 +283,15 @@
 				F450B8DC2721AA72007C37FA /* SavedViewModel.swift */,
 			);
 			path = Saved;
+			sourceTree = "<group>";
+		};
+		F442D54F273FC1C10088CDE9 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F442D550273FC3030088CDE9 /* TypeOfTransactionTableViewCell.swift */,
+				F442D551273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		F450B8D12721A0D5007C37FA /* CreatAdvertisement */ = {
@@ -421,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42F3A6D272196640020DEC6 /* LaunchScreen.storyboard in Resources */,
+				F442D553273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib in Resources */,
 				F42F3A6A272196640020DEC6 /* Assets.xcassets in Resources */,
 				F4B444F4273817A5002E6E86 /* AdvertisementCollectionViewCell.xib in Resources */,
 			);
@@ -551,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F450B8D92721AA4E007C37FA /* ExploreViewModel.swift in Sources */,
+				F442D552273FC3030088CDE9 /* TypeOfTransactionTableViewCell.swift in Sources */,
 				F4B284BA2737E52300675805 /* Image.swift in Sources */,
 				F4B444FD273874D4002E6E86 /* DescriptionRepository.swift in Sources */,
 				F4B444F92738746C002E6E86 /* AddresRepository.swift in Sources */,

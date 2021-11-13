@@ -61,9 +61,6 @@ final class CreatAdvertisementViewController: BaseViewController {
         
         super.init()
         
-//        self.tabBarItem = UITabBarItem(title: "Flights",
-//                                       image: UIImage(systemName: "airplane"),
-//                                       selectedImage: nil)
         
         self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 1)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMRotationAnimation() 
@@ -189,7 +186,7 @@ final class CreatAdvertisementViewController: BaseViewController {
       
         
         navigationController?.navigationBar.isHidden = true
-        view.backgroundColor = .brown
+        view.backgroundColor = .white
         
     }
     

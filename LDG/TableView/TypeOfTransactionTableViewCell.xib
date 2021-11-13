@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TypeOfTransactionTableViewCell" customModule="LDG" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="typeOfTransactionTableViewCell" rowHeight="91" id="mgY-7d-zLs" customClass="TypeOfTransactionTableViewCell" customModule="LDG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="91"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mgY-7d-zLs" id="V0H-Ur-Q2z">
+                <rect key="frame" x="0.0" y="0.0" width="433" height="91"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-Af-0RJ">
+                        <rect key="frame" x="11" y="11" width="96" height="21"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Тип сделки">
+                                <attributes>
+                                    <color key="NSColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="18" name="SFProDisplay-Medium"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHC-s0-qfO">
+                        <rect key="frame" x="11" y="48" width="86" height="31"/>
+                        <color key="backgroundColor" red="0.89271624461568966" green="0.89271624461568966" blue="0.89271624461568966" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Продажа"/>
+                        <connections>
+                            <action selector="saleButton:" destination="-1" eventType="primaryActionTriggered" id="PaK-Ck-5wl"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R26-ME-sOc">
+                        <rect key="frame" x="115" y="48" width="66" height="31"/>
+                        <color key="backgroundColor" red="0.89271624459999999" green="0.89271624459999999" blue="0.89271624459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Сдача"/>
+                        <connections>
+                            <action selector="changeButton:" destination="-1" eventType="primaryActionTriggered" id="sqX-zm-cbE"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="R26-ME-sOc" firstAttribute="top" secondItem="T2T-Af-0RJ" secondAttribute="bottom" constant="16" id="FYj-yy-GFb"/>
+                    <constraint firstItem="T2T-Af-0RJ" firstAttribute="leading" secondItem="V0H-Ur-Q2z" secondAttribute="leading" constant="11" id="Zak-im-Ob9"/>
+                    <constraint firstItem="RHC-s0-qfO" firstAttribute="top" secondItem="T2T-Af-0RJ" secondAttribute="bottom" constant="16" id="cOh-k5-yta"/>
+                    <constraint firstItem="RHC-s0-qfO" firstAttribute="leading" secondItem="V0H-Ur-Q2z" secondAttribute="leading" constant="11" id="cQJ-e5-SbI"/>
+                    <constraint firstItem="R26-ME-sOc" firstAttribute="leading" secondItem="RHC-s0-qfO" secondAttribute="trailing" constant="18" id="ecg-Z4-wC1"/>
+                    <constraint firstItem="T2T-Af-0RJ" firstAttribute="top" secondItem="V0H-Ur-Q2z" secondAttribute="top" constant="11" id="zN7-6h-1bM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="499.27536231884062" y="98.772321428571431"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -92,6 +92,7 @@ final class CreatAdvertisementViewModel {
     
 
     lazy var houseNumberFieldText = _houseNumberFieldChanged
+        .map{ String($0) }
         .asDriver(onErrorJustReturn: "")
         .startWith("")
     
