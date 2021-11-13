@@ -1,5 +1,5 @@
 //
-//  TypeOfTransactionTableViewController.swift
+//  NumberOfRoomsTableViewCell.swift
 //  LDG
 //
 //  Created by Home on 13.11.21.
@@ -7,15 +7,13 @@
 
 import UIKit
 
-class TypeOfTransactionTableViewCell: UITableViewCell {
-  
-   
-    
-    static let identifier = "TypeOfTransactionTableViewCell"
+class NumberOfRoomsTableViewCell: UITableViewCell {
+
+    static let identifier = "NumberOfRoomsTableViewCell"
     
     static func nib () -> UINib {
         
-        return UINib(nibName: "TypeOfTransactionTableViewCell", bundle: nil)
+        return UINib(nibName: "NumberOfRoomsTableViewCell", bundle: nil)
     }
     
    

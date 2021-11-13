@@ -1,5 +1,5 @@
 //
-//  TypeOfTransactionTableViewController.swift
+//  BalconyTableViewCell.swift
 //  LDG
 //
 //  Created by Home on 13.11.21.
@@ -7,19 +7,15 @@
 
 import UIKit
 
-class TypeOfTransactionTableViewCell: UITableViewCell {
-  
-   
-    
-    static let identifier = "TypeOfTransactionTableViewCell"
+class BalconyTableViewCell: UITableViewCell {
+
+    static let identifier = "BalconyTableViewCell"
     
     static func nib () -> UINib {
         
-        return UINib(nibName: "TypeOfTransactionTableViewCell", bundle: nil)
+        return UINib(nibName: "BalconyTableViewCell", bundle: nil)
     }
-    
-   
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,5 +26,4 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
 }

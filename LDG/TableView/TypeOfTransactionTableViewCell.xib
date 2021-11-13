@@ -8,53 +8,40 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TypeOfTransactionTableViewCell" customModule="LDG" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="typeOfTransactionTableViewCell" rowHeight="91" id="mgY-7d-zLs" customClass="TypeOfTransactionTableViewCell" customModule="LDG" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeOfTransactionTableViewCell" rowHeight="91" id="mgY-7d-zLs" customClass="TypeOfTransactionTableViewCell" customModule="LDG" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="433" height="91"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mgY-7d-zLs" id="V0H-Ur-Q2z">
                 <rect key="frame" x="0.0" y="0.0" width="433" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-Af-0RJ">
-                        <rect key="frame" x="11" y="11" width="96" height="21"/>
-                        <attributedString key="attributedText">
-                            <fragment content="Тип сделки">
-                                <attributes>
-                                    <color key="NSColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <font key="NSFont" size="18" name="SFProDisplay-Medium"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип сделки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-Af-0RJ">
+                        <rect key="frame" x="15" y="10" width="96" height="21"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHC-s0-qfO">
-                        <rect key="frame" x="11" y="48" width="86" height="31"/>
-                        <color key="backgroundColor" red="0.89271624461568966" green="0.89271624461568966" blue="0.89271624461568966" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXj-di-FoI">
+                        <rect key="frame" x="15" y="46" width="86" height="31"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Продажа"/>
-                        <connections>
-                            <action selector="saleButton:" destination="-1" eventType="primaryActionTriggered" id="PaK-Ck-5wl"/>
-                        </connections>
+                        <buttonConfiguration key="configuration" style="gray" title="Продажа"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R26-ME-sOc">
-                        <rect key="frame" x="115" y="48" width="66" height="31"/>
-                        <color key="backgroundColor" red="0.89271624459999999" green="0.89271624459999999" blue="0.89271624459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-sA-K8e">
+                        <rect key="frame" x="116" y="46" width="66" height="31"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Сдача"/>
-                        <connections>
-                            <action selector="changeButton:" destination="-1" eventType="primaryActionTriggered" id="sqX-zm-cbE"/>
-                        </connections>
+                        <buttonConfiguration key="configuration" style="gray" title="Сдача"/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="R26-ME-sOc" firstAttribute="top" secondItem="T2T-Af-0RJ" secondAttribute="bottom" constant="16" id="FYj-yy-GFb"/>
-                    <constraint firstItem="T2T-Af-0RJ" firstAttribute="leading" secondItem="V0H-Ur-Q2z" secondAttribute="leading" constant="11" id="Zak-im-Ob9"/>
-                    <constraint firstItem="RHC-s0-qfO" firstAttribute="top" secondItem="T2T-Af-0RJ" secondAttribute="bottom" constant="16" id="cOh-k5-yta"/>
-                    <constraint firstItem="RHC-s0-qfO" firstAttribute="leading" secondItem="V0H-Ur-Q2z" secondAttribute="leading" constant="11" id="cQJ-e5-SbI"/>
-                    <constraint firstItem="R26-ME-sOc" firstAttribute="leading" secondItem="RHC-s0-qfO" secondAttribute="trailing" constant="18" id="ecg-Z4-wC1"/>
-                    <constraint firstItem="T2T-Af-0RJ" firstAttribute="top" secondItem="V0H-Ur-Q2z" secondAttribute="top" constant="11" id="zN7-6h-1bM"/>
+                    <constraint firstItem="T2T-Af-0RJ" firstAttribute="leading" secondItem="V0H-Ur-Q2z" secondAttribute="leading" constant="15" id="Zak-im-Ob9"/>
+                    <constraint firstItem="XXj-di-FoI" firstAttribute="top" secondItem="T2T-Af-0RJ" secondAttribute="bottom" constant="15" id="abs-0x-ly5"/>
+                    <constraint firstItem="XXj-di-FoI" firstAttribute="leading" secondItem="V0H-Ur-Q2z" secondAttribute="leading" constant="15" id="bvH-CB-7nQ"/>
+                    <constraint firstItem="zW7-sA-K8e" firstAttribute="leading" secondItem="XXj-di-FoI" secondAttribute="trailing" constant="15" id="lI5-Xt-Xzf"/>
+                    <constraint firstItem="zW7-sA-K8e" firstAttribute="top" secondItem="T2T-Af-0RJ" secondAttribute="bottom" constant="15" id="xbr-PK-gJ4"/>
+                    <constraint firstItem="T2T-Af-0RJ" firstAttribute="top" secondItem="V0H-Ur-Q2z" secondAttribute="top" constant="10" id="zN7-6h-1bM"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="499.27536231884062" y="98.772321428571431"/>

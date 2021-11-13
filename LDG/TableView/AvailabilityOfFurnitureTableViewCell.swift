@@ -1,5 +1,5 @@
 //
-//  TypeOfTransactionTableViewController.swift
+//  AvailabilityOfFurnitureTableViewCell.swift
 //  LDG
 //
 //  Created by Home on 13.11.21.
@@ -7,19 +7,15 @@
 
 import UIKit
 
-class TypeOfTransactionTableViewCell: UITableViewCell {
-  
-   
-    
-    static let identifier = "TypeOfTransactionTableViewCell"
+class AvailabilityOfFurnitureTableViewCell: UITableViewCell {
+
+    static let identifier = "AvailabilityOfFurnitureTableViewCell"
     
     static func nib () -> UINib {
         
-        return UINib(nibName: "TypeOfTransactionTableViewCell", bundle: nil)
+        return UINib(nibName: "AvailabilityOfFurnitureTableViewCell", bundle: nil)
     }
-    
-   
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

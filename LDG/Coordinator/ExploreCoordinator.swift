@@ -39,8 +39,8 @@ class ExploreCoordinator: CoordinatorType {
     
     func showCreatAdvertisementScreen() -> UIViewController {
         let viewController = CreatAdvertisementViewController()
-        let viewModel = CreatAdvertisementViewModel()
-        viewController.bind(viewModel: viewModel)
+//        let viewModel = CreatAdvertisementViewModel()
+//        viewController.bind(viewModel: viewModel)
         
         return viewController
     }
