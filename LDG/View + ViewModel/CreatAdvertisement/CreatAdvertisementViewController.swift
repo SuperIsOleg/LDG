@@ -19,7 +19,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     let button: UIButton
     
-    var tableView = UITableView(frame: .zero, style: .insetGrouped)
+ var tableView = UITableView(frame: .zero, style: .insetGrouped)
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Создать объявление"
@@ -59,7 +59,8 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
 
         if indexPath.row < 1 {
             let customCell = tableView.dequeueReusableCell(withIdentifier: TypeOfTransactionTableViewCell.identifier, for: indexPath) as! TypeOfTransactionTableViewCell
@@ -166,7 +167,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     override init() {
        
-        self.button = UIButton()
+        self.button = UIButton(type: .system)
         super.init()
         self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 1)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMRotationAnimation()
@@ -211,20 +212,20 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     func createdButton() {
         
-        button.setTitle("Подать объявление", for: .normal)
-        button.backgroundColor = .red
-        button.layer.cornerRadius = 16
-        
-        [button].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-        
-        NSLayoutConstraint.activate([
-            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            button.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 20.0),
-            button.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-        ])
-        
-        view.addSubview(button)
+//        button.setTitle("Подать объявление", for: .normal)
+//        button.backgroundColor = .red
+//        button.layer.cornerRadius = 16
+//
+//        [button].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+//
+//        NSLayoutConstraint.activate([
+//            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            button.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 20.0),
+//            button.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+//            button.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
+//        ])
+//
+//        view.addSubview(button)
     }
     
     override func viewDidLayoutSubviews() {

@@ -10,7 +10,8 @@ import UIKit
 class TypeOfTransactionTableViewCell: UITableViewCell {
   
    
-
+    @IBOutlet weak var cellsButton: UIButton!
+    
     
     static let identifier = "TypeOfTransactionTableViewCell"
     
