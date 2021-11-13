@@ -29,6 +29,30 @@
 		F450B8E52721AABF007C37FA /* CreatAdvertisementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E42721AABF007C37FA /* CreatAdvertisementViewModel.swift */; };
 		F450B8E72721B000007C37FA /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8E62721B000007C37FA /* ExploreCoordinator.swift */; };
 		F450B8EF2721B0CE007C37FA /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450B8EE2721B0CE007C37FA /* CoordinatorType.swift */; };
+		F4986A8A274035B700AB1003 /* FloorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986A88274035B700AB1003 /* FloorTableViewCell.swift */; };
+		F4986A8B274035B700AB1003 /* FloorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986A89274035B700AB1003 /* FloorTableViewCell.xib */; };
+		F4986A8E2740377B00AB1003 /* FloorOfTheHouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986A8C2740377B00AB1003 /* FloorOfTheHouseTableViewCell.swift */; };
+		F4986A8F2740377B00AB1003 /* FloorOfTheHouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986A8D2740377B00AB1003 /* FloorOfTheHouseTableViewCell.xib */; };
+		F4986A922740383F00AB1003 /* WallMaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986A902740383F00AB1003 /* WallMaterialTableViewCell.swift */; };
+		F4986A932740383F00AB1003 /* WallMaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986A912740383F00AB1003 /* WallMaterialTableViewCell.xib */; };
+		F4986A96274039CE00AB1003 /* YearOfConstructionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986A94274039CE00AB1003 /* YearOfConstructionTableViewCell.swift */; };
+		F4986A97274039CE00AB1003 /* YearOfConstructionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986A95274039CE00AB1003 /* YearOfConstructionTableViewCell.xib */; };
+		F4986A9A27403AEA00AB1003 /* InANewBuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986A9827403AEA00AB1003 /* InANewBuildingTableViewCell.swift */; };
+		F4986A9B27403AEA00AB1003 /* InANewBuildingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986A9927403AEA00AB1003 /* InANewBuildingTableViewCell.xib */; };
+		F4986A9E27403DB800AB1003 /* ConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986A9C27403DB800AB1003 /* ConditionTableViewCell.swift */; };
+		F4986A9F27403DB800AB1003 /* ConditionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986A9D27403DB800AB1003 /* ConditionTableViewCell.xib */; };
+		F4986AA227403F1700AB1003 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986AA027403F1700AB1003 /* DescriptionTableViewCell.swift */; };
+		F4986AA327403F1700AB1003 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AA127403F1700AB1003 /* DescriptionTableViewCell.xib */; };
+		F4986AA62740408900AB1003 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986AA42740408900AB1003 /* PriceTableViewCell.swift */; };
+		F4986AA72740408900AB1003 /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AA52740408900AB1003 /* PriceTableViewCell.xib */; };
+		F4986AAA274041B300AB1003 /* ExchangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986AA8274041B300AB1003 /* ExchangeTableViewCell.swift */; };
+		F4986AAB274041B300AB1003 /* ExchangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AA9274041B300AB1003 /* ExchangeTableViewCell.xib */; };
+		F4986AAE274042C000AB1003 /* AddresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986AAC274042C000AB1003 /* AddresTableViewCell.swift */; };
+		F4986AAF274042C000AB1003 /* AddresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AAD274042C000AB1003 /* AddresTableViewCell.xib */; };
+		F4986AB2274043E500AB1003 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986AB0274043E500AB1003 /* NameTableViewCell.swift */; };
+		F4986AB3274043E500AB1003 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AB1274043E500AB1003 /* NameTableViewCell.xib */; };
+		F4986AB62740449D00AB1003 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986AB42740449D00AB1003 /* PhoneNumberTableViewCell.swift */; };
+		F4986AB72740449D00AB1003 /* PhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AB52740449D00AB1003 /* PhoneNumberTableViewCell.xib */; };
 		F4B284B22737E44D00675805 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B12737E44D00675805 /* Advertisement.swift */; };
 		F4B284B42737E4FE00675805 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B32737E4FE00675805 /* Address.swift */; };
 		F4B284B62737E50A00675805 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B52737E50A00675805 /* Contact.swift */; };
@@ -111,6 +135,30 @@
 		F450B8E42721AABF007C37FA /* CreatAdvertisementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatAdvertisementViewModel.swift; sourceTree = "<group>"; };
 		F450B8E62721B000007C37FA /* ExploreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCoordinator.swift; sourceTree = "<group>"; };
 		F450B8EE2721B0CE007C37FA /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		F4986A88274035B700AB1003 /* FloorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorTableViewCell.swift; sourceTree = "<group>"; };
+		F4986A89274035B700AB1003 /* FloorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorTableViewCell.xib; sourceTree = "<group>"; };
+		F4986A8C2740377B00AB1003 /* FloorOfTheHouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorOfTheHouseTableViewCell.swift; sourceTree = "<group>"; };
+		F4986A8D2740377B00AB1003 /* FloorOfTheHouseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorOfTheHouseTableViewCell.xib; sourceTree = "<group>"; };
+		F4986A902740383F00AB1003 /* WallMaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallMaterialTableViewCell.swift; sourceTree = "<group>"; };
+		F4986A912740383F00AB1003 /* WallMaterialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallMaterialTableViewCell.xib; sourceTree = "<group>"; };
+		F4986A94274039CE00AB1003 /* YearOfConstructionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearOfConstructionTableViewCell.swift; sourceTree = "<group>"; };
+		F4986A95274039CE00AB1003 /* YearOfConstructionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YearOfConstructionTableViewCell.xib; sourceTree = "<group>"; };
+		F4986A9827403AEA00AB1003 /* InANewBuildingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InANewBuildingTableViewCell.swift; sourceTree = "<group>"; };
+		F4986A9927403AEA00AB1003 /* InANewBuildingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InANewBuildingTableViewCell.xib; sourceTree = "<group>"; };
+		F4986A9C27403DB800AB1003 /* ConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTableViewCell.swift; sourceTree = "<group>"; };
+		F4986A9D27403DB800AB1003 /* ConditionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionTableViewCell.xib; sourceTree = "<group>"; };
+		F4986AA027403F1700AB1003 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		F4986AA127403F1700AB1003 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		F4986AA42740408900AB1003 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
+		F4986AA52740408900AB1003 /* PriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
+		F4986AA8274041B300AB1003 /* ExchangeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTableViewCell.swift; sourceTree = "<group>"; };
+		F4986AA9274041B300AB1003 /* ExchangeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeTableViewCell.xib; sourceTree = "<group>"; };
+		F4986AAC274042C000AB1003 /* AddresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresTableViewCell.swift; sourceTree = "<group>"; };
+		F4986AAD274042C000AB1003 /* AddresTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddresTableViewCell.xib; sourceTree = "<group>"; };
+		F4986AB0274043E500AB1003 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		F4986AB1274043E500AB1003 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		F4986AB42740449D00AB1003 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
+		F4986AB52740449D00AB1003 /* PhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
 		F4B284B12737E44D00675805 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
 		F4B284B32737E4FE00675805 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		F4B284B52737E50A00675805 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -332,6 +380,30 @@
 				F4F375DC27402E90006E0411 /* CeilingHeightTableViewCell.xib */,
 				F4F375E12740313B006E0411 /* AvailabilityOfFurnitureTableViewCell.swift */,
 				F4F375E22740313B006E0411 /* AvailabilityOfFurnitureTableViewCell.xib */,
+				F4986A88274035B700AB1003 /* FloorTableViewCell.swift */,
+				F4986A89274035B700AB1003 /* FloorTableViewCell.xib */,
+				F4986A8C2740377B00AB1003 /* FloorOfTheHouseTableViewCell.swift */,
+				F4986A8D2740377B00AB1003 /* FloorOfTheHouseTableViewCell.xib */,
+				F4986A902740383F00AB1003 /* WallMaterialTableViewCell.swift */,
+				F4986A912740383F00AB1003 /* WallMaterialTableViewCell.xib */,
+				F4986A94274039CE00AB1003 /* YearOfConstructionTableViewCell.swift */,
+				F4986A95274039CE00AB1003 /* YearOfConstructionTableViewCell.xib */,
+				F4986A9827403AEA00AB1003 /* InANewBuildingTableViewCell.swift */,
+				F4986A9927403AEA00AB1003 /* InANewBuildingTableViewCell.xib */,
+				F4986A9C27403DB800AB1003 /* ConditionTableViewCell.swift */,
+				F4986A9D27403DB800AB1003 /* ConditionTableViewCell.xib */,
+				F4986AA027403F1700AB1003 /* DescriptionTableViewCell.swift */,
+				F4986AA127403F1700AB1003 /* DescriptionTableViewCell.xib */,
+				F4986AA42740408900AB1003 /* PriceTableViewCell.swift */,
+				F4986AA52740408900AB1003 /* PriceTableViewCell.xib */,
+				F4986AA8274041B300AB1003 /* ExchangeTableViewCell.swift */,
+				F4986AA9274041B300AB1003 /* ExchangeTableViewCell.xib */,
+				F4986AAC274042C000AB1003 /* AddresTableViewCell.swift */,
+				F4986AAD274042C000AB1003 /* AddresTableViewCell.xib */,
+				F4986AB0274043E500AB1003 /* NameTableViewCell.swift */,
+				F4986AB1274043E500AB1003 /* NameTableViewCell.xib */,
+				F4986AB42740449D00AB1003 /* PhoneNumberTableViewCell.swift */,
+				F4986AB52740449D00AB1003 /* PhoneNumberTableViewCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -477,14 +549,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42F3A6D272196640020DEC6 /* LaunchScreen.storyboard in Resources */,
+				F4986AA72740408900AB1003 /* PriceTableViewCell.xib in Resources */,
 				F442D553273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib in Resources */,
+				F4986AA327403F1700AB1003 /* DescriptionTableViewCell.xib in Resources */,
+				F4986AAB274041B300AB1003 /* ExchangeTableViewCell.xib in Resources */,
+				F4986A932740383F00AB1003 /* WallMaterialTableViewCell.xib in Resources */,
+				F4986AB3274043E500AB1003 /* NameTableViewCell.xib in Resources */,
+				F4986A9F27403DB800AB1003 /* ConditionTableViewCell.xib in Resources */,
+				F4986A9B27403AEA00AB1003 /* InANewBuildingTableViewCell.xib in Resources */,
 				F4F375E42740313B006E0411 /* AvailabilityOfFurnitureTableViewCell.xib in Resources */,
 				F4F375DE27402E90006E0411 /* CeilingHeightTableViewCell.xib in Resources */,
 				F4F375DA27402D27006E0411 /* BalconyTableViewCell.xib in Resources */,
+				F4986AAF274042C000AB1003 /* AddresTableViewCell.xib in Resources */,
 				F42F3A6A272196640020DEC6 /* Assets.xcassets in Resources */,
+				F4986AB72740449D00AB1003 /* PhoneNumberTableViewCell.xib in Resources */,
 				F4B444F4273817A5002E6E86 /* AdvertisementCollectionViewCell.xib in Resources */,
 				F4F375CA274023CE006E0411 /* NumberOfRoomsTableViewCell.xib in Resources */,
+				F4986A97274039CE00AB1003 /* YearOfConstructionTableViewCell.xib in Resources */,
+				F4986A8B274035B700AB1003 /* FloorTableViewCell.xib in Resources */,
 				F4F375CE2740266D006E0411 /* TypeOfRoomsTableViewCell.xib in Resources */,
+				F4986A8F2740377B00AB1003 /* FloorOfTheHouseTableViewCell.xib in Resources */,
 				F4F375D627402A78006E0411 /* KitchenAreaTableViewCell.xib in Resources */,
 				F4F375D227402880006E0411 /* TotalAreaTableViewCell.xib in Resources */,
 			);
@@ -616,6 +700,7 @@
 			files = (
 				F450B8D92721AA4E007C37FA /* ExploreViewModel.swift in Sources */,
 				F442D552273FC3030088CDE9 /* TypeOfTransactionTableViewCell.swift in Sources */,
+				F4986A9E27403DB800AB1003 /* ConditionTableViewCell.swift in Sources */,
 				F4B284BA2737E52300675805 /* Image.swift in Sources */,
 				F4B444FD273874D4002E6E86 /* DescriptionRepository.swift in Sources */,
 				F4B444F92738746C002E6E86 /* AddresRepository.swift in Sources */,
@@ -624,30 +709,41 @@
 				F4F375CD2740266D006E0411 /* TypeOfRoomsTableViewCell.swift in Sources */,
 				F40EDE2F272F15A600534A8F /* BaseViewController.swift in Sources */,
 				F4B284B82737E51800675805 /* Description.swift in Sources */,
+				F4986A96274039CE00AB1003 /* YearOfConstructionTableViewCell.swift in Sources */,
+				F4986AAE274042C000AB1003 /* AddresTableViewCell.swift in Sources */,
+				F4986AAA274041B300AB1003 /* ExchangeTableViewCell.swift in Sources */,
 				F4F375D527402A78006E0411 /* КitchenAreaTableViewCell.swift in Sources */,
 				F4F375C9274023CE006E0411 /* NumberOfRoomsTableViewCell.swift in Sources */,
 				F4B284B62737E50A00675805 /* Contact.swift in Sources */,
 				F450B8DB2721AA61007C37FA /* SavedViewController.swift in Sources */,
 				F4F375D127402880006E0411 /* TotalAreaTableViewCell.swift in Sources */,
 				F4B444F3273817A5002E6E86 /* AdvertisementCollectionViewCell.swift in Sources */,
+				F4986A922740383F00AB1003 /* WallMaterialTableViewCell.swift in Sources */,
 				F450B8E72721B000007C37FA /* ExploreCoordinator.swift in Sources */,
 				F4B444FF273874E3002E6E86 /* ImageRepository.swift in Sources */,
 				F4B445032738751D002E6E86 /* PriceRepository.swift in Sources */,
+				F4986AB2274043E500AB1003 /* NameTableViewCell.swift in Sources */,
 				F4B284B22737E44D00675805 /* Advertisement.swift in Sources */,
+				F4986A8E2740377B00AB1003 /* FloorOfTheHouseTableViewCell.swift in Sources */,
 				F42F3A61272196630020DEC6 /* AppDelegate.swift in Sources */,
 				F450B8E52721AABF007C37FA /* CreatAdvertisementViewModel.swift in Sources */,
 				F4B284BE2737E53B00675805 /* NumberOfRooms.swift in Sources */,
 				F4B444FB273874B4002E6E86 /* ContactRepository.swift in Sources */,
 				F4F375DD27402E90006E0411 /* CeilingHeightTableViewCell.swift in Sources */,
 				F42F3A63272196630020DEC6 /* SceneDelegate.swift in Sources */,
+				F4986A9A27403AEA00AB1003 /* InANewBuildingTableViewCell.swift in Sources */,
 				F4F375D927402D27006E0411 /* BalconyTableViewCell.swift in Sources */,
 				F4B4450127387501002E6E86 /* NumberOfRoomsRepository.swift in Sources */,
 				F450B8DD2721AA72007C37FA /* SavedViewModel.swift in Sources */,
 				F4B284B42737E4FE00675805 /* Address.swift in Sources */,
 				F4F375E32740313B006E0411 /* AvailabilityOfFurnitureTableViewCell.swift in Sources */,
 				F4B284BC2737E52D00675805 /* Like.swift in Sources */,
+				F4986A8A274035B700AB1003 /* FloorTableViewCell.swift in Sources */,
+				F4986AA62740408900AB1003 /* PriceTableViewCell.swift in Sources */,
 				F450B8D72721AA3E007C37FA /* ExploreViewController.swift in Sources */,
 				F4B284C02737E54E00675805 /* Price.swift in Sources */,
+				F4986AA227403F1700AB1003 /* DescriptionTableViewCell.swift in Sources */,
+				F4986AB62740449D00AB1003 /* PhoneNumberTableViewCell.swift in Sources */,
 				F450B8E32721AAB2007C37FA /* CreatAdvertisementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

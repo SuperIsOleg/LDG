@@ -32,7 +32,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,6 +78,60 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             return customCell8
         }
         
+        if indexPath.row < 9 {
+            let customCell9 = tableView.dequeueReusableCell(withIdentifier: FloorTableViewCell.identifier, for: indexPath) as! FloorTableViewCell
+            return customCell9
+        }
+        
+        if indexPath.row < 10 {
+            let customCell10 = tableView.dequeueReusableCell(withIdentifier: FloorOfTheHouseTableViewCell.identifier, for: indexPath) as! FloorOfTheHouseTableViewCell
+            return customCell10
+        }
+        
+        if indexPath.row < 11 {
+            let customCell11 = tableView.dequeueReusableCell(withIdentifier: WallMaterialTableViewCell.identifier, for: indexPath) as! WallMaterialTableViewCell
+            return customCell11
+        }
+        
+        if indexPath.row < 12 {
+            let customCell12 = tableView.dequeueReusableCell(withIdentifier: YearOfConstructionTableViewCell.identifier, for: indexPath) as! YearOfConstructionTableViewCell
+            return customCell12
+        }
+        
+        if indexPath.row < 13 {
+            let customCell13 = tableView.dequeueReusableCell(withIdentifier: InANewBuildingTableViewCell.identifier, for: indexPath) as! InANewBuildingTableViewCell
+            return customCell13
+        }
+        if indexPath.row < 14 {
+            let customCell14 = tableView.dequeueReusableCell(withIdentifier: ConditionTableViewCell.identifier, for: indexPath) as! ConditionTableViewCell
+            return customCell14
+        }
+        if indexPath.row < 15 {
+            let customCell15 = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for: indexPath) as! DescriptionTableViewCell
+            return customCell15
+        }
+        if indexPath.row < 16 {
+            let customCell16 = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as! PriceTableViewCell
+            return customCell16
+        }
+        if indexPath.row < 17 {
+            let customCell17 = tableView.dequeueReusableCell(withIdentifier: ExchangeTableViewCell.identifier, for: indexPath) as! ExchangeTableViewCell
+            return customCell17
+        }
+        if indexPath.row < 18 {
+            let customCell18 = tableView.dequeueReusableCell(withIdentifier: AddresTableViewCell.identifier, for: indexPath) as! AddresTableViewCell
+            return customCell18
+        }
+        if indexPath.row < 19 {
+            let customCell19 = tableView.dequeueReusableCell(withIdentifier: NameTableViewCell.identifier, for: indexPath) as! NameTableViewCell
+            return customCell19
+        }
+        if indexPath.row < 20 {
+            let customCell20 = tableView.dequeueReusableCell(withIdentifier: PhoneNumberTableViewCell.identifier, for: indexPath) as! PhoneNumberTableViewCell
+            return customCell20
+        }
+        
+        
         return UITableViewCell()
     }
     
@@ -105,6 +159,18 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         tableView.register(BalconyTableViewCell.nib(), forCellReuseIdentifier: BalconyTableViewCell.identifier)
         tableView.register(CeilingHeightTableViewCell.nib(), forCellReuseIdentifier: CeilingHeightTableViewCell.identifier)
         tableView.register(AvailabilityOfFurnitureTableViewCell.nib(), forCellReuseIdentifier: AvailabilityOfFurnitureTableViewCell.identifier)
+        tableView.register(FloorTableViewCell.nib(), forCellReuseIdentifier: FloorTableViewCell.identifier)
+        tableView.register(FloorOfTheHouseTableViewCell.nib(), forCellReuseIdentifier: FloorOfTheHouseTableViewCell.identifier)
+        tableView.register(WallMaterialTableViewCell.nib(), forCellReuseIdentifier: WallMaterialTableViewCell.identifier)
+        tableView.register(YearOfConstructionTableViewCell.nib(), forCellReuseIdentifier: YearOfConstructionTableViewCell.identifier)
+        tableView.register(InANewBuildingTableViewCell.nib(), forCellReuseIdentifier: InANewBuildingTableViewCell.identifier)
+        tableView.register(ConditionTableViewCell.nib(), forCellReuseIdentifier: ConditionTableViewCell.identifier)
+        tableView.register(DescriptionTableViewCell.nib(), forCellReuseIdentifier: DescriptionTableViewCell.identifier)
+        tableView.register(PriceTableViewCell.nib(), forCellReuseIdentifier: PriceTableViewCell.identifier)
+        tableView.register(ExchangeTableViewCell.nib(), forCellReuseIdentifier: ExchangeTableViewCell.identifier)
+        tableView.register(AddresTableViewCell.nib(), forCellReuseIdentifier: AddresTableViewCell.identifier)
+        tableView.register(NameTableViewCell.nib(), forCellReuseIdentifier: NameTableViewCell.identifier)
+        tableView.register(PhoneNumberTableViewCell.nib(), forCellReuseIdentifier: PhoneNumberTableViewCell.identifier)
         
         tableView.dataSource = self
         tableView.delegate = self

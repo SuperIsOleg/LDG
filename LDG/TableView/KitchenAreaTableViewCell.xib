@@ -22,8 +22,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Введите" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-Pg-bgT">
-                        <rect key="frame" x="15" y="51" width="290" height="34"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Введите" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-Pg-bgT">
+                        <rect key="frame" x="15" y="51" width="290" height="22"/>
                         <attributedString key="attributedText"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
