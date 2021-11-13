@@ -17,6 +17,8 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     private let disposeBag = DisposeBag()
     
+    let button: UIButton
+    
     var tableView = UITableView(frame: .zero, style: .insetGrouped)
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -24,7 +26,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 25
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,6 +35,28 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
+    }
+    
+    func animatedTableView() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        let tableViewHeight = tableView.bounds.height
+        var delay: Double = 0
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
+            
+            UIView.animate(withDuration: 1.5,
+                           delay: delay * 0.05,
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0,
+                           options: .curveEaseInOut,
+                           animations: {
+                cell.transform = CGAffineTransform.identity
+            },completion: nil)
+            
+            delay += 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -141,9 +165,12 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     override init() {
+       
+        self.button = UIButton()
         super.init()
         self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 1)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMRotationAnimation()
+       
     }
     
     override func loadView() {
@@ -175,13 +202,38 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
         
+        createdButton()
+        
         navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
         
     }
     
+    func createdButton() {
+        
+        button.setTitle("Подать объявление", for: .normal)
+        button.backgroundColor = .red
+        button.layer.cornerRadius = 16
+        
+        [button].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+        
+        NSLayoutConstraint.activate([
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            button.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 20.0),
+            button.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+            button.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
+        ])
+        
+        view.addSubview(button)
+    }
+    
     override func viewDidLayoutSubviews() {
         tableView.frame = view.bounds
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animatedTableView()
     }
     
 }

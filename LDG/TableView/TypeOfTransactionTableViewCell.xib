@@ -23,13 +23,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXj-di-FoI">
-                        <rect key="frame" x="15" y="46" width="86" height="31"/>
+                        <rect key="frame" x="15" y="46" width="85.5" height="31"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="gray" title="Продажа"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-sA-K8e">
-                        <rect key="frame" x="116" y="46" width="66" height="31"/>
+                        <rect key="frame" x="115.5" y="46" width="66" height="31"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="gray" title="Сдача"/>
