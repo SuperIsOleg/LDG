@@ -85,7 +85,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 110
         
     }
     
@@ -109,7 +109,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
        
        if indexPath.row < 1 {
            let customCell0 = tableView.dequeueReusableCell(withIdentifier: PhotoPickerTableViewCell.identifier, for: indexPath) as! PhotoPickerTableViewCell
+           
            customCell0.configure()
+           
            return customCell0
        }
 

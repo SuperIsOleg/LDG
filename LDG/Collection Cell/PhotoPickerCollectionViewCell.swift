@@ -4,12 +4,20 @@
 //
 //  Created by Home on 14.11.21.
 //
-
+import Photos
+import PhotosUI
 import UIKit
+import SwiftUI
 
 class PhotoPickerCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var photoPickerButton: UIButton!
+    @IBOutlet var photoPickerImageButton: UIButton!
+    
+   
+    @IBAction func photoPickerButtonTapd(_ sender: Any) {
+//        showImagePickerController()
+        print("Я работаю")
+    }
     
     static var identifier = "PhotoPickerCollectionViewCell"
 
@@ -19,7 +27,7 @@ class PhotoPickerCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure() {
-        self.photoPickerButton.contentMode = .scaleAspectFill
+        self.photoPickerImageButton.contentMode = .scaleAspectFill
         
     }
     
@@ -28,7 +36,7 @@ class PhotoPickerCollectionViewCell: UICollectionViewCell {
         // Initialization code
         
     }
-    
    
 
 }
+

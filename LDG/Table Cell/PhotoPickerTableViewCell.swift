@@ -4,11 +4,12 @@
 //
 //  Created by Home on 14.11.21.
 //
-
+import Photos
+import PhotosUI
 import UIKit
 
 class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-   
+    
     static let identifier = "PhotoPickerTableViewCell"
     
     @IBOutlet var collectionView: UICollectionView!
@@ -44,13 +45,42 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoPickerCollectionViewCell.identifier, for: indexPath) as! PhotoPickerCollectionViewCell
-        
+        cell.photoPickerImageButton.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
         cell.configure()
-return cell
-}
+        return cell
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 90, height: 90)
+        CGSize(width: 100, height: 75)
     }
-
+    
 }
+
+extension PhotoPickerTableViewCell:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @objc func showImagePickerController() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = .photoLibrary
+//        present(imagePickerController, animated: true)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+       
+
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView?.image = image
+        }
+        
+        
+        
+        picker.dismiss(animated: true, completion: nil)
+        print("\(info)")
+    }
+    
+    
+}
+

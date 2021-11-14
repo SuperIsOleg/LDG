@@ -22,13 +22,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JK9-Ol-bJd">
+                        <rect key="frame" x="234" y="20.5" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="ZOc-cf-ird"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fIF-Dj-KwE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="KdF-OP-ccg"/>
+                    <constraint firstAttribute="trailing" secondItem="JK9-Ol-bJd" secondAttribute="trailing" constant="16" id="aGA-74-gu1"/>
+                    <constraint firstItem="JK9-Ol-bJd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pwb-9m-nWp"/>
                     <constraint firstItem="fIF-Dj-KwE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uSp-wo-8gk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="yearsOfConstructionTextField" destination="JK9-Ol-bJd" id="84h-0T-FEL"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="86.383928571428569"/>
         </tableViewCell>
     </objects>

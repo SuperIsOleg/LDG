@@ -22,13 +22,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3u-WX-hIY">
+                        <rect key="frame" x="238.5" y="32" width="66.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Eyi-ef-GRU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="r3u-WX-hIY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="03t-VA-cox"/>
                     <constraint firstItem="P36-ah-XrP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HQj-SL-vu8"/>
+                    <constraint firstAttribute="trailing" secondItem="r3u-WX-hIY" secondAttribute="trailing" constant="15" id="J5P-sl-c9u"/>
                     <constraint firstItem="P36-ah-XrP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iGx-4B-PJL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="floorOfHousTextField" destination="r3u-WX-hIY" id="PRg-By-0pT"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="94.084821428571431"/>
         </tableViewCell>
     </objects>
