@@ -53,6 +53,10 @@
 		F4986AB3274043E500AB1003 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AB1274043E500AB1003 /* NameTableViewCell.xib */; };
 		F4986AB62740449D00AB1003 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4986AB42740449D00AB1003 /* PhoneNumberTableViewCell.swift */; };
 		F4986AB72740449D00AB1003 /* PhoneNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4986AB52740449D00AB1003 /* PhoneNumberTableViewCell.xib */; };
+		F4A697352741318A001BA0EB /* PhotoPickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A697332741318A001BA0EB /* PhotoPickerCollectionViewCell.swift */; };
+		F4A697362741318A001BA0EB /* PhotoPickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A697342741318A001BA0EB /* PhotoPickerCollectionViewCell.xib */; };
+		F4A6973B2741365E001BA0EB /* PhotoPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A697392741365E001BA0EB /* PhotoPickerTableViewCell.swift */; };
+		F4A6973C2741365E001BA0EB /* PhotoPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A6973A2741365E001BA0EB /* PhotoPickerTableViewCell.xib */; };
 		F4B284B22737E44D00675805 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B12737E44D00675805 /* Advertisement.swift */; };
 		F4B284B42737E4FE00675805 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B32737E4FE00675805 /* Address.swift */; };
 		F4B284B62737E50A00675805 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284B52737E50A00675805 /* Contact.swift */; };
@@ -61,8 +65,6 @@
 		F4B284BC2737E52D00675805 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BB2737E52D00675805 /* Like.swift */; };
 		F4B284BE2737E53B00675805 /* NumberOfRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BD2737E53B00675805 /* NumberOfRooms.swift */; };
 		F4B284C02737E54E00675805 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B284BF2737E54E00675805 /* Price.swift */; };
-		F4B444F3273817A5002E6E86 /* AdvertisementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444F1273817A5002E6E86 /* AdvertisementCollectionViewCell.swift */; };
-		F4B444F4273817A5002E6E86 /* AdvertisementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B444F2273817A5002E6E86 /* AdvertisementCollectionViewCell.xib */; };
 		F4B444F92738746C002E6E86 /* AddresRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444F82738746C002E6E86 /* AddresRepository.swift */; };
 		F4B444FB273874B4002E6E86 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444FA273874B4002E6E86 /* ContactRepository.swift */; };
 		F4B444FD273874D4002E6E86 /* DescriptionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B444FC273874D4002E6E86 /* DescriptionRepository.swift */; };
@@ -159,6 +161,10 @@
 		F4986AB1274043E500AB1003 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		F4986AB42740449D00AB1003 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
 		F4986AB52740449D00AB1003 /* PhoneNumberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberTableViewCell.xib; sourceTree = "<group>"; };
+		F4A697332741318A001BA0EB /* PhotoPickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4A697342741318A001BA0EB /* PhotoPickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		F4A697392741365E001BA0EB /* PhotoPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerTableViewCell.swift; sourceTree = "<group>"; };
+		F4A6973A2741365E001BA0EB /* PhotoPickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPickerTableViewCell.xib; sourceTree = "<group>"; };
 		F4B284B12737E44D00675805 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
 		F4B284B32737E4FE00675805 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		F4B284B52737E50A00675805 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -167,8 +173,6 @@
 		F4B284BB2737E52D00675805 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		F4B284BD2737E53B00675805 /* NumberOfRooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfRooms.swift; sourceTree = "<group>"; };
 		F4B284BF2737E54E00675805 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
-		F4B444F1273817A5002E6E86 /* AdvertisementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCollectionViewCell.swift; sourceTree = "<group>"; };
-		F4B444F2273817A5002E6E86 /* AdvertisementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertisementCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4B444F82738746C002E6E86 /* AddresRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresRepository.swift; sourceTree = "<group>"; };
 		F4B444FA273874B4002E6E86 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
 		F4B444FC273874D4002E6E86 /* DescriptionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionRepository.swift; sourceTree = "<group>"; };
@@ -275,9 +279,9 @@
 		F42F3A5F272196630020DEC6 /* LDG */ = {
 			isa = PBXGroup;
 			children = (
-				F442D54F273FC1C10088CDE9 /* TableView */,
+				F4B444EC27380596002E6E86 /* Collection Cell */,
+				F442D54F273FC1C10088CDE9 /* Table Cell */,
 				F4B444F527386C1C002E6E86 /* Repository */,
-				F4B444EC27380596002E6E86 /* CollectionView */,
 				F40EDE2D272F158B00534A8F /* Types */,
 				F42F3A92272199650020DEC6 /* Models */,
 				F42F3A90272198F70020DEC6 /* View + ViewModel */,
@@ -361,9 +365,11 @@
 			path = Saved;
 			sourceTree = "<group>";
 		};
-		F442D54F273FC1C10088CDE9 /* TableView */ = {
+		F442D54F273FC1C10088CDE9 /* Table Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F4A697392741365E001BA0EB /* PhotoPickerTableViewCell.swift */,
+				F4A6973A2741365E001BA0EB /* PhotoPickerTableViewCell.xib */,
 				F442D550273FC3030088CDE9 /* TypeOfTransactionTableViewCell.swift */,
 				F442D551273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib */,
 				F4F375C7274023CE006E0411 /* NumberOfRoomsTableViewCell.swift */,
@@ -405,7 +411,7 @@
 				F4986AB42740449D00AB1003 /* PhoneNumberTableViewCell.swift */,
 				F4986AB52740449D00AB1003 /* PhoneNumberTableViewCell.xib */,
 			);
-			path = TableView;
+			path = "Table Cell";
 			sourceTree = "<group>";
 		};
 		F450B8D12721A0D5007C37FA /* CreatAdvertisement */ = {
@@ -417,13 +423,13 @@
 			path = CreatAdvertisement;
 			sourceTree = "<group>";
 		};
-		F4B444EC27380596002E6E86 /* CollectionView */ = {
+		F4B444EC27380596002E6E86 /* Collection Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F4B444F1273817A5002E6E86 /* AdvertisementCollectionViewCell.swift */,
-				F4B444F2273817A5002E6E86 /* AdvertisementCollectionViewCell.xib */,
+				F4A697332741318A001BA0EB /* PhotoPickerCollectionViewCell.swift */,
+				F4A697342741318A001BA0EB /* PhotoPickerCollectionViewCell.xib */,
 			);
-			path = CollectionView;
+			path = "Collection Cell";
 			sourceTree = "<group>";
 		};
 		F4B444F527386C1C002E6E86 /* Repository */ = {
@@ -548,9 +554,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A6973C2741365E001BA0EB /* PhotoPickerTableViewCell.xib in Resources */,
 				F42F3A6D272196640020DEC6 /* LaunchScreen.storyboard in Resources */,
 				F4986AA72740408900AB1003 /* PriceTableViewCell.xib in Resources */,
 				F442D553273FC3030088CDE9 /* TypeOfTransactionTableViewCell.xib in Resources */,
+				F4A697362741318A001BA0EB /* PhotoPickerCollectionViewCell.xib in Resources */,
 				F4986AA327403F1700AB1003 /* DescriptionTableViewCell.xib in Resources */,
 				F4986AAB274041B300AB1003 /* ExchangeTableViewCell.xib in Resources */,
 				F4986A932740383F00AB1003 /* WallMaterialTableViewCell.xib in Resources */,
@@ -563,7 +571,6 @@
 				F4986AAF274042C000AB1003 /* AddresTableViewCell.xib in Resources */,
 				F42F3A6A272196640020DEC6 /* Assets.xcassets in Resources */,
 				F4986AB72740449D00AB1003 /* PhoneNumberTableViewCell.xib in Resources */,
-				F4B444F4273817A5002E6E86 /* AdvertisementCollectionViewCell.xib in Resources */,
 				F4F375CA274023CE006E0411 /* NumberOfRoomsTableViewCell.xib in Resources */,
 				F4986A97274039CE00AB1003 /* YearOfConstructionTableViewCell.xib in Resources */,
 				F4986A8B274035B700AB1003 /* FloorTableViewCell.xib in Resources */,
@@ -710,6 +717,7 @@
 				F40EDE2F272F15A600534A8F /* BaseViewController.swift in Sources */,
 				F4B284B82737E51800675805 /* Description.swift in Sources */,
 				F4986A96274039CE00AB1003 /* YearOfConstructionTableViewCell.swift in Sources */,
+				F4A697352741318A001BA0EB /* PhotoPickerCollectionViewCell.swift in Sources */,
 				F4986AAE274042C000AB1003 /* AddresTableViewCell.swift in Sources */,
 				F4986AAA274041B300AB1003 /* ExchangeTableViewCell.swift in Sources */,
 				F4F375D527402A78006E0411 /* КitchenAreaTableViewCell.swift in Sources */,
@@ -717,7 +725,7 @@
 				F4B284B62737E50A00675805 /* Contact.swift in Sources */,
 				F450B8DB2721AA61007C37FA /* SavedViewController.swift in Sources */,
 				F4F375D127402880006E0411 /* TotalAreaTableViewCell.swift in Sources */,
-				F4B444F3273817A5002E6E86 /* AdvertisementCollectionViewCell.swift in Sources */,
+				F4A6973B2741365E001BA0EB /* PhotoPickerTableViewCell.swift in Sources */,
 				F4986A922740383F00AB1003 /* WallMaterialTableViewCell.swift in Sources */,
 				F450B8E72721B000007C37FA /* ExploreCoordinator.swift in Sources */,
 				F4B444FF273874E3002E6E86 /* ImageRepository.swift in Sources */,
