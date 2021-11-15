@@ -51,12 +51,12 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 100, height: 75)
+        CGSize(width: 260, height: 200)
     }
     
 }
 
-extension PhotoPickerTableViewCell:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension PhotoPickerTableViewCell: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @objc func showImagePickerController() {
         let imagePickerController = UIImagePickerController()
@@ -69,13 +69,9 @@ extension PhotoPickerTableViewCell:  UIImagePickerControllerDelegate, UINavigati
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
        
-
-        
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             imageView?.image = image
         }
-        
-        
         
         picker.dismiss(animated: true, completion: nil)
         print("\(info)")

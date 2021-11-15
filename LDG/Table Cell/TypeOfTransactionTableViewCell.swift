@@ -12,6 +12,15 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
    
     @IBOutlet weak var cellsButton: UIButton!
     
+//    cellsButton.addTarget(self, action: #selector(cellsButtonTapd), for: .touchUpInside)
+//    
+//    @objc func cellsButtonTapd() {
+//        UIView.animate(withDuration: 1) {
+//            self.cellsButton.setTitleColor(.red, for: .normal)
+//        }
+//    }
+    
+    
     
     static let identifier = "TypeOfTransactionTableViewCell"
     
@@ -24,12 +33,13 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cellsButton.layer.cornerRadius = 16
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.selectionStyle = .none
+       
         // Configure the view for the selected state
     }
     

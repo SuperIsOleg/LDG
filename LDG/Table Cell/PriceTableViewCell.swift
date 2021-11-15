@@ -14,7 +14,7 @@ class PriceTableViewCell: UITableViewCell {
     
     var pickerView = UIPickerView()
     
-    var currency: [String] = ["руб.", "$", "евро"]
+    var currency: [String] = ["руб.", "$", "euro"]
     
     static let identifier = "PriceTableViewCell"
     
@@ -30,6 +30,7 @@ class PriceTableViewCell: UITableViewCell {
         
         currencyTextField.inputView = pickerView
         currencyTextField.textAlignment = .right
+        currencyTextField.textColor = .red
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

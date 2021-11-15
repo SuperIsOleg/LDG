@@ -12,14 +12,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoPickerCollectionViewCell" id="gTV-IL-0wX" customClass="PhotoPickerCollectionViewCell" customModule="LDG" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="222" height="168"/>
+            <rect key="frame" x="0.0" y="0.0" width="137" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="222" height="168"/>
+                <rect key="frame" x="0.0" y="0.0" width="137" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-et-jIc">
-                        <rect key="frame" x="0.0" y="0.5" width="222" height="166"/>
+                        <rect key="frame" x="0.0" y="0.5" width="137" height="98"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="137" id="BeQ-wv-x4O"/>
+                            <constraint firstAttribute="height" constant="100" id="igt-kO-lFS"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
                         <state key="normal">
@@ -41,16 +45,18 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="aBG-et-jIc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IA5-4i-erA"/>
-                <constraint firstAttribute="bottom" secondItem="aBG-et-jIc" secondAttribute="bottom" id="ZHv-lC-1MK"/>
-                <constraint firstAttribute="trailing" secondItem="aBG-et-jIc" secondAttribute="trailing" id="ZQ6-3j-69d"/>
+                <constraint firstItem="aBG-et-jIc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9BB-X1-im5"/>
+                <constraint firstItem="aBG-et-jIc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="arx-ba-u32"/>
+                <constraint firstAttribute="trailing" secondItem="aBG-et-jIc" secondAttribute="trailing" id="j0c-26-14D"/>
+                <constraint firstAttribute="bottom" secondItem="aBG-et-jIc" secondAttribute="bottom" id="kwD-rK-hZO"/>
                 <constraint firstItem="aBG-et-jIc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qAp-r6-Iaf"/>
+                <constraint firstItem="aBG-et-jIc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="th2-pO-p0f"/>
             </constraints>
-            <size key="customSize" width="222" height="168"/>
+            <size key="customSize" width="137" height="100"/>
             <connections>
                 <outlet property="photoPickerImageButton" destination="aBG-et-jIc" id="aLU-lE-dKM"/>
             </connections>
-            <point key="canvasLocation" x="262.31884057971018" y="104.46428571428571"/>
+            <point key="canvasLocation" x="200.72463768115944" y="80.357142857142847"/>
         </collectionViewCell>
     </objects>
     <resources>

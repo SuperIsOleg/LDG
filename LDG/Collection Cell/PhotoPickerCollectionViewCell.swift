@@ -16,7 +16,7 @@ class PhotoPickerCollectionViewCell: UICollectionViewCell {
    
     @IBAction func photoPickerButtonTapd(_ sender: Any) {
 //        showImagePickerController()
-        print("Я работаю")
+        print("Кнопка нажата")
     }
     
     static var identifier = "PhotoPickerCollectionViewCell"

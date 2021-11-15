@@ -20,6 +20,9 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oTz-g1-OxF">
                         <rect key="frame" x="0.0" y="0.0" width="326" height="208"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="208" id="EzA-eH-f9C"/>
+                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="F49-BE-oDg">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -29,20 +32,24 @@
                     </collectionView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="oTz-g1-OxF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5sQ-kt-HWu"/>
                     <constraint firstAttribute="bottom" secondItem="oTz-g1-OxF" secondAttribute="bottom" id="7pG-qV-ciI"/>
+                    <constraint firstAttribute="trailing" secondItem="oTz-g1-OxF" secondAttribute="trailing" id="Cb0-HN-2zc"/>
                     <constraint firstItem="oTz-g1-OxF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ixh-ed-aZp"/>
                     <constraint firstAttribute="trailing" secondItem="oTz-g1-OxF" secondAttribute="trailing" id="LhW-A2-oCJ"/>
                     <constraint firstItem="oTz-g1-OxF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OeT-O8-NGV"/>
                     <constraint firstItem="oTz-g1-OxF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SD8-Hx-YXa"/>
+                    <constraint firstItem="oTz-g1-OxF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bTq-Gs-Dnj"/>
                     <constraint firstItem="oTz-g1-OxF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dte-1N-zQ5"/>
                     <constraint firstAttribute="trailing" secondItem="oTz-g1-OxF" secondAttribute="trailing" id="fPz-zE-9f4"/>
+                    <constraint firstAttribute="bottom" secondItem="oTz-g1-OxF" secondAttribute="bottom" id="idi-6t-dkb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="oTz-g1-OxF" id="h01-Ll-E8F"/>
             </connections>
-            <point key="canvasLocation" x="133.33333333333334" y="119.86607142857142"/>
+            <point key="canvasLocation" x="-10" y="134"/>
         </tableViewCell>
     </objects>
     <resources>
