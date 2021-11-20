@@ -9,6 +9,20 @@ import UIKit
 
 class ConditionTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var newButton: UIButton!
+    
+    @IBOutlet weak var secondaryButton: UIButton!
+    
+    
+    @IBAction func tapedButton(_ sender: UIButton) {
+        newButton.isSelected = false
+        secondaryButton.isSelected = false
+        
+        sender.isSelected = true
+    }
+    
+    
     static let identifier = "ConditionTableViewCell"
     
     static func nib () -> UINib {

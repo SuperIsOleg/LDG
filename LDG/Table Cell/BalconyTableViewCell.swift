@@ -8,6 +8,21 @@
 import UIKit
 
 class BalconyTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var haveButton: UIButton!
+    
+    @IBOutlet weak var noButton: UIButton!
+    
+    
+    @IBAction func tapedButton(_ sender: UIButton) {
+        haveButton.isSelected = false
+        noButton.isSelected = false
+        
+        sender.isSelected = true
+    }
+    
+    
 
     static let identifier = "BalconyTableViewCell"
     

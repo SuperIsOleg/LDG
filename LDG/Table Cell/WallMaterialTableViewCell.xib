@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,39 +25,69 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2W-e0-Dxs">
                         <rect key="frame" x="15" y="51" width="100" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Панельный"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Панельный">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5ps-Iv-zOt"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SK0-fJ-e9i">
                         <rect key="frame" x="16" y="90" width="101" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Кирпичный"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Кирпичный">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="giG-e0-KdU"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqF-Dl-V9b">
                         <rect key="frame" x="16" y="129" width="99" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Каркасный"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Каркасный">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="us4-Hq-puV"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40T-JW-AjT">
                         <rect key="frame" x="125" y="90" width="84" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Блочный"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Блочный">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KHB-rc-bdh"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8x8-et-p9t">
                         <rect key="frame" x="123" y="51" width="111" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Монолитный"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Монолитный">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="X6x-lm-cZT"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXM-Ka-8T0">
                         <rect key="frame" x="123" y="129" width="154" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Каркасно-блочный"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Каркасно-блочный">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s0E-tz-E5i"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -78,7 +109,20 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="blockyButton" destination="40T-JW-AjT" id="BqS-gk-4Ef"/>
+                <outlet property="brickButton" destination="SK0-fJ-e9i" id="B5i-8W-eIu"/>
+                <outlet property="carcassBlocklyButton" destination="HXM-Ka-8T0" id="J7X-yW-8Gx"/>
+                <outlet property="carcassButton" destination="SqF-Dl-V9b" id="lKv-Nf-V7w"/>
+                <outlet property="monolithButton" destination="8x8-et-p9t" id="6zK-KU-Pze"/>
+                <outlet property="panelButton" destination="v2W-e0-Dxs" id="J3q-nc-SR9"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
