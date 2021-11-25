@@ -14,13 +14,15 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
     @IBOutlet var collectionView: UICollectionView!
     
+    var clouser: (() -> Void) = {  }
+    
     static func nib () -> UINib {
         
         return UINib(nibName: "PhotoPickerTableViewCell", bundle: nil)
     }
-    public func configure() {
+    public func configure(picker: @escaping () -> Void ) {
         collectionView.reloadData()
-        
+        clouser = picker
     }
     
     override func awakeFromNib() {
@@ -45,7 +47,7 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoPickerCollectionViewCell.identifier, for: indexPath) as! PhotoPickerCollectionViewCell
-        cell.photoPickerImageButton.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
+//        cell.photoPickerImageButton.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
         cell.configure()
         return cell
     }
@@ -56,27 +58,11 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
 }
 
-extension PhotoPickerTableViewCell: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    @objc func showImagePickerController() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.allowsEditing = true
-        imagePickerController.sourceType = .photoLibrary
-//        present(imagePickerController, animated: true)
-        
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-       
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            imageView?.image = image
-        }
-        
-        picker.dismiss(animated: true, completion: nil)
-        print("\(info)")
-    }
-    
-    
-}
+//extension PhotoPickerTableViewCell  {
+//
+//    @objc func showImagePickerController() {
+//        clouser()
+//    }
+//
+//}
 

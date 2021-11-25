@@ -21,7 +21,7 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
         sender.isSelected = true
         
         var buttonTitle = sender.currentTitle
-        
+  
     }
     
     //
