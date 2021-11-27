@@ -11,15 +11,18 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
   
    
     @IBOutlet weak var cellsButton: UIButton!
+    @IBOutlet weak var changeButton: UIButton!
     
-//    cellsButton.addTarget(self, action: #selector(cellsButtonTapd), for: .touchUpInside)
-//    
-//    @objc func cellsButtonTapd() {
-//        UIView.animate(withDuration: 1) {
-//            self.cellsButton.setTitleColor(.red, for: .normal)
-//        }
-//    }
-    
+    @IBAction func buttonTaped(_ sender: UIButton) {
+        
+        cellsButton.isSelected = false
+        changeButton.isSelected = false
+        
+        sender.isSelected = true
+        
+        var buttonTitle = sender.currentTitle
+  
+    }
     
     
     static let identifier = "TypeOfTransactionTableViewCell"
@@ -33,7 +36,7 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        cellsButton.layer.cornerRadius = 16
+     
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
