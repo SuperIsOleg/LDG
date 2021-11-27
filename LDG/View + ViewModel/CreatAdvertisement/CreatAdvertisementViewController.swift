@@ -96,7 +96,13 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         case 0:
             if indexPath.row < 1 {
                 let customCell0 = tableView.dequeueReusableCell(withIdentifier: PhotoPickerTableViewCell.identifier, for: indexPath) as! PhotoPickerTableViewCell
-                customCell0.configure()
+                customCell0.configure {
+                    let imagePickerController = UIImagePickerController()
+                    imagePickerController.delegate = self
+                    imagePickerController.allowsEditing = true
+                    imagePickerController.sourceType = .photoLibrary
+                    self.present(imagePickerController, animated: true)
+                }
                 return customCell0
             }
         case 1:
@@ -264,4 +270,18 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         animatedTableView()
     }
     
+}
+
+extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var imageView:UIImageView!
+
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView?.image = image
+        }
+
+        picker.dismiss(animated: true, completion: nil)
+        print("\(info)")
+    }
 }
