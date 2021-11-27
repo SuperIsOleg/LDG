@@ -23,24 +23,24 @@ class ExploreCoordinator: CoordinatorType {
     
     func showExploreScreen() -> UIViewController {
         let viewController = ExploreViewController()
-//        let viewModel = ExploreViewModel()
-//        viewController.bind(viewModel: viewModel)
+        let viewModel = ExploreViewModel()
+        viewController.bind(viewModel: viewModel)
         
         return viewController
     }
     
     func showSavedScreen() -> UIViewController {
         let viewController = SavedViewController()
-//        let viewModel = SavedViewModel()
-//        viewController.bind(viewModel: viewModel)
+        let viewModel = SavedViewModel()
+        viewController.bind(viewModel: viewModel)
         
         return viewController
     }
     
     func showCreatAdvertisementScreen() -> UIViewController {
         let viewController = CreatAdvertisementViewController()
-//        let viewModel = CreatAdvertisementViewModel()
-//        viewController.bind(viewModel: viewModel)
+        let viewModel = CreatAdvertisementViewModel()
+        viewController.bind(viewModel: viewModel)
         
         return viewController
     }

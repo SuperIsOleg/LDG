@@ -9,6 +9,25 @@ import UIKit
 
 class NumberOfRoomsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var oneButton: UIButton!
+    @IBOutlet weak var twoButton: UIButton!
+    @IBOutlet weak var threeButton: UIButton!
+    @IBOutlet weak var fourButton: UIButton!
+    @IBOutlet weak var fiveButton: UIButton!
+    
+    
+    @IBAction func tapedButton(_ sender: UIButton) {
+        
+        oneButton.isSelected = false
+        twoButton.isSelected = false
+        threeButton.isSelected = false
+        fourButton.isSelected = false
+        fiveButton.isSelected = false
+        
+        sender.isSelected = true
+        
+    }
+    
     static let identifier = "NumberOfRoomsTableViewCell"
     
     static func nib () -> UINib {

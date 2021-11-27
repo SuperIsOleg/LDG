@@ -24,7 +24,6 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
   
     }
     
-    
     static let identifier = "TypeOfTransactionTableViewCell"
     
     static func nib () -> UINib {
@@ -32,11 +31,8 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
         return UINib(nibName: "TypeOfTransactionTableViewCell", bundle: nil)
     }
     
-   
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-     
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

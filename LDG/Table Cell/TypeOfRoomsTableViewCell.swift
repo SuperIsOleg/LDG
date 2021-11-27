@@ -9,6 +9,16 @@ import UIKit
 
 class TypeOfRoomsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var walkThroughButton: UIButton!
+    @IBOutlet weak var withASeparateEntranceButton: UIButton!
+    
+    @IBAction func tapedButton(_ sender: UIButton) {
+        walkThroughButton.isSelected = false
+        withASeparateEntranceButton.isSelected = false
+        
+        sender.isSelected = true
+    }
+    
     static let identifier = "TypeOfRoomsTableViewCell"
     
     static func nib () -> UINib {

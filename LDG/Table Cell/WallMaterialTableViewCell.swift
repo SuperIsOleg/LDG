@@ -8,6 +8,31 @@
 import UIKit
 
 class WallMaterialTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var panelButton: UIButton!
+    
+    @IBOutlet weak var monolithButton: UIButton!
+    
+    @IBOutlet weak var brickButton: UIButton!
+    
+    @IBOutlet weak var blockyButton: UIButton!
+
+    @IBOutlet weak var carcassButton: UIButton!
+    
+    @IBOutlet weak var carcassBlocklyButton: UIButton!
+    
+    
+    @IBAction func tapedButton(_ sender: UIButton) {
+        
+        panelButton.isSelected = false
+        monolithButton.isSelected = false
+        brickButton.isSelected = false
+        blockyButton.isSelected = false
+        carcassButton.isSelected = false
+        carcassBlocklyButton.isSelected = false
+        
+        sender.isSelected = true
+    }
 
     static let identifier = "WallMaterialTableViewCell"
     

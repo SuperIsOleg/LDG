@@ -28,7 +28,9 @@
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Продажа"/>
+                        <state key="normal" title="Продажа">
+                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                         <connections>
                             <action selector="buttonTaped:" destination="mgY-7d-zLs" eventType="touchUpInside" id="0jx-qD-ZvI"/>
                         </connections>

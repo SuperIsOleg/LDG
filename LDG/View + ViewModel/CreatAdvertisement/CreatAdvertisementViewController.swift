@@ -21,13 +21,18 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         let button = UIButton(type: .system)
         button.setTitle("Подать объявление", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 20)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.backgroundColor = .red
         button.layer.cornerRadius = 20
         return button
     }()
     
     var tableView = UITableView(frame: .zero, style: .insetGrouped)
+    
+    func bind(viewModel: CreatAdvertisementViewModel) {
+        self.viewModel = viewModel
+        
+    }
     
     func animatedTableView() {
         tableView.reloadData()
@@ -54,7 +59,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Добавьте фотографию"
+            return "Добавьте фотографии"
         case 1:
             return "Заполните пустые поля"
         default:
@@ -91,16 +96,13 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         case 0:
             if indexPath.row < 1 {
                 let customCell0 = tableView.dequeueReusableCell(withIdentifier: PhotoPickerTableViewCell.identifier, for: indexPath) as! PhotoPickerTableViewCell
-                
                 customCell0.configure()
-                
                 return customCell0
             }
         case 1:
             
             if indexPath.row < 1 {
                 let customCell1 = tableView.dequeueReusableCell(withIdentifier: TypeOfTransactionTableViewCell.identifier, for: indexPath) as! TypeOfTransactionTableViewCell
-                customCell1.cellsButton.layer.cornerRadius = 16
                 return customCell1
             }
             

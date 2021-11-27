@@ -22,35 +22,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNY-y8-ATe">
-                        <rect key="frame" x="15" y="51" width="63" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="от 2,5"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR2-b4-Q2v">
-                        <rect key="frame" x="87" y="51" width="62" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="от 2,7"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0t-uc-dyt">
-                        <rect key="frame" x="157" y="51" width="52" height="31"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="от 3"/>
-                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYq-V9-rH1">
+                        <rect key="frame" x="15" y="44" width="289" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="KR2-b4-Q2v" firstAttribute="leading" secondItem="BNY-y8-ATe" secondAttribute="trailing" constant="9" id="0fR-hO-dKt"/>
+                    <constraint firstAttribute="trailing" secondItem="yYq-V9-rH1" secondAttribute="trailing" constant="16" id="0Bm-jR-YrS"/>
                     <constraint firstItem="P27-CO-hiS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="DDD-Uh-JHm"/>
                     <constraint firstItem="P27-CO-hiS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="PAQ-3K-VLE"/>
-                    <constraint firstItem="KR2-b4-Q2v" firstAttribute="top" secondItem="P27-CO-hiS" secondAttribute="bottom" constant="15" id="WAZ-he-yGz"/>
-                    <constraint firstItem="BNY-y8-ATe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hXk-Ca-YSW"/>
-                    <constraint firstItem="a0t-uc-dyt" firstAttribute="leading" secondItem="KR2-b4-Q2v" secondAttribute="trailing" constant="8" symbolic="YES" id="kIc-fG-UdN"/>
-                    <constraint firstItem="a0t-uc-dyt" firstAttribute="top" secondItem="P27-CO-hiS" secondAttribute="bottom" constant="15" id="qYm-lT-DCT"/>
-                    <constraint firstItem="BNY-y8-ATe" firstAttribute="top" secondItem="P27-CO-hiS" secondAttribute="bottom" constant="15" id="tl8-y1-3RW"/>
-                    <constraint firstAttribute="bottom" secondItem="a0t-uc-dyt" secondAttribute="bottom" constant="15" id="uFg-aV-f7h"/>
+                    <constraint firstItem="yYq-V9-rH1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ftF-vl-Gxx"/>
+                    <constraint firstItem="yYq-V9-rH1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="44" id="nbg-hy-aOv"/>
+                    <constraint firstAttribute="bottom" secondItem="yYq-V9-rH1" secondAttribute="bottom" constant="15" id="p6s-Ue-H3g"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
