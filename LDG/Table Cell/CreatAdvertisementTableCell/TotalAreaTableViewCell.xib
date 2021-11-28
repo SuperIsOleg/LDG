@@ -22,10 +22,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" placeholder="Введите" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCM-EV-amJ">
+                    <textField opaque="NO" contentMode="bottom" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" placeholder="Введите" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCM-EV-amJ">
                         <rect key="frame" x="15" y="51" width="292" height="22"/>
                         <attributedString key="attributedText"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                     </textField>
                 </subviews>
                 <constraints>
@@ -38,6 +38,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="totalAreaTextField" destination="XCM-EV-amJ" id="0n6-ay-nSe"/>
+            </connections>
             <point key="canvasLocation" x="139.13043478260872" y="95.089285714285708"/>
         </tableViewCell>
     </objects>

@@ -12,6 +12,8 @@ class PriceTableViewCell: UITableViewCell {
    
     @IBOutlet weak var currencyTextField: UITextField!
     
+    @IBOutlet weak var priceTextField: UITextField!
+    
     var pickerView = UIPickerView()
     
     var currency: [String] = ["руб.", "$", "euro"]
@@ -25,12 +27,15 @@ class PriceTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        configureTextField()
         pickerView.delegate = self
         pickerView.dataSource = self
         
         currencyTextField.inputView = pickerView
         currencyTextField.textAlignment = .right
         currencyTextField.textColor = .red
+        
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -57,6 +62,17 @@ extension PriceTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currencyTextField.text = currency[row]
         currencyTextField.resignFirstResponder()
+    }
+    
+    func  configureTextField() {
+        priceTextField.delegate = self
+    }
+}
+
+extension PriceTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

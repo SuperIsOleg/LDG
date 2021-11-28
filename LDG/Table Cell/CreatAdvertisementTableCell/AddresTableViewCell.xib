@@ -9,35 +9,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="KitchenAreaTableViewCell" rowHeight="88" id="KGk-i7-Jjw" customClass="KitchenAreaTableViewCell" customModule="LDG" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddresTableViewCell" rowHeight="88" id="KGk-i7-Jjw" customClass="AddresTableViewCell" customModule="LDG" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Площадь кухни, кв.м." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpH-Tj-Oue">
-                        <rect key="frame" x="15" y="15" width="171" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tER-nQ-gP1">
+                        <rect key="frame" x="15" y="15" width="50" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Введите" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-Pg-bgT">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Введите" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0d-Z7-XlU">
                         <rect key="frame" x="15" y="51" width="290" height="22"/>
                         <attributedString key="attributedText"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="EpH-Tj-Oue" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JWh-bi-YAb"/>
-                    <constraint firstAttribute="trailing" secondItem="Dc1-Pg-bgT" secondAttribute="trailing" constant="15" id="QZu-w5-gsr"/>
-                    <constraint firstItem="Dc1-Pg-bgT" firstAttribute="top" secondItem="EpH-Tj-Oue" secondAttribute="bottom" constant="15" id="S4V-vR-hYi"/>
-                    <constraint firstItem="Dc1-Pg-bgT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="dlQ-cV-d3O"/>
-                    <constraint firstItem="EpH-Tj-Oue" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="g4x-1r-odQ"/>
-                    <constraint firstAttribute="bottom" secondItem="Dc1-Pg-bgT" secondAttribute="bottom" constant="15" id="vXN-6S-W41"/>
+                    <constraint firstItem="tER-nQ-gP1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="6Mb-vG-ybO"/>
+                    <constraint firstAttribute="bottom" secondItem="d0d-Z7-XlU" secondAttribute="bottom" constant="15" id="Gc5-Ev-JWI"/>
+                    <constraint firstAttribute="trailing" secondItem="d0d-Z7-XlU" secondAttribute="trailing" constant="15" id="KkI-dt-OXD"/>
+                    <constraint firstItem="tER-nQ-gP1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="eEq-bN-YEQ"/>
+                    <constraint firstItem="d0d-Z7-XlU" firstAttribute="top" secondItem="tER-nQ-gP1" secondAttribute="bottom" constant="15" id="fGB-fn-OuK"/>
+                    <constraint firstItem="d0d-Z7-XlU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="jM6-aZ-6BV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adressTextField" destination="d0d-Z7-XlU" id="IoZ-dB-pM2"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="95.089285714285708"/>
         </tableViewCell>
     </objects>

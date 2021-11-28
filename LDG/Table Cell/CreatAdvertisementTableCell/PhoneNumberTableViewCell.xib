@@ -36,7 +36,7 @@
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="(25)234-56-78" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SJ6-6B-ufz">
                         <rect key="frame" x="101" y="15.5" width="204" height="22"/>
                         <attributedString key="attributedText"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                     </textField>
                 </subviews>
                 <constraints>
@@ -52,6 +52,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="phoneNumberTextField" destination="SJ6-6B-ufz" id="xEg-ta-bXA"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="83.370535714285708"/>
         </tableViewCell>
     </objects>

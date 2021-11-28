@@ -57,11 +57,21 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(AdvertisementCollectionViewCell.nib(), forCellWithReuseIdentifier: AdvertisementCollectionViewCell.identifier)
+        
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        layout.collectionView?.backgroundColor = .white
+        
+        collectionView.register(AdvertisementCollectionViewCell.nib(), forCellWithReuseIdentifier: AdvertisementCollectionViewCell.identifier)
+        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false // нужно ли?
+        
+        layout.minimumLineSpacing = 10 // расстояние между ячейками
+       
         view.addSubview(collectionView)
         collectionView.frame = view.bounds
+ 
         
         navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
@@ -73,10 +83,12 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
         collectionView.reloadData()
     }
     
+    //количество ячеек в секции
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return advertisements.count
     }
     
+    //настройка ячейки
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvertisementCollectionViewCell.identifier, for: indexPath) as! AdvertisementCollectionViewCell
         let advertisement = advertisements[indexPath.item]
@@ -85,7 +97,7 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
+        return CGSize(width: UIScreen.main.bounds.width - 40, height: 350)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

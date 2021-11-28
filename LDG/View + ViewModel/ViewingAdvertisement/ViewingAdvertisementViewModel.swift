@@ -1,8 +1,8 @@
 //
-//  ExploreViewModel.swift
+//  ViewingAdvertisementViewModel.swift
 //  LDG
 //
-//  Created by Home on 21.10.21.
+//  Created by Home on 28.11.21.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import RxRelay
 import RxCocoa
 import RealmSwift
 
-final class ExploreViewModel {
+final class ViewingAdvertisementViewModel {
     
     private let disposeBag = DisposeBag()
 

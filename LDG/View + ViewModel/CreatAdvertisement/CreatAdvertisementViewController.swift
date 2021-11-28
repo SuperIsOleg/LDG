@@ -31,7 +31,6 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     func bind(viewModel: CreatAdvertisementViewModel) {
         self.viewModel = viewModel
-        
     }
     
     func animatedTableView() {
@@ -215,8 +214,11 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     override func loadView() {
         super.loadView()
+        
         tableView.reloadData()
+        
         animatedTableView()
+        
         let footer = UIView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: 80.0))
         footer.backgroundColor = .secondarySystemBackground
         tableView.tableFooterView = footer

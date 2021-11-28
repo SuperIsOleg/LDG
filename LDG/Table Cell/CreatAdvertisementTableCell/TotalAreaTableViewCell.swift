@@ -8,7 +8,10 @@
 import UIKit
 
 class TotalAreaTableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var totalAreaTextField: UITextField!
+    
     static let identifier = "TotalAreaTableViewCell"
     
     static func nib () -> UINib {
@@ -20,7 +23,7 @@ class TotalAreaTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configureTextField()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,4 +31,16 @@ class TotalAreaTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         // Configure the view for the selected state
     }
+    
+    func  configureTextField() {
+        totalAreaTextField.delegate = self
+    }
+}
+
+extension TotalAreaTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }

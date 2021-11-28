@@ -25,7 +25,7 @@
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Введите" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWk-2C-5HK">
                         <rect key="frame" x="15" y="51" width="290" height="22"/>
                         <attributedString key="attributedText"/>
-                        <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="next"/>
                     </textField>
                 </subviews>
                 <constraints>
@@ -38,6 +38,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionTextField" destination="gWk-2C-5HK" id="1VM-gQ-9kq"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="95.424107142857139"/>
         </tableViewCell>
     </objects>

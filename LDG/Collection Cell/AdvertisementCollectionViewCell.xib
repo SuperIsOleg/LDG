@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,41 +22,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="271" height="154"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3s-Qh-Tsg">
-                        <rect key="frame" x="20" y="164" width="42" height="21"/>
+                        <rect key="frame" x="0.0" y="164" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw2-c7-RPk">
-                        <rect key="frame" x="209" y="164" width="42" height="21"/>
+                        <rect key="frame" x="229" y="164" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" systemColor="systemRedColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08M-6C-PjR">
+                        <rect key="frame" x="231" y="12" width="25.5" height="26"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <imageReference key="image" image="hand.thumbsup" catalog="system" symbolScale="large"/>
+                        </state>
+                        <state key="selected">
+                            <imageReference key="image" image="hand.thumbsup.fill" catalog="system" symbolScale="large"/>
+                        </state>
+                        <connections>
+                            <action selector="buttonTaped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Ari-ha-06T"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="pw2-c7-RPk" secondAttribute="trailing" constant="20" id="1aa-cR-1qt"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="pw2-c7-RPk" secondAttribute="trailing" id="1aa-cR-1qt"/>
                 <constraint firstItem="KF2-Hv-UY8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DYG-qg-nSt"/>
                 <constraint firstAttribute="trailing" secondItem="KF2-Hv-UY8" secondAttribute="trailing" id="Qde-ph-Wtj"/>
+                <constraint firstItem="08M-6C-PjR" firstAttribute="leading" secondItem="KF2-Hv-UY8" secondAttribute="trailing" constant="-40" id="Tjr-fc-fFx"/>
                 <constraint firstItem="pw2-c7-RPk" firstAttribute="top" secondItem="KF2-Hv-UY8" secondAttribute="bottom" constant="10" id="Y5p-3p-5RH"/>
                 <constraint firstItem="o3s-Qh-Tsg" firstAttribute="top" secondItem="KF2-Hv-UY8" secondAttribute="bottom" constant="10" id="bCG-YE-0gV"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="pw2-c7-RPk" secondAttribute="bottom" constant="10" id="dWM-fu-AbC"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="o3s-Qh-Tsg" secondAttribute="bottom" constant="10" id="kXQ-a9-4vO"/>
-                <constraint firstItem="o3s-Qh-Tsg" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="qxR-EB-ru9"/>
+                <constraint firstItem="o3s-Qh-Tsg" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="qxR-EB-ru9"/>
                 <constraint firstItem="KF2-Hv-UY8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="t7C-sM-oho"/>
+                <constraint firstItem="KF2-Hv-UY8" firstAttribute="top" secondItem="08M-6C-PjR" secondAttribute="bottom" constant="-38" id="taV-ve-NHN"/>
             </constraints>
             <size key="customSize" width="271" height="195"/>
             <connections>
                 <outlet property="contryLabel" destination="o3s-Qh-Tsg" id="cgT-Qs-pJq"/>
                 <outlet property="costCell" destination="pw2-c7-RPk" id="DKz-EI-Vin"/>
                 <outlet property="imageHouseCell" destination="KF2-Hv-UY8" id="z7g-DR-LWp"/>
+                <outlet property="likeButton" destination="08M-6C-PjR" id="W8I-os-jKm"/>
             </connections>
             <point key="canvasLocation" x="296.37681159420293" y="128.23660714285714"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
