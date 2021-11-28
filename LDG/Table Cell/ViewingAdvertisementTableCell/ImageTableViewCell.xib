@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="319" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="LDG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="319"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="319"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iXO-iK-T4r">
+                        <rect key="frame" x="0.0" y="0.0" width="317" height="219"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mey-GK-DMy">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пусто" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXj-1m-tD6">
+                        <rect key="frame" x="16" y="227" width="285" height="18.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пусто" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7e-UF-n2X">
+                        <rect key="frame" x="16" y="253.5" width="285" height="18.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пусто" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKO-08-8rY">
+                        <rect key="frame" x="16" y="280" width="134" height="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пусто" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EbX-Q5-h5C">
+                        <rect key="frame" x="158" y="280" width="143" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="143" id="It8-Ne-ish"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="EbX-Q5-h5C" firstAttribute="leading" secondItem="WKO-08-8rY" secondAttribute="trailing" constant="8" symbolic="YES" id="1FM-cs-UgW"/>
+                    <constraint firstAttribute="trailing" secondItem="iXO-iK-T4r" secondAttribute="trailing" id="3Mj-hd-4B3"/>
+                    <constraint firstItem="GXj-1m-tD6" firstAttribute="top" secondItem="iXO-iK-T4r" secondAttribute="bottom" constant="8" symbolic="YES" id="5DA-ic-med"/>
+                    <constraint firstAttribute="trailing" secondItem="b7e-UF-n2X" secondAttribute="trailing" constant="16" id="CK6-Aa-xJn"/>
+                    <constraint firstAttribute="trailing" secondItem="GXj-1m-tD6" secondAttribute="trailing" constant="16" id="GyA-lG-Nnq"/>
+                    <constraint firstItem="EbX-Q5-h5C" firstAttribute="top" secondItem="WKO-08-8rY" secondAttribute="top" id="HmW-fQ-oa8"/>
+                    <constraint firstItem="iXO-iK-T4r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NQJ-Gv-hoF"/>
+                    <constraint firstAttribute="bottom" secondItem="WKO-08-8rY" secondAttribute="bottom" constant="20" symbolic="YES" id="Ryv-GY-0CK"/>
+                    <constraint firstItem="b7e-UF-n2X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dpr-7T-zEv"/>
+                    <constraint firstItem="WKO-08-8rY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="fDA-CZ-GRZ"/>
+                    <constraint firstItem="WKO-08-8rY" firstAttribute="top" secondItem="b7e-UF-n2X" secondAttribute="bottom" constant="8" symbolic="YES" id="rOe-4B-mFb"/>
+                    <constraint firstItem="b7e-UF-n2X" firstAttribute="top" secondItem="GXj-1m-tD6" secondAttribute="bottom" constant="8" symbolic="YES" id="tht-jS-J4X"/>
+                    <constraint firstItem="GXj-1m-tD6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="viC-gx-jSR"/>
+                    <constraint firstItem="EbX-Q5-h5C" firstAttribute="trailing" secondItem="b7e-UF-n2X" secondAttribute="trailing" id="xny-d5-G2V"/>
+                    <constraint firstItem="iXO-iK-T4r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ycE-YU-Yb7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adressTextField" destination="GXj-1m-tD6" id="uQu-R0-xEB"/>
+                <outlet property="collectionView" destination="iXO-iK-T4r" id="GI6-3P-zjZ"/>
+                <outlet property="priceTextField" destination="b7e-UF-n2X" id="1JN-1x-7cF"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="188.50446428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
