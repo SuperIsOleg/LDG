@@ -20,8 +20,7 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
         
         sender.isSelected = true
         
-        var buttonTitle = sender.currentTitle
-  
+//        var buttonTitle = sender.currentTitle
     }
     
     static let identifier = "TypeOfTransactionTableViewCell"

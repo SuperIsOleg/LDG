@@ -209,7 +209,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     override init() {
         super.init()
         
-        self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 1)
+        self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 3)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMRotationAnimation()
     }
     
@@ -273,15 +273,15 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 }
 
 extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
-
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        var imageView:UIImageView!
-
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            imageView?.image = image
-        }
-
-        picker.dismiss(animated: true, completion: nil)
-        print("\(info)")
+//        var imageView:UIImageView!
+//        
+//        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+//            imageView?.image = image
+//        }
+//        
+//        picker.dismiss(animated: true, completion: nil)
+//        print("\(info)")
     }
 }
