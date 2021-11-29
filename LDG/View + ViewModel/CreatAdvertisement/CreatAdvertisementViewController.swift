@@ -31,6 +31,10 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     func bind(viewModel: CreatAdvertisementViewModel) {
         self.viewModel = viewModel
+        
+//        viewModel.totalAreaTextField
+//            .drive(totalAreaField.rx.text)
+//            .disposed(by: disposeBag)
     }
     
     func animatedTableView() {
@@ -90,7 +94,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let viewModel = viewModel!
         switch indexPath.section {
         case 0:
             if indexPath.row < 1 {
@@ -123,6 +127,8 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 4 {
                 let customCell4 = tableView.dequeueReusableCell(withIdentifier: TotalAreaTableViewCell.identifier, for: indexPath) as! TotalAreaTableViewCell
+        
+                customCell4.clouser = {viewModel.totalAreaTextFieldChanged($0)}
                 return customCell4
             }
             

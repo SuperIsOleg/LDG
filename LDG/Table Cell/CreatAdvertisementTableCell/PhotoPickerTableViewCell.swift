@@ -45,10 +45,13 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
         return 10
     }
     
+   @objc func picker (_ sender: UIButton) {
+        clouser()
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoPickerCollectionViewCell.identifier, for: indexPath) as! PhotoPickerCollectionViewCell
-        cell.photoPickerImageButton.addTarget(self, action: #selector(configure), for: .touchUpInside)
+        cell.photoPickerImageButton.addTarget(self, action: #selector(picker), for: .touchUpInside)// ??????
         cell.configure()
         return cell
     }

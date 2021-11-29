@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import RxRelay
+import RxCocoa
 
 class TotalAreaTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
     
-    @IBOutlet weak var totalAreaTextField: UITextField!
+    
+    @IBOutlet weak var totalAreaField: UITextField!
     
     static let identifier = "TotalAreaTableViewCell"
     
@@ -19,12 +23,12 @@ class TotalAreaTableViewCell: UITableViewCell {
         return UINib(nibName: "TotalAreaTableViewCell", bundle: nil)
     }
     
-   
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureTextField()
     }
+    
+   
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -32,10 +36,19 @@ class TotalAreaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    
     func  configureTextField() {
-        totalAreaTextField.delegate = self
+        totalAreaField.delegate = self
+        totalAreaField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
     }
+    
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
+    }
+
 }
+
 
 extension TotalAreaTableViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
