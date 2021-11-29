@@ -32,9 +32,6 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     func bind(viewModel: CreatAdvertisementViewModel) {
         self.viewModel = viewModel
         
-//        viewModel.totalAreaTextField
-//            .drive(totalAreaField.rx.text)
-//            .disposed(by: disposeBag)
     }
     
     func animatedTableView() {
@@ -283,13 +280,14 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        var imageView:UIImageView!
-//        
-//        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-//            imageView?.image = image
-//        }
-//        
-//        picker.dismiss(animated: true, completion: nil)
-//        print("\(info)")
+        
+        var imageView:UIImageView!
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView?.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        print("\(info)")
     }
 }

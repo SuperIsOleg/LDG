@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import Foundation
+import RxSwift
+import RxCocoa
+import RxSwiftExt
+import RealmSwift
 
 class ViewingAdvertisementViewController: BaseViewController {
     
@@ -58,7 +63,7 @@ extension ViewingAdvertisementViewController:  UITableViewDataSource, UITableVie
         case 0:
             return 1
         case 1:
-            return 20
+            return 1
         default:
             return 0
         }

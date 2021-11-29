@@ -104,6 +104,13 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
         return 10
     }
     
+    
+    // функция перехода на другой View
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        return 
+    }
+  
+    
 }
 
 

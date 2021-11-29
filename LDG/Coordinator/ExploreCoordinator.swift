@@ -44,6 +44,14 @@ class ExploreCoordinator: CoordinatorType {
         
         return viewController
     }
+    
+    func viewingAdvertisementScreen() -> UIViewController {
+        let viewController = ViewingAdvertisementViewController()
+        let viewModel = ViewingAdvertisementViewModel()
+        viewController.bind(viewModel: viewModel)
+        
+        return viewController
+    }
   
     
 }
