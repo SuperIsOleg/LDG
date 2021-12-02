@@ -287,6 +287,8 @@ extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UIN
             imageView?.image = image
         }
         
+        
+        
         picker.dismiss(animated: true, completion: nil)
         print("\(info)")
     }

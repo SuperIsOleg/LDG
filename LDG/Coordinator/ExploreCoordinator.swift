@@ -25,7 +25,17 @@ class ExploreCoordinator: CoordinatorType {
         let viewController = ExploreViewController()
         let viewModel = ExploreViewModel()
         viewController.bind(viewModel: viewModel)
-        
+        viewModel.route.emit(onNext: { [weak self] route in
+            guard let self = self else {
+                return
+            }
+            switch route {
+            case .button: break
+        case .viewingAdvertisement: self.navigationController.pushViewController(self.showViewingAdvertisementScreen(), animated: true)
+                
+            }
+        } ).disposed(by: disposeBag)
+       
         return viewController
     }
     
@@ -45,11 +55,11 @@ class ExploreCoordinator: CoordinatorType {
         return viewController
     }
     
-    func viewingAdvertisementScreen() -> UIViewController {
+    func showViewingAdvertisementScreen() -> UIViewController {
         let viewController = ViewingAdvertisementViewController()
         let viewModel = ViewingAdvertisementViewModel()
         viewController.bind(viewModel: viewModel)
-        
+
         return viewController
     }
   

@@ -14,8 +14,10 @@ import RealmSwift
 
 class ViewingAdvertisementViewController: BaseViewController {
     
+    static var identifier = "ViewingAdvertisementViewController"
+    
     var tableView = UITableView(frame: .zero, style: .insetGrouped)
-
+    
     private var viewModel: ViewingAdvertisementViewModel!
     
     func bind(viewModel: ViewingAdvertisementViewModel) {
@@ -38,7 +40,7 @@ class ViewingAdvertisementViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        navigationController?.navigationBar.isHidden = true
+//        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
     }
    
