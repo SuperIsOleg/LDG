@@ -39,8 +39,7 @@ class ViewingAdvertisementViewController: BaseViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-//        navigationController?.navigationBar.isHidden = true
+    
         view.backgroundColor = .white
     }
    
@@ -52,9 +51,7 @@ class ViewingAdvertisementViewController: BaseViewController {
 
 extension ViewingAdvertisementViewController:  UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
+   
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -68,6 +65,28 @@ extension ViewingAdvertisementViewController:  UITableViewDataSource, UITableVie
             return 1
         default:
             return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 10
+        case 1:
+            return 30
+        default:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return " "
+        case 1:
+            return "Описание:"
+        default:
+            return ""
         }
     }
     

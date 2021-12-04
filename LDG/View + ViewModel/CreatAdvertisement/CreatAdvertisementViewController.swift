@@ -68,7 +68,14 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        switch section {
+        case 0:
+            return 10
+        case 1:
+            return 30
+        default:
+            return 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,7 +98,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let viewModel = viewModel!
+        
         switch indexPath.section {
         case 0:
             if indexPath.row < 1 {
@@ -126,6 +135,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
                 let customCell4 = tableView.dequeueReusableCell(withIdentifier: TotalAreaTableViewCell.identifier, for: indexPath) as! TotalAreaTableViewCell
         
                 customCell4.clouser = {viewModel.totalAreaTextFieldChanged($0)}
+                
                 return customCell4
             }
             
@@ -261,7 +271,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
         
-        navigationController?.navigationBar.isHidden = true
+//        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
     }
     
@@ -286,9 +296,7 @@ extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UIN
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             imageView?.image = image
         }
-        
-        
-        
+
         picker.dismiss(animated: true, completion: nil)
         print("\(info)")
     }

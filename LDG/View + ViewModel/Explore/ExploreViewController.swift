@@ -71,21 +71,18 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
         
         view.addSubview(collectionView)
         collectionView.frame = view.bounds
-        
-        
-//
         view.backgroundColor = .white
     }
-    
-    
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = "Explore"
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         collectionView.frame = view.bounds
         setupAdvertisement()
         collectionView.reloadData()
-//        navigationController?.navigationBar.isHidden = true
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
