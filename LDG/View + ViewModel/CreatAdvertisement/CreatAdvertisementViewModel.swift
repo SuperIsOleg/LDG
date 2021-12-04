@@ -15,65 +15,13 @@ final class CreatAdvertisementViewModel {
     enum Route {
         case adAdvertisement
     }
-
+    
     private let disposeBag = DisposeBag()
     
     private let _addAdvertisementTapped = PublishRelay<Void>()
     func addAdvertisementTapped() {
         _addAdvertisementTapped.accept(())
     }
-    
-    init() {
-    }
-
- 
-    lazy var totalAreaField = _totalAreaTextFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var kitchenAreaField = _kitchenAreaFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var ceilingHeightField = _ceilingHeightFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var floorField = _floorFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var floorOfHousField = _floorOfHousFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var yearsOfConstructionField = _yearsOfConstructionFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var descriptionField = _descriptionFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var priceField = _priceFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var currencyField = _currencyFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var adressField = _adressFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var nameField = _nameFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
-    
-    lazy var phoneNumberField = _phoneNumberFieldChanged
-        .asDriver(onErrorJustReturn: "")
-        .startWith("")
     
     private let _postAnAdTapped = PublishRelay<Void>()
     func postAnAdTapped() {
@@ -141,7 +89,101 @@ final class CreatAdvertisementViewModel {
         _phoneNumberFieldChanged.accept(text)
     }
     
-   
+    
+    lazy var totalAreaFieldText = _totalAreaTextFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var kitchenAreaFieldText = _kitchenAreaFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var ceilingHeightFieldText = _ceilingHeightFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var floorFieldText = _floorFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var floorOfHousFieldText = _floorOfHousFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var yearsOfConstructionFieldText = _yearsOfConstructionFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var descriptionFieldText = _descriptionFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var priceFieldText = _priceFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var currencyFieldText = _currencyFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var adressFieldText = _adressFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var nameFieldText = _nameFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var phoneNumberFieldText = _phoneNumberFieldChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    //    var arrayField = [totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText,  yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]
+    
+    //        .withLatestFrom(Observable.combineLatest(totalAreaFieldText.asObservable(),
+    //            kitchenAreaFieldText.asObservable(),
+    //            ceilingHeightFieldText.asObservable(),
+    //            floorFieldText.asObservable(),
+    //            floorOfHousFieldText.asObservable(),
+    //            yearsOfConstructionFieldText.asObservable(),
+    //            descriptionFieldText.asObservable(),
+    //            priceFieldText.asObservable(),
+    //            currencyFieldText.asObservable(),
+    //            adressFieldText.asObservable(),
+    //            nameFieldText.asObservable(),
+    //            phoneNumberFieldText.asObservable()
+    //        ))
+    
+    lazy var route: Signal<Route> = Signal
+        .merge(
+            _addAdvertisementTapped.asObservable()
+                .withLatestFrom(Observable.combineLatest(totalAreaFieldText.asObservable(),
+                                                    kitchenAreaFieldText.asObservable(),
+                                                    ceilingHeightFieldText.asObservable(),
+                                                    floorFieldText.asObservable(),
+                                                    floorOfHousFieldText.asObservable(),
+                                                    yearsOfConstructionFieldText.asObservable(),
+                                                    descriptionFieldText.asObservable(),
+                                                    priceFieldText.asObservable(),
+                                                    currencyFieldText.asObservable(),
+                                                    adressFieldText.asObservable(),
+                                                    nameFieldText.asObservable(),
+                                                    phoneNumberFieldText.asObservable()
+                                                   ))
+                .flatMapLatest { totalArea, kitchenArea, ceilingHeight, floor, floorOfTheHouse, yearOfConstruction, descriptions, price, currency, address, name, phoneNumber in
+                    AdvertisementRepository.shared.AddAdvertisement(totalArea: totalArea, kitchenArea: kitchenArea, ceilingHeight: ceilingHeight, floor: floor, floorOfTheHouse: floorOfTheHouse, yearOfConstruction: yearOfConstruction, descriptions: descriptions, price: price, currency: currency, address: address, name: name, phoneNumber: phoneNumber)
+                        .debug("Add Advertisement Result")
+                        .asSignal(onErrorSignalWith: .never())
+                }
+                .debug("Add Advertisement")
+                .filter { $0 == true }
+                .mapTo(.adAdvertisement)
+                .asSignal(onErrorSignalWith: .never())
+        )
+    
+    init() {
+        _addAdvertisementTapped.asSignal().emit(onNext: { print("Advertisement Added") }).disposed(by: disposeBag)
+    }
     
 }
 

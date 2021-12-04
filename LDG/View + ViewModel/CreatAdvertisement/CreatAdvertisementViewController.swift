@@ -34,8 +34,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         
         addAdvertisementButton.rx.tap
             .bind(onNext: viewModel.addAdvertisementTapped)
-            .disposed(by: disposeBag)
-        
+            .disposed(by: disposeBag)   
     }
     
     func animatedTableView() {
@@ -244,7 +243,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             if indexPath.row < 20 {
                 let customCell20 = tableView.dequeueReusableCell(withIdentifier: PhoneNumberTableViewCell.identifier, for: indexPath) as! PhoneNumberTableViewCell
                 
-                customCell20.clouser = {viewModel.phoneNumberFieldChanged(String($0))}
+                customCell20.clouser = {viewModel.phoneNumberFieldChanged(String("+375 \($0)"))}
                 
                 return customCell20
             }
@@ -326,17 +325,22 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 
 extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
     
+//    var photoImagePicker = PhotoPickerCollectionViewCell()
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-//        let image = PhotoPickerCollectionViewCell()
-        
-        var imageView:UIImageView!
-        
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            imageView?.image = image
-        }
-
+//        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+//            photoImagePicker.photoImagePicker.image = image
+//    }
         picker.dismiss(animated: true, completion: nil)
         print("\(info)")
     }
-}
+
+       
+    }
+    
+

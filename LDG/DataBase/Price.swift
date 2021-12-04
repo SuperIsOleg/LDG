@@ -10,4 +10,5 @@ import RealmSwift
 
 class Price: Object {
     @Persisted var price: String = ""
+    @Persisted var currency: String = ""
 }
