@@ -42,7 +42,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="floorOfHousTextField" destination="r3u-WX-hIY" id="PRg-By-0pT"/>
+                <outlet property="floorOfHousField" destination="r3u-WX-hIY" id="PRg-By-0pT"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="83.370535714285708"/>
         </tableViewCell>

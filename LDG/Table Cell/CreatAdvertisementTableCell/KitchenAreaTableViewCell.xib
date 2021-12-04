@@ -39,7 +39,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="kitchenAreaTextField" destination="Dc1-Pg-bgT" id="Si9-kn-DEg"/>
+                <outlet property="kitchenAreaField" destination="Dc1-Pg-bgT" id="Si9-kn-DEg"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="95.089285714285708"/>
         </tableViewCell>

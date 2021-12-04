@@ -8,8 +8,10 @@
 import UIKit
 
 class DescriptionTableViewCell: UITableViewCell {
+    
+    var clouser: ((String) -> Void) = { _ in }
 
-    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var descriptionField: UITextField!
     
     static let identifier = "DescriptionTableViewCell"
     
@@ -31,7 +33,11 @@ class DescriptionTableViewCell: UITableViewCell {
     }
     
     func  configureTextField() {
-        descriptionTextField.delegate = self
+        descriptionField.delegate = self
+        descriptionField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
 }
 

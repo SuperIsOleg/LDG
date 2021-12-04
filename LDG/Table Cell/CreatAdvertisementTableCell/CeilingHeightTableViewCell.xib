@@ -39,7 +39,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="ceilingHeightTextField" destination="yYq-V9-rH1" id="5n7-ai-it2"/>
+                <outlet property="ceilingHeightField" destination="yYq-V9-rH1" id="5n7-ai-it2"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="98.102678571428569"/>
         </tableViewCell>

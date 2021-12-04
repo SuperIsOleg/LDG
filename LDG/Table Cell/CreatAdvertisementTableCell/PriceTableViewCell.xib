@@ -46,8 +46,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="currencyTextField" destination="CfE-oR-9dD" id="bOa-E1-nL5"/>
-                <outlet property="priceTextField" destination="d8e-bJ-ITw" id="DV3-1B-EMf"/>
+                <outlet property="currencyField" destination="CfE-oR-9dD" id="bOa-E1-nL5"/>
+                <outlet property="priceField" destination="d8e-bJ-ITw" id="DV3-1B-EMf"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="95.089285714285708"/>
         </tableViewCell>

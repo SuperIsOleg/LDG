@@ -8,11 +8,12 @@
 import UIKit
 
 class PriceTableViewCell: UITableViewCell {
-
-   
-    @IBOutlet weak var currencyTextField: UITextField!
     
-    @IBOutlet weak var priceTextField: UITextField!
+    var clouser: ((String) -> Void) = { _ in }
+
+    @IBOutlet weak var currencyField: UITextField!
+    
+    @IBOutlet weak var priceField: UITextField!
     
     var pickerView = UIPickerView()
     
@@ -31,11 +32,9 @@ class PriceTableViewCell: UITableViewCell {
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        currencyTextField.inputView = pickerView
-        currencyTextField.textAlignment = .right
-        currencyTextField.textColor = .red
-        
-        
+        currencyField.inputView = pickerView
+        currencyField.textAlignment = .right
+        currencyField.textColor = .red
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -60,12 +59,17 @@ extension PriceTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        currencyTextField.text = currency[row]
-        currencyTextField.resignFirstResponder()
+        currencyField.text = currency[row]
+        currencyField.resignFirstResponder()
     }
     
     func  configureTextField() {
-        priceTextField.delegate = self
+        priceField.delegate = self
+        priceField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+        currencyField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
 }
 

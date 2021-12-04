@@ -2,15 +2,13 @@
 //  NumberOfRooms.swift
 //  LDG
 //
-//  Created by Home on 7.11.21.
+//  Created by Home on 4.12.21.
 //
 
 import Foundation
 import RealmSwift
 
 class NumberOfRooms: Object {
-    @Persisted(primaryKey: true) var id: ObjectId
-    
-    @Persisted var numberOfRooms: Int?
+    @Persisted var numberOfRooms: String = ""
 
 }

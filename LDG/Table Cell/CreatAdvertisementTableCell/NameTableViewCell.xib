@@ -39,7 +39,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="nameTextField" destination="Eqv-Rg-25Y" id="5cz-GF-ILt"/>
+                <outlet property="nameField" destination="Eqv-Rg-25Y" id="5cz-GF-ILt"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="95.089285714285708"/>
         </tableViewCell>

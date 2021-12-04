@@ -17,7 +17,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     private let disposeBag = DisposeBag()
     
-    let button: UIButton = {
+    let addAdvertisementButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Подать объявление", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -31,6 +31,10 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     func bind(viewModel: CreatAdvertisementViewModel) {
         self.viewModel = viewModel
+        
+        addAdvertisementButton.rx.tap
+            .bind(onNext: viewModel.addAdvertisementTapped)
+            .disposed(by: disposeBag)
         
     }
     
@@ -105,12 +109,14 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         case 0:
             if indexPath.row < 1 {
                 let customCell0 = tableView.dequeueReusableCell(withIdentifier: PhotoPickerTableViewCell.identifier, for: indexPath) as! PhotoPickerTableViewCell
+                
                 customCell0.configure {
                     let imagePickerController = UIImagePickerController()
                     imagePickerController.delegate = self
                     imagePickerController.allowsEditing = true
                     imagePickerController.sourceType = .photoLibrary
                     self.present(imagePickerController, animated: true)
+                    
                 }
                 return customCell0
             }
@@ -141,6 +147,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 5 {
                 let customCell5 = tableView.dequeueReusableCell(withIdentifier: KitchenAreaTableViewCell.identifier, for: indexPath) as! KitchenAreaTableViewCell
+                
+                customCell5.clouser = {viewModel.kitchenAreaFieldChanged($0)}
+                
                 return customCell5
             }
             
@@ -151,6 +160,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 7 {
                 let customCell7 = tableView.dequeueReusableCell(withIdentifier: CeilingHeightTableViewCell.identifier, for: indexPath) as! CeilingHeightTableViewCell
+                
+                customCell7.clouser = {viewModel.ceilingHeightFieldChanged(String($0))}
+                
                 return customCell7
             }
             
@@ -161,11 +173,17 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 9 {
                 let customCell9 = tableView.dequeueReusableCell(withIdentifier: FloorTableViewCell.identifier, for: indexPath) as! FloorTableViewCell
+                
+                customCell9.clouser = {viewModel.floorFieldChanged(String($0))}
+                
                 return customCell9
             }
             
             if indexPath.row < 10 {
                 let customCell10 = tableView.dequeueReusableCell(withIdentifier: FloorOfTheHouseTableViewCell.identifier, for: indexPath) as! FloorOfTheHouseTableViewCell
+                
+                customCell10.clouser = {viewModel.floorOfHousFieldChanged(String($0))}
+                
                 return customCell10
             }
             
@@ -176,6 +194,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 12 {
                 let customCell12 = tableView.dequeueReusableCell(withIdentifier: YearOfConstructionTableViewCell.identifier, for: indexPath) as! YearOfConstructionTableViewCell
+                
+                customCell12.clouser = {viewModel.yearsOfConstructionFieldChanged(String($0))}
+                
                 return customCell12
             }
             
@@ -189,10 +210,17 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             }
             if indexPath.row < 15 {
                 let customCell15 = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for: indexPath) as! DescriptionTableViewCell
+                
+                customCell15.clouser = {viewModel.descriptionFieldChanged($0)}
+                
                 return customCell15
             }
             if indexPath.row < 16 {
                 let customCell16 = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as! PriceTableViewCell
+                
+                customCell16.clouser = {viewModel.priceFieldChanged(String($0))}
+                customCell16.clouser = {viewModel.currencyFieldChanged(String($0))}
+                
                 return customCell16
             }
             if indexPath.row < 17 {
@@ -201,14 +229,23 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             }
             if indexPath.row < 18 {
                 let customCell18 = tableView.dequeueReusableCell(withIdentifier: AddresTableViewCell.identifier, for: indexPath) as! AddresTableViewCell
+                
+                customCell18.clouser = {viewModel.adressFieldChanged(String($0))}
+                
                 return customCell18
             }
             if indexPath.row < 19 {
                 let customCell19 = tableView.dequeueReusableCell(withIdentifier: NameTableViewCell.identifier, for: indexPath) as! NameTableViewCell
+                
+                customCell19.clouser = {viewModel.nameFieldChanged($0)}
+                
                 return customCell19
             }
             if indexPath.row < 20 {
                 let customCell20 = tableView.dequeueReusableCell(withIdentifier: PhoneNumberTableViewCell.identifier, for: indexPath) as! PhoneNumberTableViewCell
+                
+                customCell20.clouser = {viewModel.phoneNumberFieldChanged(String($0))}
+                
                 return customCell20
             }
             return UITableViewCell()
@@ -236,13 +273,13 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         footer.backgroundColor = .secondarySystemBackground
         tableView.tableFooterView = footer
         
-        footer.addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
+        footer.addSubview(addAdvertisementButton)
+        addAdvertisementButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             //            button.centerYAnchor.constraint(equalTo: footer.centerYAnchor),
-            button.centerXAnchor.constraint(equalTo: footer.centerXAnchor),
-            button.heightAnchor.constraint(equalToConstant: 60),
-            button.widthAnchor.constraint(equalToConstant: 370)
+            addAdvertisementButton.centerXAnchor.constraint(equalTo: footer.centerXAnchor),
+            addAdvertisementButton.heightAnchor.constraint(equalToConstant: 60),
+            addAdvertisementButton.widthAnchor.constraint(equalToConstant: 370)
         ])
         
         view.addSubview(tableView)
@@ -290,6 +327,8 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+//        let image = PhotoPickerCollectionViewCell()
         
         var imageView:UIImageView!
         

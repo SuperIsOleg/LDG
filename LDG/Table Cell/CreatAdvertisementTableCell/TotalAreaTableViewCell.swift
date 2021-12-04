@@ -13,13 +13,11 @@ class TotalAreaTableViewCell: UITableViewCell {
     
     var clouser: ((String) -> Void) = { _ in }
     
-    
     @IBOutlet weak var totalAreaField: UITextField!
     
     static let identifier = "TotalAreaTableViewCell"
     
     static func nib () -> UINib {
-        
         return UINib(nibName: "TotalAreaTableViewCell", bundle: nil)
     }
     
@@ -28,16 +26,12 @@ class TotalAreaTableViewCell: UITableViewCell {
         configureTextField()
     }
     
-   
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.selectionStyle = .none
         // Configure the view for the selected state
     }
-    
-    
-    
+
     func  configureTextField() {
         totalAreaField.delegate = self
         totalAreaField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)

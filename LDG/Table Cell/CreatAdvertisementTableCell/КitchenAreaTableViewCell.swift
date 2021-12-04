@@ -9,8 +9,9 @@ import UIKit
 
 class KitchenAreaTableViewCell: UITableViewCell {
 
+    var clouser: ((String) -> Void) = { _ in }
     
-    @IBOutlet weak var kitchenAreaTextField: UITextField!
+    @IBOutlet weak var kitchenAreaField: UITextField!
     
     static let identifier = "KitchenAreaTableViewCell"
     
@@ -32,7 +33,11 @@ class KitchenAreaTableViewCell: UITableViewCell {
     }
     
     func  configureTextField() {
-        kitchenAreaTextField.delegate = self
+        kitchenAreaField.delegate = self
+        kitchenAreaField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
 }
 

@@ -9,8 +9,9 @@ import UIKit
 
 class PhoneNumberTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
     
-    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var phoneNumberField: UITextField!
     
     static let identifier = "PhoneNumberTableViewCell"
     
@@ -32,7 +33,12 @@ class PhoneNumberTableViewCell: UITableViewCell {
     }
     
     func  configureTextField() {
-        phoneNumberTextField.delegate = self
+        phoneNumberField.delegate = self
+        phoneNumberField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
 }
 

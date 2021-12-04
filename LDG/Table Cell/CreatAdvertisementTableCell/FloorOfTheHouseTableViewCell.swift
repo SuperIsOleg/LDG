@@ -9,8 +9,9 @@ import UIKit
 
 class FloorOfTheHouseTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
     
-    @IBOutlet weak var floorOfHousTextField: UITextField!
+    @IBOutlet weak var floorOfHousField: UITextField!
     
     var pickerView = UIPickerView()
     
@@ -28,14 +29,22 @@ class FloorOfTheHouseTableViewCell: UITableViewCell {
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        floorOfHousTextField.inputView = pickerView
-        floorOfHousTextField.textAlignment = .right
+        floorOfHousField.inputView = pickerView
+        floorOfHousField.textAlignment = .right
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.selectionStyle = .none
         // Configure the view for the selected state
+    }
+    
+    func  configureTextField() {
+        floorOfHousField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
     
 }
@@ -54,8 +63,8 @@ extension FloorOfTheHouseTableViewCell: UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        floorOfHousTextField.text = String(floorfloorOfHous[row])
-        floorOfHousTextField.resignFirstResponder()
+        floorOfHousField.text = String(floorfloorOfHous[row])
+        floorOfHousField.resignFirstResponder()
     }
     
 }

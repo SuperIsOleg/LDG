@@ -8,9 +8,10 @@
 import UIKit
 
 class YearOfConstructionTableViewCell: UITableViewCell {
-
     
-    @IBOutlet weak var yearsOfConstructionTextField: UITextField!
+    var clouser: ((String) -> Void) = { _ in }
+
+    @IBOutlet weak var yearsOfConstructionField: UITextField!
     
     var yearsOfConstruction: [Int] = Array(1950...2021)
     
@@ -28,14 +29,22 @@ class YearOfConstructionTableViewCell: UITableViewCell {
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        yearsOfConstructionTextField.inputView = pickerView
-        yearsOfConstructionTextField.textAlignment = .right
+        yearsOfConstructionField.inputView = pickerView
+        yearsOfConstructionField.textAlignment = .right
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.selectionStyle = .none
         // Configure the view for the selected state
+    }
+    
+    func  configureTextField() {
+        yearsOfConstructionField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
     
 }
@@ -54,8 +63,8 @@ extension YearOfConstructionTableViewCell: UIPickerViewDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        yearsOfConstructionTextField.text = String(yearsOfConstruction[row])
-        yearsOfConstructionTextField.resignFirstResponder()
+        yearsOfConstructionField.text = String(yearsOfConstruction[row])
+        yearsOfConstructionField.resignFirstResponder()
     }
     
 }

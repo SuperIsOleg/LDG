@@ -9,8 +9,9 @@ import UIKit
 
 class NameTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     
     static let identifier = "NameTableViewCell"
     
@@ -32,7 +33,11 @@ class NameTableViewCell: UITableViewCell {
     }
     
     func  configureTextField() {
-        nameTextField.delegate = self
+        nameField.delegate = self
+        nameField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
 }
 

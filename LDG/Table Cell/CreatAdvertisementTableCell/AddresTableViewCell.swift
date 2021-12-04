@@ -8,8 +8,10 @@
 import UIKit
 
 class AddresTableViewCell: UITableViewCell {
+    
+    var clouser: ((String) -> Void) = { _ in }
 
-    @IBOutlet weak var adressTextField: UITextField!
+    @IBOutlet weak var adressField: UITextField!
     
     static let identifier = "AddresTableViewCell"
     
@@ -31,7 +33,12 @@ class AddresTableViewCell: UITableViewCell {
     }
     
     func  configureTextField() {
-        adressTextField.delegate = self
+        adressField.delegate = self
+        adressField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
 }
 

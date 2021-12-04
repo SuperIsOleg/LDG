@@ -9,9 +9,9 @@ import UIKit
 
 class FloorTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
     
-    
-    @IBOutlet weak var floorTextField: UITextField!
+    @IBOutlet weak var floorField: UITextField!
     
     var floor: [Int] = Array(1...100)
     
@@ -29,8 +29,8 @@ class FloorTableViewCell: UITableViewCell {
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        floorTextField.inputView = pickerView
-        floorTextField.textAlignment = .right
+        floorField.inputView = pickerView
+        floorField.textAlignment = .right
         
         
     }
@@ -39,6 +39,14 @@ class FloorTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         self.selectionStyle = .none
         // Configure the view for the selected state
+    }
+    
+    func  configureTextField() {
+        floorField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
     
 }
@@ -57,8 +65,8 @@ extension FloorTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        floorTextField.text = String(floor[row])
-        floorTextField.resignFirstResponder()
+        floorField.text = String(floor[row])
+        floorField.resignFirstResponder()
     }
     
 }

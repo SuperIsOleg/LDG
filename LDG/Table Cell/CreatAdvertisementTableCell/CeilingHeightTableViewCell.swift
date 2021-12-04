@@ -9,8 +9,9 @@ import UIKit
 
 class CeilingHeightTableViewCell: UITableViewCell {
 
+    var clouser: ((String) -> Void) = { _ in }
     
-    @IBOutlet weak var ceilingHeightTextField: UITextField!
+    @IBOutlet weak var ceilingHeightField: UITextField!
     
     
     static let identifier = "CeilingHeightTableViewCell"
@@ -33,7 +34,12 @@ class CeilingHeightTableViewCell: UITableViewCell {
     }
     
     func  configureTextField() {
-        ceilingHeightTextField.delegate = self
+        ceilingHeightField.delegate = self
+        ceilingHeightField.addTarget(self, action: #selector(textChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textChange(_ sender: UITextField) {
+        clouser(sender.text ?? "")
     }
 }
 

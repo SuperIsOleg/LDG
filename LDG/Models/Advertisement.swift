@@ -11,7 +11,7 @@ import RealmSwift
 class Advertisement: Object {
     
     var adress: List<Address> = List()
-    var contact: List<Contact> = List()
+    var contact: List<Name> = List()
     var descriptions: Description?
     var image: Image?
     var like: Like?
