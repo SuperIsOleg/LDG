@@ -23,16 +23,55 @@ final class CreatAdvertisementViewModel {
         _addAdvertisementTapped.accept(())
     }
     
-    private let _postAnAdTapped = PublishRelay<Void>()
-    func postAnAdTapped() {
-        _postAnAdTapped.accept(())
+    // для переключателя
+    private let _inANewBuildingTextChanged = PublishRelay<String>()
+    func inANewBuildingTextChanged(_ text: String) {
+        _inANewBuildingTextChanged.accept(text)
     }
     
+    
+ 
+    
+    private let _typeOfTransactionTextChanged = PublishRelay<String>()
+    func typeOfTransactionTextChanged(_ text: String) {
+        _typeOfTransactionTextChanged.accept(text)
+    }
+    
+    private let _numberOfRoomsTextChanged = PublishRelay<String>()
+    func numberOfRoomsTextChanged(_ text: String) {
+        _numberOfRoomsTextChanged.accept(text)
+    }
+    
+    private let _typeOfRoomsTextChanged = PublishRelay<String>()
+    func typeOfRoomsTextChanged(_ text: String) {
+        _typeOfRoomsTextChanged.accept(text)
+    }
+    
+    private let _balconyTextChanged = PublishRelay<String>()
+    func balconyTextChanged(_ text: String) {
+        _balconyTextChanged.accept(text)
+    }
+    
+    private let _availabilityOfFurnitureTextChanged = PublishRelay<String>()
+    func availabilityOfFurnitureTextChanged(_ text: String) {
+        _availabilityOfFurnitureTextChanged.accept(text)
+    }
+    
+    private let _wallMaterialTextChanged = PublishRelay<String>()
+    func wallMaterialTextChanged(_ text: String) {
+        _wallMaterialTextChanged.accept(text)
+    }
+    
+    private let _conditionTextChanged = PublishRelay<String>()
+    func conditionTextChanged(_ text: String) {
+        _conditionTextChanged.accept(text)
+    }
     
     private let _totalAreaTextFieldChanged = PublishRelay<String>()
     func totalAreaTextFieldChanged(_ text: String) {
         _totalAreaTextFieldChanged.accept(text)
     }
+    
     
     private let _kitchenAreaFieldChanged = PublishRelay<String>()
     func kitchenAreaFieldChanged(_ text: String) {
@@ -90,6 +129,43 @@ final class CreatAdvertisementViewModel {
     }
     
     
+  
+  // для переключателя
+    lazy var inANewBuildingText = _inANewBuildingTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    
+    
+    
+    lazy var typeOfTransactionText = _typeOfTransactionTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var numberOfRoomsText = _numberOfRoomsTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var typeOfRoomsText = _typeOfRoomsTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var balconyText = _balconyTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var availabilityOfFurnitureText = _availabilityOfFurnitureTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var wallMaterialText = _wallMaterialTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
+    lazy var conditionText = _conditionTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
+    
     lazy var totalAreaFieldText = _totalAreaTextFieldChanged
         .asDriver(onErrorJustReturn: "")
         .startWith("")
@@ -138,40 +214,41 @@ final class CreatAdvertisementViewModel {
         .asDriver(onErrorJustReturn: "")
         .startWith("")
     
-    //    var arrayField = [totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText,  yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]
+    var arrayFieldText = [totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText,  yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]
     
-    //        .withLatestFrom(Observable.combineLatest(totalAreaFieldText.asObservable(),
-    //            kitchenAreaFieldText.asObservable(),
-    //            ceilingHeightFieldText.asObservable(),
-    //            floorFieldText.asObservable(),
-    //            floorOfHousFieldText.asObservable(),
-    //            yearsOfConstructionFieldText.asObservable(),
-    //            descriptionFieldText.asObservable(),
-    //            priceFieldText.asObservable(),
-    //            currencyFieldText.asObservable(),
-    //            adressFieldText.asObservable(),
-    //            nameFieldText.asObservable(),
-    //            phoneNumberFieldText.asObservable()
-    //        ))
+//    (Observable.combineLatest(
+//        typeOfTransactionText.asObservable(),
+//        numberOfRoomsText.asObservable(),
+//        typeOfRoomsText.asObservable(),
+//        balconyText.asObservable(),
+//        availabilityOfFurnitureText.asObservable(),
+//        wallMaterialText.asObservable(),
+//        conditionText.asObservable(),
+//        totalAreaFieldText.asObservable(),
+//        kitchenAreaFieldText.asObservable(),
+//        ceilingHeightFieldText.asObservable(),
+//        floorFieldText.asObservable(),
+//        floorOfHousFieldText.asObservable(),
+//        yearsOfConstructionFieldText.asObservable(),
+//        descriptionFieldText.asObservable(),
+//        priceFieldText.asObservable(),
+//        currencyFieldText.asObservable(),
+//        adressFieldText.asObservable(),
+//        nameFieldText.asObservable(),
+//        phoneNumberFieldText.asObservable()
+//    ))
+
+    
+//    for item in arrayFieldText {
+//        item.asObservable()
+//    }
     
     lazy var route: Signal<Route> = Signal
         .merge(
             _addAdvertisementTapped.asObservable()
-                .withLatestFrom(Observable.combineLatest(totalAreaFieldText.asObservable(),
-                                                    kitchenAreaFieldText.asObservable(),
-                                                    ceilingHeightFieldText.asObservable(),
-                                                    floorFieldText.asObservable(),
-                                                    floorOfHousFieldText.asObservable(),
-                                                    yearsOfConstructionFieldText.asObservable(),
-                                                    descriptionFieldText.asObservable(),
-                                                    priceFieldText.asObservable(),
-                                                    currencyFieldText.asObservable(),
-                                                    adressFieldText.asObservable(),
-                                                    nameFieldText.asObservable(),
-                                                    phoneNumberFieldText.asObservable()
-                                                   ))
-                .flatMapLatest { totalArea, kitchenArea, ceilingHeight, floor, floorOfTheHouse, yearOfConstruction, descriptions, price, currency, address, name, phoneNumber in
-                    AdvertisementRepository.shared.AddAdvertisement(totalArea: totalArea, kitchenArea: kitchenArea, ceilingHeight: ceilingHeight, floor: floor, floorOfTheHouse: floorOfTheHouse, yearOfConstruction: yearOfConstruction, descriptions: descriptions, price: price, currency: currency, address: address, name: name, phoneNumber: phoneNumber)
+                .withLatestFrom(Observable.arrayFieldText.forEach($0.asObservable()))
+                .flatMapLatest { typeOfTransaction, numberOfRooms, typeOfRooms, balcony, availabilityOfFurniture, wallMaterial, condition, totalArea, kitchenArea, ceilingHeight, floor, floorOfTheHouse, yearOfConstruction, descriptions, price, currency, address, name, phoneNumber in
+                    AdvertisementRepository.shared.AddAdvertisement(typeOfTransaction: typeOfTransaction, numberOfRooms: numberOfRooms, typeOfRooms: typeOfRooms, balcony: balcony, availabilityOfFurniture: availabilityOfFurniture, wallMaterial: wallMaterial, condition: condition, totalArea: totalArea, kitchenArea: kitchenArea, ceilingHeight: ceilingHeight, floor: floor, floorOfTheHouse: floorOfTheHouse, yearOfConstruction: yearOfConstruction, descriptions: descriptions, price: price, currency: currency, address: address, name: name, phoneNumber: phoneNumber)
                         .debug("Add Advertisement Result")
                         .asSignal(onErrorSignalWith: .never())
                 }

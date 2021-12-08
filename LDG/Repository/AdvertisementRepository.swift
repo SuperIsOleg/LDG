@@ -19,9 +19,16 @@ final class AdvertisementRepository {
     init() {
     }
     
-    func AddAdvertisement(totalArea: String, kitchenArea: String, ceilingHeight: String, floor: String, floorOfTheHouse: String, yearOfConstruction: String, descriptions: String, price: String, currency: String, address: String, name: String, phoneNumber: String) -> Single<Bool>  {
+    func AddAdvertisement(typeOfTransaction:String, numberOfRooms:String, typeOfRooms:String, balcony:String, availabilityOfFurniture:String, wallMaterial:String, condition:String, totalArea: String, kitchenArea: String, ceilingHeight: String, floor: String, floorOfTheHouse: String, yearOfConstruction: String, descriptions: String, price: String, currency: String, address: String, name: String, phoneNumber: String) -> Single<Bool>  {
        
         let advertisement = Advertisement()
+        advertisement.typeOfTransaction?.typeOfTransaction = typeOfTransaction
+        advertisement.numberOfRooms?.numberOfRooms = numberOfRooms
+        advertisement.typeOfRooms?.typeOfRooms = typeOfRooms
+        advertisement.balcony?.balcony = balcony
+        advertisement.availabilityOfFurniture?.availabilityOfFurniture = availabilityOfFurniture
+        advertisement.wallMaterial?.wallMaterial = wallMaterial
+        advertisement.condition?.condition = condition
         advertisement.totalArea?.totalArea = totalArea
         advertisement.kitchenArea?.kitchenArea = kitchenArea
         advertisement.ceilingHeight?.ceilingHeight = ceilingHeight

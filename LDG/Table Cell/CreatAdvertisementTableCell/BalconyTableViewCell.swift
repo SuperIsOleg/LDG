@@ -9,6 +9,8 @@ import UIKit
 
 class BalconyTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
+    
     @IBOutlet weak var haveButton: UIButton!
     
     @IBOutlet weak var noButton: UIButton!
@@ -19,6 +21,8 @@ class BalconyTableViewCell: UITableViewCell {
         noButton.isSelected = false
         
         sender.isSelected = true
+        
+        clouser(sender.currentTitle ?? "")
     }
 
     static let identifier = "BalconyTableViewCell"

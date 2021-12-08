@@ -10,6 +10,8 @@ import RxSwift
 import RxCocoa
 import RxSwiftExt
 import RAMAnimatedTabBarController
+import Photos
+import PhotosUI
 
 final class CreatAdvertisementViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -34,7 +36,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         
         addAdvertisementButton.rx.tap
             .bind(onNext: viewModel.addAdvertisementTapped)
-            .disposed(by: disposeBag)   
+            .disposed(by: disposeBag)
     }
     
     func animatedTableView() {
@@ -117,28 +119,51 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
                     self.present(imagePickerController, animated: true)
                     
                 }
+                
+                customCell0.photoImageArray {
+                    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+                        
+                        var images = [UIImage]()
+                        
+                        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+                            images.append(image)
+                        }
+                        picker.dismiss(animated: true, completion: nil)
+                        print("\(info)")
+                    }
+                }
+                
                 return customCell0
             }
         case 1:
             
             if indexPath.row < 1 {
                 let customCell1 = tableView.dequeueReusableCell(withIdentifier: TypeOfTransactionTableViewCell.identifier, for: indexPath) as! TypeOfTransactionTableViewCell
+                
+                customCell1.clouser = {viewModel.typeOfTransactionTextChanged($0)}
+                
                 return customCell1
             }
             
             if indexPath.row < 2 {
                 let customCell2 = tableView.dequeueReusableCell(withIdentifier: NumberOfRoomsTableViewCell.identifier, for: indexPath) as! NumberOfRoomsTableViewCell
+                
+                customCell2.clouser = {viewModel.numberOfRoomsTextChanged($0)}
+                
                 return customCell2
             }
             
             if indexPath.row < 3 {
                 let customCell3 = tableView.dequeueReusableCell(withIdentifier: TypeOfRoomsTableViewCell.identifier, for: indexPath) as! TypeOfRoomsTableViewCell
+                
+                customCell3.clouser = {viewModel.typeOfRoomsTextChanged($0)}
+                
                 return customCell3
             }
             
             if indexPath.row < 4 {
                 let customCell4 = tableView.dequeueReusableCell(withIdentifier: TotalAreaTableViewCell.identifier, for: indexPath) as! TotalAreaTableViewCell
-        
+                
                 customCell4.clouser = {viewModel.totalAreaTextFieldChanged($0)}
                 
                 return customCell4
@@ -154,6 +179,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 6 {
                 let customCell6 = tableView.dequeueReusableCell(withIdentifier: BalconyTableViewCell.identifier, for: indexPath) as! BalconyTableViewCell
+                
+                customCell6.clouser = {viewModel.balconyTextChanged($0)}
+                
                 return customCell6
             }
             
@@ -167,6 +195,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 8 {
                 let customCell8 = tableView.dequeueReusableCell(withIdentifier: AvailabilityOfFurnitureTableViewCell.identifier, for: indexPath) as! AvailabilityOfFurnitureTableViewCell
+                
+                customCell8.clouser = {viewModel.availabilityOfFurnitureTextChanged($0)}
+                
                 return customCell8
             }
             
@@ -188,6 +219,9 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 11 {
                 let customCell11 = tableView.dequeueReusableCell(withIdentifier: WallMaterialTableViewCell.identifier, for: indexPath) as! WallMaterialTableViewCell
+                
+                customCell11.clouser = {viewModel.wallMaterialTextChanged($0)}
+                
                 return customCell11
             }
             
@@ -201,10 +235,16 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             
             if indexPath.row < 13 {
                 let customCell13 = tableView.dequeueReusableCell(withIdentifier: InANewBuildingTableViewCell.identifier, for: indexPath) as! InANewBuildingTableViewCell
+                
+                customCell13.clouser = {viewModel.inANewBuildingTextChanged($0)}
+                
                 return customCell13
             }
             if indexPath.row < 14 {
                 let customCell14 = tableView.dequeueReusableCell(withIdentifier: ConditionTableViewCell.identifier, for: indexPath) as! ConditionTableViewCell
+                
+                customCell14.clouser = {viewModel.conditionTextChanged($0)}
+                
                 return customCell14
             }
             if indexPath.row < 15 {
@@ -252,6 +292,19 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             return UITableViewCell()
         }
         return UITableViewCell()
+    }
+    
+    @objc func keyboardWillShow(_:Notification) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
+    @objc func keyboardWillChangeFrame(notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIView.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: view.frame.height - keyboardFrame.origin.y + 20, right: 0.0)
     }
     
     override init() {
@@ -307,7 +360,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
         
-//        navigationController?.navigationBar.isHidden = true
+        //        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
     }
     
@@ -325,22 +378,21 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 
 extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
     
-//    var photoImagePicker = PhotoPickerCollectionViewCell()
+//    public var images = [UIImage]()
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//
 //        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-//            photoImagePicker.photoImagePicker.image = image
+//            images.append(image)
+//        }
+//        picker.dismiss(animated: true, completion: nil)
+//        print("\(info)")
 //    }
-        picker.dismiss(animated: true, completion: nil)
-        print("\(info)")
-    }
+  
+}
 
-       
-    }
-    
 

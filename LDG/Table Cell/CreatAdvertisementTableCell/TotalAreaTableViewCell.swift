@@ -27,8 +27,15 @@ class TotalAreaTableViewCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        self.selectionStyle = .none
+//        super.setSelected(selected, animated: animated)
+//        self.selectionStyle = .none
+        
+        if selected {
+            totalAreaField.becomeFirstResponder()
+        } else {
+            totalAreaField.resignFirstResponder()
+        }
+        
         // Configure the view for the selected state
     }
 
@@ -45,9 +52,22 @@ class TotalAreaTableViewCell: UITableViewCell {
 
 
 extension TotalAreaTableViewCell: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if !isSelected {
+        setSelected(true, animated: false)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if isSelected {
+        setSelected(false, animated: false)
+        }
     }
     
 }

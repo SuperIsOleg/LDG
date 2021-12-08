@@ -11,7 +11,8 @@ import SwiftUI
 
 class PhotoPickerCollectionViewCell: UICollectionViewCell {
     
-
+   
+    
     @IBOutlet weak var photoImagePicker: UIImageView!
     
     static var identifier = "PhotoPickerCollectionViewCell"
@@ -19,11 +20,6 @@ class PhotoPickerCollectionViewCell: UICollectionViewCell {
     static func nib () -> UINib {
         
         return UINib(nibName: "PhotoPickerCollectionViewCell", bundle: nil)
-    }
-    
-    public func configure() {
-        self.photoImagePicker.contentMode = .scaleAspectFill
-        
     }
     
     override func awakeFromNib() {

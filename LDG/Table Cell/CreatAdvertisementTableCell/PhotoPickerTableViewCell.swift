@@ -17,13 +17,22 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     @IBOutlet var collectionView: UICollectionView!
     
     static func nib () -> UINib {
-        
         return UINib(nibName: "PhotoPickerTableViewCell", bundle: nil)
     }
-    @objc func configure(picker: @escaping () -> Void) {
+    
+     func configure(picker: @escaping () -> Void) {
         collectionView.reloadData()
         clouser = picker
-        
+    }
+    
+    func photoImageArray(array: @escaping () -> Void) {
+       
+       clouser = array
+   }
+    
+  
+    @IBAction func pickerButton(_ sender: Any) {
+        clouser()
     }
     
     override func awakeFromNib() {
@@ -38,25 +47,15 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
         self.selectionStyle = .none
         // Configure the view for the selected state
     }
-    
-    // collectionView
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return images.count
         return 10
     }
     
-    @IBAction func pickerButton(_ sender: Any) {
-        clouser()
-    }
-    
-//    func picker (_ sender: UIButton) {
-//        clouser()
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoPickerCollectionViewCell.identifier, for: indexPath) as! PhotoPickerCollectionViewCell
-//        cell.photoPickerImageButton.addTarget(self, action: #selector(picker), for: .touchUpInside)// ??????
-        cell.configure()
+//        cell.photoImagePicker.image = images[indexPath.row]
         return cell
     }
     
@@ -66,4 +65,4 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
 }
 
-
+    

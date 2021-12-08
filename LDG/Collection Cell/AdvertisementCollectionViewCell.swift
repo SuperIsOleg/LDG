@@ -9,20 +9,25 @@ import UIKit
 
 class AdvertisementCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var likeButton: UIButton!
+    
+    @IBAction func likeButtonTaped(_ sender: UIButton) {
+        
+        if sender.isSelected == true {
+            likeButton.isSelected = false
+        } else if  sender.isSelected == false {
+            likeButton.isSelected = true
+        }
+        
+    }
+    
+    
     
     @IBOutlet weak var imageHouseCell: UIImageView!
     
     @IBOutlet weak var contryLabel: UILabel!
     
     @IBOutlet weak var costCell: UILabel!
-    
-    @IBOutlet weak var likeButton: UIButton!
-    
-    @IBAction func buttonTaped(_ sender: UIButton) {
-        likeButton.isSelected = false
-        
-        sender.isSelected = true
-            }
     
     
     static var identifier = "AdvertisementCollectionViewCell"

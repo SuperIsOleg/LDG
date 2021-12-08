@@ -8,14 +8,31 @@
 import UIKit
 
 class InANewBuildingTableViewCell: UITableViewCell {
-
+    
+    var clouser: ((String) -> Void) = { _ in }
+    
+    @IBOutlet weak var inANewBuildingSwitch: UISwitch!
+    
+    @IBAction func InANewBuildingSwitch(_ sender: UISwitch) {
+        
+        let noText = "Нет"
+        let yesText = "Да"
+        
+        if inANewBuildingSwitch.isSelected == false {
+            clouser(noText)
+        } else if inANewBuildingSwitch.isSelected == true {
+            clouser(yesText)
+        }
+        
+    }
+    
     static let identifier = "InANewBuildingTableViewCell"
     
     static func nib () -> UINib {
         
         return UINib(nibName: "InANewBuildingTableViewCell", bundle: nil)
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

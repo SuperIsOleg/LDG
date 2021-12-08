@@ -8,6 +8,8 @@
 import UIKit
 
 class NumberOfRoomsTableViewCell: UITableViewCell {
+    
+    var clouser: ((String) -> Void) = { _ in }
 
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var twoButton: UIButton!
@@ -25,6 +27,8 @@ class NumberOfRoomsTableViewCell: UITableViewCell {
         fiveButton.isSelected = false
         
         sender.isSelected = true
+        
+        clouser(sender.currentTitle ?? "")
         
     }
     

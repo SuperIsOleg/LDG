@@ -9,6 +9,8 @@ import UIKit
 
 class WallMaterialTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
+    
     @IBOutlet weak var panelButton: UIButton!
     
     @IBOutlet weak var monolithButton: UIButton!
@@ -32,6 +34,8 @@ class WallMaterialTableViewCell: UITableViewCell {
         carcassBlocklyButton.isSelected = false
         
         sender.isSelected = true
+        
+        clouser(sender.currentTitle ?? "")
     }
 
     static let identifier = "WallMaterialTableViewCell"

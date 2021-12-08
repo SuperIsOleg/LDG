@@ -44,7 +44,7 @@
                             <imageReference key="image" image="hand.thumbsup.fill" catalog="system" symbolScale="large"/>
                         </state>
                         <connections>
-                            <action selector="buttonTaped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Ari-ha-06T"/>
+                            <action selector="likeButtonTaped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KrI-mJ-Cgi"/>
                         </connections>
                     </button>
                 </subviews>
@@ -68,7 +68,7 @@
                 <outlet property="contryLabel" destination="o3s-Qh-Tsg" id="cgT-Qs-pJq"/>
                 <outlet property="costCell" destination="pw2-c7-RPk" id="DKz-EI-Vin"/>
                 <outlet property="imageHouseCell" destination="KF2-Hv-UY8" id="z7g-DR-LWp"/>
-                <outlet property="likeButton" destination="08M-6C-PjR" id="W8I-os-jKm"/>
+                <outlet property="likeButton" destination="08M-6C-PjR" id="Y3B-so-cUh"/>
             </connections>
             <point key="canvasLocation" x="296.37681159420293" y="128.23660714285714"/>
         </collectionViewCell>

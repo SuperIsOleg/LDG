@@ -8,6 +8,8 @@
 import UIKit
 
 class TypeOfRoomsTableViewCell: UITableViewCell {
+    
+    var clouser: ((String) -> Void) = { _ in }
 
     @IBOutlet weak var walkThroughButton: UIButton!
     @IBOutlet weak var withASeparateEntranceButton: UIButton!
@@ -17,6 +19,8 @@ class TypeOfRoomsTableViewCell: UITableViewCell {
         withASeparateEntranceButton.isSelected = false
         
         sender.isSelected = true
+        
+        clouser(sender.currentTitle ?? "")
     }
     
     static let identifier = "TypeOfRoomsTableViewCell"

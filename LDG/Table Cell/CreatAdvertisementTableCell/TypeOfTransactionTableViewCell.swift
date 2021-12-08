@@ -9,6 +9,7 @@ import UIKit
 
 class TypeOfTransactionTableViewCell: UITableViewCell {
   
+    var clouser: ((String) -> Void) = { _ in }
    
     @IBOutlet weak var cellsButton: UIButton!
     @IBOutlet weak var changeButton: UIButton!
@@ -20,7 +21,7 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
         
         sender.isSelected = true
         
-//        var buttonTitle = sender.currentTitle
+        clouser(sender.currentTitle ?? "")
     }
     
     static let identifier = "TypeOfTransactionTableViewCell"

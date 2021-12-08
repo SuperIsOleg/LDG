@@ -27,6 +27,9 @@
                         <rect key="frame" x="256" y="12" width="51" height="31"/>
                         <color key="onTintColor" systemColor="systemRedColor"/>
                         <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <action selector="InANewBuildingSwitch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LEF-i6-IZ9"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <constraints>
@@ -39,6 +42,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inANewBuildingSwitch" destination="RTR-YW-0tV" id="vbS-Cl-edC"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="84.040178571428569"/>
         </tableViewCell>
     </objects>

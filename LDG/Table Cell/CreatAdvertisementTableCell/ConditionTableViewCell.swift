@@ -9,6 +9,8 @@ import UIKit
 
 class ConditionTableViewCell: UITableViewCell {
     
+    var clouser: ((String) -> Void) = { _ in }
+    
     @IBOutlet weak var newButton: UIButton!
     
     @IBOutlet weak var secondaryButton: UIButton!
@@ -19,6 +21,8 @@ class ConditionTableViewCell: UITableViewCell {
         secondaryButton.isSelected = false
         
         sender.isSelected = true
+        
+        clouser(sender.currentTitle ?? "")
     }
 
     static let identifier = "ConditionTableViewCell"
