@@ -8,6 +8,23 @@
 import UIKit
 
 class ExchangeTableViewCell: UITableViewCell {
+    
+    var clouser: ((String) -> Void) = { _ in }
+    
+    @IBOutlet weak var exchangeSwitch: UISwitch!
+    
+    @IBAction func exchangeSwitch(_ sender: UISwitch) {
+        
+        let noText = "Нет"
+        let yesText = "Да"
+        
+        if exchangeSwitch.isSelected == false {
+            clouser(noText)
+        } else if exchangeSwitch.isSelected == true {
+            clouser(yesText)
+        }
+        
+    }
 
     static let identifier = "ExchangeTableViewCell"
     

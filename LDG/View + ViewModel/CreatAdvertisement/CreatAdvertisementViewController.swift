@@ -19,6 +19,8 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     private let disposeBag = DisposeBag()
     
+    var images = [UIImage(systemName: "photo.on.rectangle.angled")!]
+    
     let addAdvertisementButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Подать объявление", for: .normal)
@@ -111,28 +113,13 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             if indexPath.row < 1 {
                 let customCell0 = tableView.dequeueReusableCell(withIdentifier: PhotoPickerTableViewCell.identifier, for: indexPath) as! PhotoPickerTableViewCell
                 
-                customCell0.configure {
+                customCell0.configure(images: self.images) {
                     let imagePickerController = UIImagePickerController()
                     imagePickerController.delegate = self
                     imagePickerController.allowsEditing = true
                     imagePickerController.sourceType = .photoLibrary
                     self.present(imagePickerController, animated: true)
-                    
                 }
-                
-                customCell0.photoImageArray {
-                    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-                        
-                        var images = [UIImage]()
-                        
-                        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-                            images.append(image)
-                        }
-                        picker.dismiss(animated: true, completion: nil)
-                        print("\(info)")
-                    }
-                }
-                
                 return customCell0
             }
         case 1:
@@ -264,6 +251,8 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
             }
             if indexPath.row < 17 {
                 let customCell17 = tableView.dequeueReusableCell(withIdentifier: ExchangeTableViewCell.identifier, for: indexPath) as! ExchangeTableViewCell
+                customCell17.clouser = {viewModel.exchangeTextChanged($0)}
+                
                 return customCell17
             }
             if indexPath.row < 18 {
@@ -359,9 +348,14 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-        //        navigationController?.navigationBar.isHidden = true
+
         view.backgroundColor = .white
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let navigationItem = UINavigationItem()
+        navigationItem.title = "Explore"
     }
     
     override func viewDidLayoutSubviews() {
@@ -378,20 +372,20 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 
 extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
     
-//    public var images = [UIImage]()
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//
-//        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-//            images.append(image)
-//        }
-//        picker.dismiss(animated: true, completion: nil)
-//        print("\(info)")
-//    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            images.append(image)
+        }
+        picker.dismiss(animated: true, completion: nil)
+        print("\(info)")
+        
+        tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+    }
   
 }
 

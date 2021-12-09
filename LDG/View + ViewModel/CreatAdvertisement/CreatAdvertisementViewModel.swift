@@ -29,6 +29,11 @@ final class CreatAdvertisementViewModel {
         _inANewBuildingTextChanged.accept(text)
     }
     
+    private let _exchangeTextChanged = PublishRelay<String>()
+    func exchangeTextChanged(_ text: String) {
+        _exchangeTextChanged.accept(text)
+    }
+    
     
  
     
@@ -134,7 +139,10 @@ final class CreatAdvertisementViewModel {
     lazy var inANewBuildingText = _inANewBuildingTextChanged
         .asDriver(onErrorJustReturn: "")
         .startWith("")
-    
+   
+    lazy var exchangeText = _exchangeTextChanged
+        .asDriver(onErrorJustReturn: "")
+        .startWith("")
     
     
     
@@ -214,41 +222,14 @@ final class CreatAdvertisementViewModel {
         .asDriver(onErrorJustReturn: "")
         .startWith("")
     
-    var arrayFieldText = [totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText,  yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]
-    
-//    (Observable.combineLatest(
-//        typeOfTransactionText.asObservable(),
-//        numberOfRoomsText.asObservable(),
-//        typeOfRoomsText.asObservable(),
-//        balconyText.asObservable(),
-//        availabilityOfFurnitureText.asObservable(),
-//        wallMaterialText.asObservable(),
-//        conditionText.asObservable(),
-//        totalAreaFieldText.asObservable(),
-//        kitchenAreaFieldText.asObservable(),
-//        ceilingHeightFieldText.asObservable(),
-//        floorFieldText.asObservable(),
-//        floorOfHousFieldText.asObservable(),
-//        yearsOfConstructionFieldText.asObservable(),
-//        descriptionFieldText.asObservable(),
-//        priceFieldText.asObservable(),
-//        currencyFieldText.asObservable(),
-//        adressFieldText.asObservable(),
-//        nameFieldText.asObservable(),
-//        phoneNumberFieldText.asObservable()
-//    ))
-
-    
-//    for item in arrayFieldText {
-//        item.asObservable()
-//    }
-    
+   lazy var arrayFieldText = [inANewBuildingText, exchangeText, totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText,  yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]
+ 
     lazy var route: Signal<Route> = Signal
         .merge(
             _addAdvertisementTapped.asObservable()
-                .withLatestFrom(Observable.arrayFieldText.forEach($0.asObservable()))
-                .flatMapLatest { typeOfTransaction, numberOfRooms, typeOfRooms, balcony, availabilityOfFurniture, wallMaterial, condition, totalArea, kitchenArea, ceilingHeight, floor, floorOfTheHouse, yearOfConstruction, descriptions, price, currency, address, name, phoneNumber in
-                    AdvertisementRepository.shared.AddAdvertisement(typeOfTransaction: typeOfTransaction, numberOfRooms: numberOfRooms, typeOfRooms: typeOfRooms, balcony: balcony, availabilityOfFurniture: availabilityOfFurniture, wallMaterial: wallMaterial, condition: condition, totalArea: totalArea, kitchenArea: kitchenArea, ceilingHeight: ceilingHeight, floor: floor, floorOfTheHouse: floorOfTheHouse, yearOfConstruction: yearOfConstruction, descriptions: descriptions, price: price, currency: currency, address: address, name: name, phoneNumber: phoneNumber)
+                .withLatestFrom(Observable.combineLatest(arrayFieldText.map{$0.asObservable()}))
+                .flatMapLatest { arrayFields in
+                    AdvertisementRepository.shared.AddAdvertisement(inANewBuilding: arrayFields[0] , exchange: arrayFields[2], typeOfTransaction: arrayFields[3], numberOfRooms: arrayFields[4], typeOfRooms: arrayFields[5], balcony: arrayFields[6], availabilityOfFurniture: arrayFields[7], wallMaterial: arrayFields[8], condition: arrayFields[9], totalArea: arrayFields[10], kitchenArea: arrayFields[11], ceilingHeight: arrayFields[12], floor: arrayFields[13], floorOfTheHouse: arrayFields[14], yearOfConstruction: arrayFields[15], descriptions: arrayFields[16], price: arrayFields[17], currency: arrayFields[18], address: arrayFields[19], name: arrayFields[20], phoneNumber: arrayFields[21])
                         .debug("Add Advertisement Result")
                         .asSignal(onErrorSignalWith: .never())
                 }

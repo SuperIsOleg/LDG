@@ -12,6 +12,8 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
     var clouser: (() -> Void) = {  }
     
+    var images = [UIImage]()
+    
     static let identifier = "PhotoPickerTableViewCell"
     
     @IBOutlet var collectionView: UICollectionView!
@@ -20,15 +22,11 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
         return UINib(nibName: "PhotoPickerTableViewCell", bundle: nil)
     }
     
-     func configure(picker: @escaping () -> Void) {
-        collectionView.reloadData()
+    func configure(images: [UIImage], picker: @escaping () -> Void) {
         clouser = picker
+        self.images = images
+        collectionView.reloadData()
     }
-    
-    func photoImageArray(array: @escaping () -> Void) {
-       
-       clouser = array
-   }
     
   
     @IBAction func pickerButton(_ sender: Any) {
@@ -49,13 +47,12 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return images.count
-        return 10
-    }
+        return images.count
+        }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoPickerCollectionViewCell.identifier, for: indexPath) as! PhotoPickerCollectionViewCell
-//        cell.photoImagePicker.image = images[indexPath.row]
+        cell.photoImagePicker.image = images[indexPath.row]
         return cell
     }
     
