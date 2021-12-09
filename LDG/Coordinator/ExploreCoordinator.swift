@@ -51,6 +51,14 @@ class ExploreCoordinator: CoordinatorType {
         let viewController = CreatAdvertisementViewController()
         let viewModel = CreatAdvertisementViewModel()
         viewController.bind(viewModel: viewModel)
+        viewModel.route.emit(onNext: { [weak self] route in
+            guard let self = self else {
+                return
+            }
+            switch route {
+            case .adAdvertisement:  self.navigationController.dismiss(animated: true, completion: nil)
+            }
+        } ).disposed(by: disposeBag)
         
         return viewController
     }

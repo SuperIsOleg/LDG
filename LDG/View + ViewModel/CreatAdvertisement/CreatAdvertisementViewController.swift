@@ -354,8 +354,14 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationItem = UINavigationItem()
-        navigationItem.title = "Explore"
+        
+       
+        self.navigationItem.title = "Explore"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(notification: )), name: UIView.keyboardWillChangeFrameNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIView.keyboardWillShowNotification, object: nil)
+        
     }
     
     override func viewDidLayoutSubviews() {

@@ -233,9 +233,10 @@ final class CreatAdvertisementViewModel {
                         .debug("Add Advertisement Result")
                         .asSignal(onErrorSignalWith: .never())
                 }
-                .debug("Add Advertisement")
+                
                 .filter { $0 == true }
                 .mapTo(.adAdvertisement)
+                .debug("Add Advertisement")
                 .asSignal(onErrorSignalWith: .never())
         )
     
