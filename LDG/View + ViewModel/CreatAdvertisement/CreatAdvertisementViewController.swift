@@ -19,7 +19,8 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     private let disposeBag = DisposeBag()
     
-    var images = [UIImage(systemName: "photo.on.rectangle.angled")!]
+//    var images = [UIImage(systemName: "photo.on.rectangle.angled")!]
+    var images = [UIImage]()
     
     let addAdvertisementButton: UIButton = {
         let button = UIButton(type: .system)
@@ -354,9 +355,6 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        self.navigationItem.title = "Explore"
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(notification: )), name: UIView.keyboardWillChangeFrameNotification, object: nil)
         

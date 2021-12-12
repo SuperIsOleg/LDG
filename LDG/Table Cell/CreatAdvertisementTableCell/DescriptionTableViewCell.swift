@@ -27,9 +27,14 @@ class DescriptionTableViewCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        self.selectionStyle = .none
+//        super.setSelected(selected, animated: animated)
+//        self.selectionStyle = .none
         // Configure the view for the selected state
+        if selected {
+            descriptionField.becomeFirstResponder()
+        } else {
+            descriptionField.resignFirstResponder()
+        }
     }
     
     func  configureTextField() {
@@ -45,6 +50,18 @@ extension DescriptionTableViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if !isSelected {
+        setSelected(true, animated: false)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if isSelected {
+        setSelected(false, animated: false)
+        }
     }
     
 }

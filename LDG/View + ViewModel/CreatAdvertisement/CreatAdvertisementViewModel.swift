@@ -222,18 +222,17 @@ final class CreatAdvertisementViewModel {
         .asDriver(onErrorJustReturn: "")
         .startWith("")
     
-   lazy var arrayFieldText = [inANewBuildingText, exchangeText, totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText,  yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]
+   lazy var arrayFieldText = [inANewBuildingText, exchangeText, typeOfTransactionText, numberOfRoomsText, typeOfRoomsText, balconyText, availabilityOfFurnitureText, wallMaterialText, conditionText, totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText, yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]
  
     lazy var route: Signal<Route> = Signal
         .merge(
             _addAdvertisementTapped.asObservable()
                 .withLatestFrom(Observable.combineLatest(arrayFieldText.map{$0.asObservable()}))
                 .flatMapLatest { arrayFields in
-                    AdvertisementRepository.shared.AddAdvertisement(inANewBuilding: arrayFields[0] , exchange: arrayFields[2], typeOfTransaction: arrayFields[3], numberOfRooms: arrayFields[4], typeOfRooms: arrayFields[5], balcony: arrayFields[6], availabilityOfFurniture: arrayFields[7], wallMaterial: arrayFields[8], condition: arrayFields[9], totalArea: arrayFields[10], kitchenArea: arrayFields[11], ceilingHeight: arrayFields[12], floor: arrayFields[13], floorOfTheHouse: arrayFields[14], yearOfConstruction: arrayFields[15], descriptions: arrayFields[16], price: arrayFields[17], currency: arrayFields[18], address: arrayFields[19], name: arrayFields[20], phoneNumber: arrayFields[21])
+                    AdvertisementRepository.shared.AddAdvertisement(inANewBuilding: arrayFields[0], exchange: arrayFields[1], typeOfTransaction: arrayFields[2], numberOfRooms: arrayFields[3], typeOfRooms: arrayFields[4], balcony: arrayFields[5], availabilityOfFurniture: arrayFields[6], wallMaterial: arrayFields[7], condition: arrayFields[8], totalArea: arrayFields[9], kitchenArea: arrayFields[10], ceilingHeight: arrayFields[11], floor: arrayFields[12], floorOfTheHouse: arrayFields[13], yearOfConstruction: arrayFields[14], descriptions: arrayFields[15], price: arrayFields[16], currency: arrayFields[17], address: arrayFields[18], name: arrayFields[19], phoneNumber: arrayFields[20])
                         .debug("Add Advertisement Result")
                         .asSignal(onErrorSignalWith: .never())
                 }
-                
                 .filter { $0 == true }
                 .mapTo(.adAdvertisement)
                 .debug("Add Advertisement")

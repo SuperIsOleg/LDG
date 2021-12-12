@@ -27,9 +27,14 @@ class KitchenAreaTableViewCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        self.selectionStyle = .none
+//        super.setSelected(selected, animated: animated)
+//        self.selectionStyle = .none
         // Configure the view for the selected state
+        if selected {
+            kitchenAreaField.becomeFirstResponder()
+        } else {
+            kitchenAreaField.resignFirstResponder()
+        }
     }
     
     func  configureTextField() {
@@ -42,9 +47,21 @@ class KitchenAreaTableViewCell: UITableViewCell {
 }
 
 extension KitchenAreaTableViewCell: UITextFieldDelegate {
+   
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if !isSelected {
+        setSelected(true, animated: false)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if isSelected {
+        setSelected(false, animated: false)
+        }
     }
     
 }
