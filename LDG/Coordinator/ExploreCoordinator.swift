@@ -25,14 +25,34 @@ class ExploreCoordinator: CoordinatorType {
     func showExploreScreen() -> UIViewController {
         let viewController = ExploreViewController()
         let viewModel = ExploreViewModel()
+<<<<<<< HEAD
+        viewController.bind(viewModel: viewModel)
+        viewModel.route.emit(onNext: { [weak self] route in
+            guard let self = self else {
+                return
+            }
+            switch route {
+            case .button: break
+        case .viewingAdvertisement: self.navigationController.pushViewController(self.showViewingAdvertisementScreen(), animated: true)
+                
+            }
+        } ).disposed(by: disposeBag)
+       
+        return viewController
+=======
 //        let nav = UINavigationController(rootViewController: viewController)
         
         viewController.bind(viewModel: viewModel)
 //        viewModel.route.emit { <#()#> in
 //            <#code#>
-//        } 
+//        } onCompleted: {
+//            <#code#>
+//        } onDisposed: {
+//            <#code#>
+//        }
 
         return navigationController
+>>>>>>> main
     }
     
     func showSavedScreen() -> UIViewController {
@@ -47,7 +67,26 @@ class ExploreCoordinator: CoordinatorType {
         let viewController = CreatAdvertisementViewController()
         let viewModel = CreatAdvertisementViewModel()
         viewController.bind(viewModel: viewModel)
+<<<<<<< HEAD
+        viewModel.route.emit(onNext: { [weak self] route in
+            guard let self = self else {
+                return
+            }
+            switch route {
+            case .adAdvertisement:  self.navigationController.dismiss(animated: true, completion: nil)
+            }
+        } ).disposed(by: disposeBag)
+=======
+>>>>>>> main
         
+        return viewController
+    }
+    
+    func showViewingAdvertisementScreen() -> UIViewController {
+        let viewController = ViewingAdvertisementViewController()
+        let viewModel = ViewingAdvertisementViewModel()
+        viewController.bind(viewModel: viewModel)
+
         return viewController
     }
   

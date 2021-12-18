@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NumberOfRoomsTableViewCell" rowHeight="91" id="KGk-i7-Jjw" customClass="NumberOfRoomsTableViewCell" customModule="LDG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комнат в квартире" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI9-gU-ZIy">
+                        <rect key="frame" x="15" y="10" width="151" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hS-XH-QKd">
+<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/NumberOfRoomsTableViewCell.xib
+                        <rect key="frame" x="15" y="46" width="30" height="30"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="1"/>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7UK-qb-7b7"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGO-jA-vVY">
+                        <rect key="frame" x="90" y="46" width="30" height="30"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="3"/>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gVT-af-e91"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5C-go-6Yf">
+                        <rect key="frame" x="126" y="46" width="30" height="31"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="4"/>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="n9L-KB-Ubc"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1X-f1-ZeG">
+                        <rect key="frame" x="53" y="46" width="30" height="30"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="2"/>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gn4-BB-RMK"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWp-nw-eHx">
+                        <rect key="frame" x="164" y="46" width="30" height="30"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="5"/>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e1N-Lq-wOX"/>
+=======
+                        <rect key="frame" x="15" y="46" width="31" height="31"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="1">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x2c-zh-WS0"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGO-jA-vVY">
+                        <rect key="frame" x="94" y="46" width="33" height="31"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="3">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I4r-iZ-zi2"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5C-go-6Yf">
+                        <rect key="frame" x="133" y="46" width="33" height="31"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="4">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="btn-jI-Qwe"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1X-f1-ZeG">
+                        <rect key="frame" x="54" y="46" width="33" height="31"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="2">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hcA-Cy-aaW"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2a-AY-LqN">
+                        <rect key="frame" x="174" y="46" width="33" height="31"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="5">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LCC-xj-fVh"/>
+>>>>>>> main:LDG/Table Cell/NumberOfRoomsTableViewCell.xib
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0hS-XH-QKd" firstAttribute="top" secondItem="iI9-gU-ZIy" secondAttribute="bottom" constant="15" id="6Gb-6N-5ol"/>
+                    <constraint firstItem="y5C-go-6Yf" firstAttribute="top" secondItem="iI9-gU-ZIy" secondAttribute="bottom" constant="15" id="AHy-1x-3iO"/>
+                    <constraint firstAttribute="bottom" secondItem="y5C-go-6Yf" secondAttribute="bottom" constant="14" id="Bha-vt-h96"/>
+                    <constraint firstItem="H1X-f1-ZeG" firstAttribute="leading" secondItem="0hS-XH-QKd" secondAttribute="trailing" constant="8" symbolic="YES" id="ERX-GG-wel"/>
+                    <constraint firstItem="T2a-AY-LqN" firstAttribute="top" secondItem="iI9-gU-ZIy" secondAttribute="bottom" constant="15" id="FRL-AQ-WRz"/>
+                    <constraint firstItem="zGO-jA-vVY" firstAttribute="leading" secondItem="H1X-f1-ZeG" secondAttribute="trailing" constant="7" id="H8d-wB-AbI"/>
+                    <constraint firstItem="iI9-gU-ZIy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="M7t-4s-zwP"/>
+                    <constraint firstItem="zGO-jA-vVY" firstAttribute="top" secondItem="iI9-gU-ZIy" secondAttribute="bottom" constant="15" id="OrJ-el-lhX"/>
+                    <constraint firstItem="0hS-XH-QKd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Rk0-pK-FrB"/>
+                    <constraint firstItem="IWp-nw-eHx" firstAttribute="leading" secondItem="y5C-go-6Yf" secondAttribute="trailing" constant="8" symbolic="YES" id="Yjq-rw-BBw"/>
+                    <constraint firstItem="H1X-f1-ZeG" firstAttribute="top" secondItem="iI9-gU-ZIy" secondAttribute="bottom" constant="15" id="ZEE-27-QVs"/>
+                    <constraint firstItem="IWp-nw-eHx" firstAttribute="top" secondItem="iI9-gU-ZIy" secondAttribute="bottom" constant="15" id="cJg-7z-DZl"/>
+                    <constraint firstItem="iI9-gU-ZIy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dv9-db-Xtl"/>
+                    <constraint firstItem="T2a-AY-LqN" firstAttribute="leading" secondItem="y5C-go-6Yf" secondAttribute="trailing" constant="8" symbolic="YES" id="fgZ-XT-2VR"/>
+                    <constraint firstItem="y5C-go-6Yf" firstAttribute="leading" secondItem="zGO-jA-vVY" secondAttribute="trailing" constant="6" id="r71-iN-rll"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/NumberOfRoomsTableViewCell.xib
+                <outlet property="fiveButton" destination="IWp-nw-eHx" id="psH-nT-BeA"/>
+                <outlet property="fourButton" destination="y5C-go-6Yf" id="m0n-NQ-bTf"/>
+                <outlet property="oneButton" destination="0hS-XH-QKd" id="80y-Z9-pMR"/>
+                <outlet property="threeButton" destination="zGO-jA-vVY" id="xcS-zU-GJT"/>
+                <outlet property="twoButton" destination="H1X-f1-ZeG" id="CZ8-cC-LiL"/>
+=======
+                <outlet property="fiveButton" destination="T2a-AY-LqN" id="GrX-SS-n3N"/>
+                <outlet property="fourButton" destination="y5C-go-6Yf" id="ZUs-8t-fxM"/>
+                <outlet property="oneButton" destination="0hS-XH-QKd" id="bVB-b4-HgN"/>
+                <outlet property="threeButton" destination="zGO-jA-vVY" id="KWZ-is-Jfs"/>
+                <outlet property="twoButton" destination="H1X-f1-ZeG" id="FIw-d4-pX2"/>
+>>>>>>> main:LDG/Table Cell/NumberOfRoomsTableViewCell.xib
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="96.09375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

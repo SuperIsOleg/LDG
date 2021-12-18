@@ -18,17 +18,17 @@ extension CoordinatorType {
         return navigationController.view.window?.windowScene?.delegate as? SceneDelegate
     }
 
-    func coordinate(to coordinator: CoordinatorType, animating: Bool) {
-        func coordinate() {
-            sceneDelegate?.rootCoordinator = coordinator
-        }
-        if animating {
-            UIView.transition(with: sceneDelegate!.window!, duration: 0.2, options: [.transitionFlipFromRight]) {
-                coordinate()
-            } completion: { _ in
-            }
-        } else {
-            coordinate()
-        }
-    }
+//    func coordinate(to coordinator: CoordinatorType, animating: Bool) {
+//        func coordinate() {
+//            sceneDelegate?.rootCoordinator = coordinator
+//        }
+//        if animating {
+//            UIView.transition(with: sceneDelegate!.window!, duration: 0.2, options: [.transitionFlipFromRight]) {
+//                coordinate()
+//            } completion: { _ in
+//            }
+//        } else {
+//            coordinate()
+//        }
+//    }
 }

@@ -12,7 +12,10 @@ import RxSwiftExt
 import RAMAnimatedTabBarController
 import Photos
 import PhotosUI
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 
 final class CreatAdvertisementViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -20,7 +23,10 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     
     private let disposeBag = DisposeBag()
     
-    let button: UIButton = {
+//    var images = [UIImage(systemName: "photo.on.rectangle.angled")!]
+    var images = [UIImage]()
+    
+    let addAdvertisementButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Подать объявление", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -30,12 +36,24 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         return button
     }()
     
+<<<<<<< HEAD
+    var tableView = UITableView(frame: .zero, style: .insetGrouped)
+    
+    func bind(viewModel: CreatAdvertisementViewModel) {
+        self.viewModel = viewModel
+        
+        addAdvertisementButton.rx.tap
+            .bind(onNext: viewModel.addAdvertisementTapped)
+            .disposed(by: disposeBag)
+    }
+=======
     func bind(viewModel: CreatAdvertisementViewModel) {
         self.viewModel = viewModel
         
     }
     
     var tableView = UITableView(frame: .zero, style: .insetGrouped)
+>>>>>>> main
     
     func animatedTableView() {
 //        tableView.reloadData()
@@ -62,19 +80,26 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Добавьте фотографию"
+            return "Добавьте фотографии"
         case 1:
             return "Заполните пустые поля"
         default:
             return ""
         }
+<<<<<<< HEAD
+=======
         
+>>>>>>> main
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:
+<<<<<<< HEAD
+            return 10
+=======
             return 50
+>>>>>>> main
         case 1:
             return 30
         default:
@@ -98,17 +123,33 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     }
     
     
+<<<<<<< HEAD
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let viewModel = viewModel!
+        
+=======
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return UITableView.automaticDimension
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+>>>>>>> main
         switch indexPath.section {
         case 0:
             if indexPath.row < 1 {
                 let customCell0 = tableView.dequeueReusableCell(withIdentifier: PhotoPickerTableViewCell.identifier, for: indexPath) as! PhotoPickerTableViewCell
                 
+<<<<<<< HEAD
+                customCell0.configure(images: self.images) {
+                    let imagePickerController = UIImagePickerController()
+                    imagePickerController.delegate = self
+                    imagePickerController.allowsEditing = true
+                    imagePickerController.sourceType = .photoLibrary
+                    self.present(imagePickerController, animated: true)
+                }
+=======
                 customCell0.configure {
 //                    let imagePickerController = UIImagePickerController()
 //                    imagePickerController.delegate = self
@@ -117,100 +158,221 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 //                    self.present(imagePickerController, animated: true)
                 }
                 
+>>>>>>> main
                 return customCell0
             }
         case 1:
             
             if indexPath.row < 1 {
                 let customCell1 = tableView.dequeueReusableCell(withIdentifier: TypeOfTransactionTableViewCell.identifier, for: indexPath) as! TypeOfTransactionTableViewCell
+<<<<<<< HEAD
+                
+                customCell1.clouser = {viewModel.typeOfTransactionTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell1
             }
             
             if indexPath.row < 2 {
                 let customCell2 = tableView.dequeueReusableCell(withIdentifier: NumberOfRoomsTableViewCell.identifier, for: indexPath) as! NumberOfRoomsTableViewCell
+<<<<<<< HEAD
+                
+                customCell2.clouser = {viewModel.numberOfRoomsTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell2
             }
             
             if indexPath.row < 3 {
                 let customCell3 = tableView.dequeueReusableCell(withIdentifier: TypeOfRoomsTableViewCell.identifier, for: indexPath) as! TypeOfRoomsTableViewCell
+<<<<<<< HEAD
+                
+                customCell3.clouser = {viewModel.typeOfRoomsTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell3
             }
             
             if indexPath.row < 4 {
                 let customCell4 = tableView.dequeueReusableCell(withIdentifier: TotalAreaTableViewCell.identifier, for: indexPath) as! TotalAreaTableViewCell
+<<<<<<< HEAD
+                
+                customCell4.clouser = {viewModel.totalAreaTextFieldChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell4
             }
             
             if indexPath.row < 5 {
                 let customCell5 = tableView.dequeueReusableCell(withIdentifier: KitchenAreaTableViewCell.identifier, for: indexPath) as! KitchenAreaTableViewCell
+<<<<<<< HEAD
+                
+                customCell5.clouser = {viewModel.kitchenAreaFieldChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell5
             }
             
             if indexPath.row < 6 {
                 let customCell6 = tableView.dequeueReusableCell(withIdentifier: BalconyTableViewCell.identifier, for: indexPath) as! BalconyTableViewCell
+<<<<<<< HEAD
+                
+                customCell6.clouser = {viewModel.balconyTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell6
             }
             
             if indexPath.row < 7 {
                 let customCell7 = tableView.dequeueReusableCell(withIdentifier: CeilingHeightTableViewCell.identifier, for: indexPath) as! CeilingHeightTableViewCell
+<<<<<<< HEAD
+                
+                customCell7.clouser = {viewModel.ceilingHeightFieldChanged(String($0))}
+                
+=======
+>>>>>>> main
                 return customCell7
             }
             
             if indexPath.row < 8 {
                 let customCell8 = tableView.dequeueReusableCell(withIdentifier: AvailabilityOfFurnitureTableViewCell.identifier, for: indexPath) as! AvailabilityOfFurnitureTableViewCell
+<<<<<<< HEAD
+                
+                customCell8.clouser = {viewModel.availabilityOfFurnitureTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell8
             }
             
             if indexPath.row < 9 {
                 let customCell9 = tableView.dequeueReusableCell(withIdentifier: FloorTableViewCell.identifier, for: indexPath) as! FloorTableViewCell
+<<<<<<< HEAD
+                
+                customCell9.clouser = {viewModel.floorFieldChanged(String($0))}
+                
+=======
+>>>>>>> main
                 return customCell9
             }
             
             if indexPath.row < 10 {
                 let customCell10 = tableView.dequeueReusableCell(withIdentifier: FloorOfTheHouseTableViewCell.identifier, for: indexPath) as! FloorOfTheHouseTableViewCell
+<<<<<<< HEAD
+                
+                customCell10.clouser = {viewModel.floorOfHousFieldChanged(String($0))}
+                
+=======
+>>>>>>> main
                 return customCell10
             }
             
             if indexPath.row < 11 {
                 let customCell11 = tableView.dequeueReusableCell(withIdentifier: WallMaterialTableViewCell.identifier, for: indexPath) as! WallMaterialTableViewCell
+<<<<<<< HEAD
+                
+                customCell11.clouser = {viewModel.wallMaterialTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell11
             }
             
             if indexPath.row < 12 {
                 let customCell12 = tableView.dequeueReusableCell(withIdentifier: YearOfConstructionTableViewCell.identifier, for: indexPath) as! YearOfConstructionTableViewCell
+<<<<<<< HEAD
+                
+                customCell12.clouser = {viewModel.yearsOfConstructionFieldChanged(String($0))}
+                
+=======
+>>>>>>> main
                 return customCell12
             }
             
             if indexPath.row < 13 {
                 let customCell13 = tableView.dequeueReusableCell(withIdentifier: InANewBuildingTableViewCell.identifier, for: indexPath) as! InANewBuildingTableViewCell
+<<<<<<< HEAD
+                
+                customCell13.clouser = {viewModel.inANewBuildingTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell13
             }
             if indexPath.row < 14 {
                 let customCell14 = tableView.dequeueReusableCell(withIdentifier: ConditionTableViewCell.identifier, for: indexPath) as! ConditionTableViewCell
+<<<<<<< HEAD
+                
+                customCell14.clouser = {viewModel.conditionTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell14
             }
             if indexPath.row < 15 {
                 let customCell15 = tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier, for: indexPath) as! DescriptionTableViewCell
+<<<<<<< HEAD
+                
+                customCell15.clouser = {viewModel.descriptionFieldChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell15
             }
             if indexPath.row < 16 {
                 let customCell16 = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as! PriceTableViewCell
+<<<<<<< HEAD
+                
+                customCell16.clouser = {viewModel.priceFieldChanged(String($0))}
+                customCell16.clouser = {viewModel.currencyFieldChanged(String($0))}
+                
+=======
+>>>>>>> main
                 return customCell16
             }
             if indexPath.row < 17 {
                 let customCell17 = tableView.dequeueReusableCell(withIdentifier: ExchangeTableViewCell.identifier, for: indexPath) as! ExchangeTableViewCell
+<<<<<<< HEAD
+                customCell17.clouser = {viewModel.exchangeTextChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell17
             }
             if indexPath.row < 18 {
                 let customCell18 = tableView.dequeueReusableCell(withIdentifier: AddresTableViewCell.identifier, for: indexPath) as! AddresTableViewCell
+<<<<<<< HEAD
+                
+                customCell18.clouser = {viewModel.adressFieldChanged(String($0))}
+                
+=======
+>>>>>>> main
                 return customCell18
             }
             if indexPath.row < 19 {
                 let customCell19 = tableView.dequeueReusableCell(withIdentifier: NameTableViewCell.identifier, for: indexPath) as! NameTableViewCell
+<<<<<<< HEAD
+                
+                customCell19.clouser = {viewModel.nameFieldChanged($0)}
+                
+=======
+>>>>>>> main
                 return customCell19
             }
             if indexPath.row < 20 {
                 let customCell20 = tableView.dequeueReusableCell(withIdentifier: PhoneNumberTableViewCell.identifier, for: indexPath) as! PhoneNumberTableViewCell
+<<<<<<< HEAD
+                
+                customCell20.clouser = {viewModel.phoneNumberFieldChanged(String("+375 \($0)"))}
+                
+=======
+>>>>>>> main
                 return customCell20
             }
             return UITableViewCell()
@@ -220,26 +382,53 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         return UITableViewCell()
     }
     
+<<<<<<< HEAD
+    @objc func keyboardWillShow(_:Notification) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
+    @objc func keyboardWillChangeFrame(notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIView.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: view.frame.height - keyboardFrame.origin.y + 20, right: 0.0)
+    }
+    
+=======
+>>>>>>> main
     override init() {
         super.init()
-        self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 1)
+        
+        self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 3)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMRotationAnimation()
     }
     
     override func loadView() {
         super.loadView()
         
+        tableView.reloadData()
+        
+        animatedTableView()
+        
         let footer = UIView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: 80.0))
         footer.backgroundColor = .secondarySystemBackground
         tableView.tableFooterView = footer
         
-        footer.addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
+        footer.addSubview(addAdvertisementButton)
+        addAdvertisementButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             //            button.centerYAnchor.constraint(equalTo: footer.centerYAnchor),
+<<<<<<< HEAD
+            addAdvertisementButton.centerXAnchor.constraint(equalTo: footer.centerXAnchor),
+            addAdvertisementButton.heightAnchor.constraint(equalToConstant: 60),
+            addAdvertisementButton.widthAnchor.constraint(equalToConstant: 370)
+=======
             button.centerXAnchor.constraint(equalTo: footer.centerXAnchor),
             button.heightAnchor.constraint(equalToConstant: 60),
             button.widthAnchor.constraint(equalToConstant: 370)
+>>>>>>> main
         ])
         
         view.addSubview(tableView)
@@ -269,23 +458,55 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-        navigationController?.navigationBar.isHidden = true
+
         view.backgroundColor = .white
     }
     
+<<<<<<< HEAD
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(notification: )), name: UIView.keyboardWillChangeFrameNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIView.keyboardWillShowNotification, object: nil)
+        
+    }
+    
+=======
+>>>>>>> main
     override func viewDidLayoutSubviews() {
         tableView.frame = view.bounds
+        animatedTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animatedTableView()
-        
     }
     
 }
 
+<<<<<<< HEAD
+extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            images.append(image)
+        }
+        picker.dismiss(animated: true, completion: nil)
+        print("\(info)")
+        
+        tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+    }
+  
+}
+
+=======
 
 //extension CreatAdvertisementViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate   {
 //    
@@ -300,4 +521,5 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
 //        print("\(info)")
 //    }
 //}
+>>>>>>> main
 

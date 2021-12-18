@@ -11,24 +11,15 @@ import SwiftUI
 
 class PhotoPickerCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var photoPickerImageButton: UIButton!
-    
    
-    @IBAction func photoPickerButtonTapd(_ sender: Any) {
-//        showImagePickerController()
-        print("Кнопка нажата")
-    }
+    
+    @IBOutlet weak var photoImagePicker: UIImageView!
     
     static var identifier = "PhotoPickerCollectionViewCell"
 
     static func nib () -> UINib {
         
         return UINib(nibName: "PhotoPickerCollectionViewCell", bundle: nil)
-    }
-    
-    public func configure() {
-        self.photoPickerImageButton.contentMode = .scaleAspectFill
-        
     }
     
     override func awakeFromNib() {
