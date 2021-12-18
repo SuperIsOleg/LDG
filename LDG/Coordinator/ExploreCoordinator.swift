@@ -30,11 +30,7 @@ class ExploreCoordinator: CoordinatorType {
         viewController.bind(viewModel: viewModel)
 //        viewModel.route.emit { <#()#> in
 //            <#code#>
-//        } onCompleted: {
-//            <#code#>
-//        } onDisposed: {
-//            <#code#>
-//        }
+//        } 
 
         return navigationController
     }
