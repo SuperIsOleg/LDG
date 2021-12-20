@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
+import RxCocoa
+import RealmSwift
 
 class AdvertisementCollectionViewCell: UICollectionViewCell {
+    
+    var disposeBag = DisposeBag()
     
     @IBOutlet weak var likeButton: UIButton!
     
@@ -18,17 +24,13 @@ class AdvertisementCollectionViewCell: UICollectionViewCell {
         } else if  sender.isSelected == false {
             likeButton.isSelected = true
         }
-        
     }
-    
-    
-    
+   
     @IBOutlet weak var imageHouseCell: UIImageView!
     
-    @IBOutlet weak var contryLabel: UILabel!
+    @IBOutlet weak var addresLabel: UILabel!
     
-    @IBOutlet weak var costCell: UILabel!
-    
+    @IBOutlet weak var priceLabel: UILabel!
     
     static var identifier = "AdvertisementCollectionViewCell"
 
@@ -55,15 +57,7 @@ class AdvertisementCollectionViewCell: UICollectionViewCell {
     // переиспользуем ячейку
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.imageHouseCell.image = nil
-        self.contryLabel.text = nil
-        self.costCell.text = nil
-    }
-    
-    func setupCell(advertisement:Advertisements) {
-        self.imageHouseCell.image = advertisement.image
-        self.contryLabel.text = advertisement.contry
-        self.costCell.text = advertisement.cost
+        disposeBag = DisposeBag()
     }
 
 }

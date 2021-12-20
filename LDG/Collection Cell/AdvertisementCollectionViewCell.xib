@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="271" height="195"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-Hv-UY8">
+                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-Hv-UY8">
                         <rect key="frame" x="0.0" y="0.0" width="271" height="154"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3s-Qh-Tsg">
@@ -65,10 +65,10 @@
             </constraints>
             <size key="customSize" width="271" height="195"/>
             <connections>
-                <outlet property="contryLabel" destination="o3s-Qh-Tsg" id="cgT-Qs-pJq"/>
-                <outlet property="costCell" destination="pw2-c7-RPk" id="DKz-EI-Vin"/>
+                <outlet property="addresLabel" destination="o3s-Qh-Tsg" id="cgT-Qs-pJq"/>
                 <outlet property="imageHouseCell" destination="KF2-Hv-UY8" id="z7g-DR-LWp"/>
                 <outlet property="likeButton" destination="08M-6C-PjR" id="Y3B-so-cUh"/>
+                <outlet property="priceLabel" destination="pw2-c7-RPk" id="DKz-EI-Vin"/>
             </connections>
             <point key="canvasLocation" x="296.37681159420293" y="128.23660714285714"/>
         </collectionViewCell>
@@ -76,6 +76,7 @@
     <resources>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
         <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
+        <image name="image3" width="800" height="600"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -14,6 +14,20 @@ import RealmSwift
 final class ViewingAdvertisementViewModel {
     
     private let disposeBag = DisposeBag()
+    
+    struct Cell {
+        var address: String
+        var price: String
+    }
+ 
+    private var viewingArray = BehaviorRelay<[Advertisement]>(value: [])
+    
+    lazy var cells = viewingArray.asDriver()
+        .map {
+            $0.map { (advertisement: Advertisement) -> Cell in
+                Cell(address: advertisement.address?.address ?? "", price: advertisement.price?.price ?? "" )
+            }
+        }
 
     private let _buttonTapped = PublishRelay<Void>()
     func buttonTapped() {

@@ -13,16 +13,41 @@ import RealmSwift
 
 final class ExploreViewModel {
     
+    private let disposeBag = DisposeBag()
+    
     enum Route {
         case viewingAdvertisement
         case button
+        
     }
     
-    private let disposeBag = DisposeBag()
+    struct Cell {
+        var addres: String
+        var price: String
+    }
+ 
+    private var exploreArray = BehaviorRelay<[Advertisement]>(value: [])
+    
+    lazy var cells = exploreArray.asDriver()
+        .map {
+            $0.map { (advertisement: Advertisement) -> Cell in
+                Cell(addres: advertisement.address?.address ?? "", price: advertisement.price?.price ?? "" )
+            }
+        }
+
+    private let _refresh = PublishRelay<Void>()
+    func refresh() {
+        _refresh.accept(())
+    }
 
     private let _buttonTapped = PublishRelay<Void>()
     func buttonTapped() {
         _buttonTapped.accept(())
+    }
+    
+    private let _likeButtonTaped = PublishRelay<Void>()
+    func likeButtonTaped() {
+        _likeButtonTaped.accept(())
     }
     
     private let _apartmenetSelected = PublishRelay<Int>()
@@ -30,12 +55,16 @@ final class ExploreViewModel {
         _apartmenetSelected.accept(index)
     }
 
-    lazy var route: Signal<Route> = Signal.merge(_buttonTapped.asSignal().mapTo(.button),
-                                                 _apartmenetSelected.asSignal().map({ Index in
-            .viewingAdvertisement
-    }))
+    lazy var route: Signal<Route> = Signal
+        .merge(_buttonTapped.asSignal()
+                .mapTo(.button),
+               _apartmenetSelected.asSignal()
+                .map({ Index in
+            .viewingAdvertisement}),
+            _likeButtonTaped.asSignal()
+                .mapTo(.button)
+    )
     
-
     init() {
         _buttonTapped.asSignal().emit(onNext: { print("NEXT VC") }).disposed(by: disposeBag)
     }

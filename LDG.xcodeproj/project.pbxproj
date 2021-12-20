@@ -322,7 +322,7 @@
 				F4B444EC27380596002E6E86 /* Collection Cell */,
 				F442D54F273FC1C10088CDE9 /* Table Cell */,
 				F4B444F527386C1C002E6E86 /* Repository */,
-				F42F3A92272199650020DEC6 /* DataBase */,
+				F42F3A92272199650020DEC6 /* Model */,
 				F40EDE2D272F158B00534A8F /* Types */,
 				F42F3A90272198F70020DEC6 /* View + ViewModel */,
 				F42F3A91272199210020DEC6 /* Coordinator */,
@@ -367,7 +367,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		F42F3A92272199650020DEC6 /* DataBase */ = {
+		F42F3A92272199650020DEC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F4B284B12737E44D00675805 /* Advertisement.swift */,
@@ -394,7 +394,7 @@
 				F4B284B52737E50A00675805 /* Name.swift */,
 				F43B92B0275BFB6400C0EB74 /* PhoneNumber.swift */,
 			);
-			path = DataBase;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F42F3A97272199E60020DEC6 /* Explore */ = {

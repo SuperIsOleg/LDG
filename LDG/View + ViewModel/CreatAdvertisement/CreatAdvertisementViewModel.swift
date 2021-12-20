@@ -14,6 +14,7 @@ final class CreatAdvertisementViewModel {
     
     enum Route {
         case adAdvertisement
+        case exploreView
     }
     
     private let disposeBag = DisposeBag()
@@ -22,6 +23,8 @@ final class CreatAdvertisementViewModel {
     func addAdvertisementTapped() {
         _addAdvertisementTapped.accept(())
     }
+    
+    
     
     // для переключателя
     private let _inANewBuildingTextChanged = PublishRelay<String>()
@@ -33,10 +36,7 @@ final class CreatAdvertisementViewModel {
     func exchangeTextChanged(_ text: String) {
         _exchangeTextChanged.accept(text)
     }
-    
-    
- 
-    
+
     private let _typeOfTransactionTextChanged = PublishRelay<String>()
     func typeOfTransactionTextChanged(_ text: String) {
         _typeOfTransactionTextChanged.accept(text)
@@ -133,8 +133,6 @@ final class CreatAdvertisementViewModel {
         _phoneNumberFieldChanged.accept(text)
     }
     
-    
-  
   // для переключателя
     lazy var inANewBuildingText = _inANewBuildingTextChanged
         .asDriver(onErrorJustReturn: "")
@@ -236,6 +234,7 @@ final class CreatAdvertisementViewModel {
                 .filter { $0 == true }
                 .mapTo(.adAdvertisement)
                 .debug("Add Advertisement")
+                
                 .asSignal(onErrorSignalWith: .never())
         )
     

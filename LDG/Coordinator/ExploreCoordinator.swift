@@ -57,6 +57,7 @@ class ExploreCoordinator: CoordinatorType {
             }
             switch route {
             case .adAdvertisement:  self.navigationController.dismiss(animated: true, completion: nil)
+            case .exploreView: self.navigationController.pushViewController(self.showExploreScreen(), animated: true)
             }
         } ).disposed(by: disposeBag)
         
