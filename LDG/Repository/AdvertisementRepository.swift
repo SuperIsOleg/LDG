@@ -16,6 +16,10 @@ final class AdvertisementRepository {
     
     private lazy var realm = try! Realm()
     
+    func getAdvertisement() -> Single<Results<Advertisement>> {
+        return .just(realm.objects(Advertisement.self))
+    }
+
     init() {
     }
     

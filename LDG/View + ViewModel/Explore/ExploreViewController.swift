@@ -40,14 +40,11 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
                         .disposed(by: cell.disposeBag)
             }
             .disposed(by: disposeBag)
-        
-        
-           
     }
     
     override init() {
         super.init()
-        self.tabBarItem = RAMAnimatedTabBarItem(title: "Explore", image: UIImage(systemName: "magnifyingglass"), tag: 1)
+        self.tabBarItem = RAMAnimatedTabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMFlipRightTransitionItemAnimations()
         
         let layout = UICollectionViewFlowLayout()
@@ -60,6 +57,7 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     
     override func loadView() {
         super.loadView()
+        collectionView.refreshControl = refreshControl
         collectionView.register(AdvertisementCollectionViewCell.nib(), forCellWithReuseIdentifier: AdvertisementCollectionViewCell.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false // нужно ли?
         view.addSubview(collectionView)
@@ -77,6 +75,10 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
         collectionView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.refresh()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
@@ -84,7 +86,7 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     //количество ячеек в секции
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 ////        return advertisements.count
-//        return viewModel.cells.count
+//        return viewModel.cells
 //    }
     
     //настройка ячейки

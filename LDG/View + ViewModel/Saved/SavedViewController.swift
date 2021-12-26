@@ -23,7 +23,7 @@ final class SavedViewController: BaseViewController {
     override init() {
         super.init()
        
-        self.tabBarItem = RAMAnimatedTabBarItem(title: "Saved", image: UIImage(systemName: "heart"), tag: 2)
+        self.tabBarItem = RAMAnimatedTabBarItem(title: nil, image: UIImage(systemName: "heart"), tag: 2)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMBounceAnimation()
     }
     

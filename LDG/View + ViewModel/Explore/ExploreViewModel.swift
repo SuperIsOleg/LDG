@@ -65,6 +65,26 @@ final class ExploreViewModel {
                 .mapTo(.button)
     )
     
+    
+    init(advertisementRepository: AdvertisementRepository) {
+        
+        advertisementRepository.getAdvertisement()
+            .subscribe(onSuccess: {
+                self.exploreArray.accept(Array($0))
+            })
+            .disposed(by: disposeBag)
+
+        _refresh
+            .flatMap {
+                advertisementRepository.getAdvertisement()
+            }
+            .subscribe(onNext: {
+                self.exploreArray.accept(Array($0))
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    
     init() {
         _buttonTapped.asSignal().emit(onNext: { print("NEXT VC") }).disposed(by: disposeBag)
     }

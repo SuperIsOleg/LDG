@@ -227,7 +227,7 @@ final class CreatAdvertisementViewController: BaseViewController, UITableViewDat
     override init() {
         super.init()
         
-        self.tabBarItem = RAMAnimatedTabBarItem(title: "Create", image: UIImage(systemName: "plus"), tag: 3)
+        self.tabBarItem = RAMAnimatedTabBarItem(title: nil, image: UIImage(systemName: "plus"), tag: 3)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMRotationAnimation()
     }
     
