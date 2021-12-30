@@ -15,7 +15,6 @@ class ConditionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var secondaryButton: UIButton!
     
-    
     @IBAction func tapedButton(_ sender: UIButton) {
         newButton.isSelected = false
         secondaryButton.isSelected = false

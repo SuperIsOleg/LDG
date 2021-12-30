@@ -21,24 +21,8 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
         
         sender.isSelected = true
         
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfTransactionTableViewCell.swift
         clouser(sender.currentTitle ?? "")
     }
-=======
-        var buttonTitle = sender.currentTitle
-  
-    }
-    
-    //
-//    @objc func cellsButtonTapd() {
-//        UIView.animate(withDuration: 1) {
-//            self.cellsButtonText.isSelected = true
-//        }
-//
-//    }
-    
-    
->>>>>>> main:LDG/Table Cell/TypeOfTransactionTableViewCell.swift
     
     static let identifier = "TypeOfTransactionTableViewCell"
     
@@ -49,11 +33,6 @@ class TypeOfTransactionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfTransactionTableViewCell.swift
-=======
-//        cellsButtonText.layer.cornerRadius = 16
-//        cellsButtonText.addTarget(self, action: #selector(cellsButtonTapd), for: .touchUpInside)
->>>>>>> main:LDG/Table Cell/TypeOfTransactionTableViewCell.swift
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

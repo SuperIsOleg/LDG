@@ -2,18 +2,21 @@
 //  AdvertisementCollectionViewCell.swift
 //  LDG
 //
-<<<<<<< HEAD
-//  Created by Home on 28.11.21.
-=======
+
 //  Created by Home on 21.11.21.
->>>>>>> main
-//
+
+
 
 import UIKit
+import RxSwift
+import RxRelay
+import RxCocoa
+import RealmSwift
 
 class AdvertisementCollectionViewCell: UICollectionViewCell {
     
-<<<<<<< HEAD
+    var disposeBag = DisposeBag()
+    
     @IBOutlet weak var likeButton: UIButton!
     
     @IBAction func likeButtonTaped(_ sender: UIButton) {
@@ -27,8 +30,8 @@ class AdvertisementCollectionViewCell: UICollectionViewCell {
     }
     
     
-=======
->>>>>>> main
+
+
     
     @IBOutlet weak var imageHouseCell: UIImageView!
     
@@ -37,10 +40,15 @@ class AdvertisementCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var costCell: UILabel!
     
     
-<<<<<<< HEAD
-=======
 
->>>>>>> main
+   
+    @IBOutlet weak var imageHouseCell: UIImageView!
+    
+    @IBOutlet weak var addresLabel: UILabel!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+
     static var identifier = "AdvertisementCollectionViewCell"
 
     static func nib () -> UINib {
@@ -50,7 +58,7 @@ class AdvertisementCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-<<<<<<< HEAD
+
         // Initialization code
         
     }
@@ -64,13 +72,13 @@ class AdvertisementCollectionViewCell: UICollectionViewCell {
             self.clipsToBounds = false
         }
 
-=======
+
         imageHouseCell.layer.cornerRadius = 20
         // Initialization code
         
     }
     
->>>>>>> main
+
     // переиспользуем ячейку
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -86,7 +94,11 @@ class AdvertisementCollectionViewCell: UICollectionViewCell {
     }
 
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> main
+    // переиспользуем ячейку
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+
+}

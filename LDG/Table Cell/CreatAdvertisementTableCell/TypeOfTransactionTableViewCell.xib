@@ -24,7 +24,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXj-di-FoI">
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfTransactionTableViewCell.xib
                         <rect key="frame" x="15" y="45" width="73" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
@@ -35,16 +34,6 @@
                         <connections>
                             <action selector="buttonTaped:" destination="mgY-7d-zLs" eventType="touchUpInside" id="0jx-qD-ZvI"/>
                         </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-sA-K8e">
-                        <rect key="frame" x="103" y="45" width="50" height="33"/>
-                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Сдача"/>
-                        <connections>
-                            <action selector="buttonTaped:" destination="mgY-7d-zLs" eventType="touchUpInside" id="d7y-aA-BRS"/>
-=======
                         <rect key="frame" x="15" y="46" width="85.5" height="32"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <buttonConfiguration key="configuration" style="gray" title="Продажа">
@@ -55,15 +44,13 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-sA-K8e">
-                        <rect key="frame" x="115.5" y="46" width="66" height="32"/>
+                        <rect key="frame" x="103" y="45" width="50" height="33"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Сдача">
-                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Сдача"/>
                         <connections>
-                            <action selector="buttonTaped:" destination="mgY-7d-zLs" eventType="touchUpInside" id="iHy-Er-ppm"/>
->>>>>>> main:LDG/Table Cell/TypeOfTransactionTableViewCell.xib
+                            <action selector="buttonTaped:" destination="mgY-7d-zLs" eventType="touchUpInside" id="d7y-aA-BRS"/>
                         </connections>
                     </button>
                 </subviews>
@@ -80,11 +67,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cellsButton" destination="XXj-di-FoI" id="Nby-xH-jQV"/>
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfTransactionTableViewCell.xib
                 <outlet property="changeButton" destination="zW7-sA-K8e" id="4gm-Y8-PbN"/>
-=======
-                <outlet property="changeButton" destination="zW7-sA-K8e" id="rGu-NU-G5f"/>
->>>>>>> main:LDG/Table Cell/TypeOfTransactionTableViewCell.xib
             </connections>
             <point key="canvasLocation" x="-7.9710144927536239" y="41.852678571428569"/>
         </tableViewCell>

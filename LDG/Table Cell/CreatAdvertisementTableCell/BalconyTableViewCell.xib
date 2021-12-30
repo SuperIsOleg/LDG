@@ -24,7 +24,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-hF-sSm">
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/BalconyTableViewCell.xib
                         <rect key="frame" x="15" y="51" width="32" height="30"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -32,15 +31,6 @@
                         <connections>
                             <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gek-bY-h4l"/>
                         </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUk-gH-jFV">
-                        <rect key="frame" x="62" y="51" width="30" height="31"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Нет"/>
-                        <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dVn-jB-npn"/>
-=======
                         <rect key="frame" x="15" y="51" width="54" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
@@ -52,15 +42,12 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUk-gH-jFV">
-                        <rect key="frame" x="84" y="51" width="49" height="31"/>
+                        <rect key="frame" x="62" y="51" width="30" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Нет">
-                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Нет"/>
                         <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="emA-8O-Q2c"/>
->>>>>>> main:LDG/Table Cell/BalconyTableViewCell.xib
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dVn-jB-npn"/>
                         </connections>
                     </button>
                 </subviews>
@@ -76,13 +63,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/BalconyTableViewCell.xib
                 <outlet property="haveButton" destination="dCf-hF-sSm" id="GhJ-x6-8af"/>
                 <outlet property="noButton" destination="nUk-gH-jFV" id="f6j-Cr-d8J"/>
-=======
-                <outlet property="haveButton" destination="dCf-hF-sSm" id="TRG-MX-4Of"/>
-                <outlet property="noButton" destination="nUk-gH-jFV" id="hfu-5K-e3u"/>
->>>>>>> main:LDG/Table Cell/BalconyTableViewCell.xib
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="98.102678571428569"/>
         </tableViewCell>

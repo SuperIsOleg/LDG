@@ -9,10 +9,7 @@ import UIKit
 
 class BalconyTableViewCell: UITableViewCell {
     
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/BalconyTableViewCell.swift
     var clouser: ((String) -> Void) = { _ in }
-=======
->>>>>>> main:LDG/Table Cell/BalconyTableViewCell.swift
     
     @IBOutlet weak var haveButton: UIButton!
     
@@ -24,15 +21,9 @@ class BalconyTableViewCell: UITableViewCell {
         noButton.isSelected = false
         
         sender.isSelected = true
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/BalconyTableViewCell.swift
         
         clouser(sender.currentTitle ?? "")
     }
-=======
-    }
-    
-    
->>>>>>> main:LDG/Table Cell/BalconyTableViewCell.swift
 
     static let identifier = "BalconyTableViewCell"
     

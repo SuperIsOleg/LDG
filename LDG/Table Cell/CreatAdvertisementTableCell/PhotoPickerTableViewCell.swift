@@ -23,7 +23,6 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     static func nib () -> UINib {
         return UINib(nibName: "PhotoPickerTableViewCell", bundle: nil)
     }
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/PhotoPickerTableViewCell.swift
     
     func configure(images: [UIImage], picker: @escaping () -> Void) {
         clouser = picker
@@ -34,11 +33,9 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
   
     @IBAction func pickerButton(_ sender: Any) {
         clouser()
-=======
     public func configure(picker: @escaping () -> Void ) {
         collectionView.reloadData()
         clouser = picker
->>>>>>> main:LDG/Table Cell/PhotoPickerTableViewCell.swift
     }
     
     override func awakeFromNib() {
@@ -60,12 +57,9 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoPickerCollectionViewCell.identifier, for: indexPath) as! PhotoPickerCollectionViewCell
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/PhotoPickerTableViewCell.swift
-        cell.photoImagePicker.image = images[indexPath.row]
-=======
+
 //        cell.photoPickerImageButton.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
-        cell.configure()
->>>>>>> main:LDG/Table Cell/PhotoPickerTableViewCell.swift
+        cell.photoImagePicker.image = images[indexPath.row]
         return cell
     }
     
@@ -75,15 +69,3 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
     
 }
 
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/PhotoPickerTableViewCell.swift
-    
-=======
-//extension PhotoPickerTableViewCell  {
-//
-//    @objc func showImagePickerController() {
-//        clouser()
-//    }
-//
-//}
-
->>>>>>> main:LDG/Table Cell/PhotoPickerTableViewCell.swift

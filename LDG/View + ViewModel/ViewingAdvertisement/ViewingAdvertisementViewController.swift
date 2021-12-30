@@ -13,6 +13,8 @@ import RxSwiftExt
 import RealmSwift
 
 class ViewingAdvertisementViewController: BaseViewController {
+   
+    private let disposeBag = DisposeBag()
     
     static var identifier = "ViewingAdvertisementViewController"
     
@@ -23,6 +25,12 @@ class ViewingAdvertisementViewController: BaseViewController {
     func bind(viewModel: ViewingAdvertisementViewModel) {
         self.viewModel = viewModel
         
+        viewModel.cells
+                .drive(tableView.rx.items(cellIdentifier: ImageTableViewCell.identifier, cellType: ImageTableViewCell.self)) { index, model, cell in
+                    cell.addressLabel.text = model.address
+                    cell.priceLabel.text = model.price
+            }
+            .disposed(by: disposeBag)
     }
     
     override init() {

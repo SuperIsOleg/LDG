@@ -24,7 +24,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXv-e3-a8h">
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/ConditionTableViewCell.xib
                         <rect key="frame" x="15" y="51" width="45" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -32,15 +31,6 @@
                         <connections>
                             <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ff5-Jc-ceD"/>
                         </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6q-Dc-YNf">
-                        <rect key="frame" x="68" y="52" width="127" height="30"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Вторичное жилье"/>
-                        <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bts-O7-XY3"/>
-=======
                         <rect key="frame" x="15" y="51" width="67" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
@@ -52,15 +42,12 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6q-Dc-YNf">
-                        <rect key="frame" x="90" y="51" width="143" height="31"/>
+                        <rect key="frame" x="68" y="52" width="127" height="30"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Вторичное жилье">
-                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Вторичное жилье"/>
                         <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lAw-XT-IPu"/>
->>>>>>> main:LDG/Table Cell/ConditionTableViewCell.xib
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bts-O7-XY3"/>
                         </connections>
                     </button>
                 </subviews>
@@ -76,13 +63,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/ConditionTableViewCell.xib
                 <outlet property="newButton" destination="cXv-e3-a8h" id="P2H-2E-DhN"/>
                 <outlet property="secondaryButton" destination="K6q-Dc-YNf" id="tSQ-lc-mr2"/>
-=======
-                <outlet property="newButton" destination="cXv-e3-a8h" id="jYw-4U-S7h"/>
-                <outlet property="secondaryButton" destination="K6q-Dc-YNf" id="vWx-dQ-b7J"/>
->>>>>>> main:LDG/Table Cell/ConditionTableViewCell.xib
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
         </tableViewCell>

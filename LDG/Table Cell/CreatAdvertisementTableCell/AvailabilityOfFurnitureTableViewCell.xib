@@ -24,7 +24,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfK-UD-lKQ">
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/AvailabilityOfFurnitureTableViewCell.xib
                         <rect key="frame" x="15" y="51" width="32" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -32,15 +31,6 @@
                         <connections>
                             <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dUl-UW-JFa"/>
                         </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-Yw-jQ0">
-                        <rect key="frame" x="58" y="51" width="30" height="30"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Нет"/>
-                        <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZZJ-zG-DWP"/>
-=======
                         <rect key="frame" x="15" y="51" width="54" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <state key="normal" title="Button"/>
@@ -52,15 +42,12 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-Yw-jQ0">
-                        <rect key="frame" x="80" y="51" width="49" height="31"/>
+                        <rect key="frame" x="58" y="51" width="30" height="30"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Нет">
-                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Нет"/>
                         <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z0M-w3-Azb"/>
->>>>>>> main:LDG/Table Cell/AvailabilityOfFurnitureTableViewCell.xib
+                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZZJ-zG-DWP"/>
                         </connections>
                     </button>
                 </subviews>
@@ -76,13 +63,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/AvailabilityOfFurnitureTableViewCell.xib
                 <outlet property="haveButton" destination="WfK-UD-lKQ" id="sU6-Bk-0lA"/>
                 <outlet property="noButton" destination="fdd-Yw-jQ0" id="pAF-Hb-m47"/>
-=======
-                <outlet property="haveButton" destination="WfK-UD-lKQ" id="1o8-se-fpW"/>
-                <outlet property="noButton" destination="fdd-Yw-jQ0" id="Jd4-y5-9eo"/>
->>>>>>> main:LDG/Table Cell/AvailabilityOfFurnitureTableViewCell.xib
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
         </tableViewCell>

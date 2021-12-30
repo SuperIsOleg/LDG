@@ -9,12 +9,8 @@ import UIKit
 
 class NumberOfRoomsTableViewCell: UITableViewCell {
     
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/NumberOfRoomsTableViewCell.swift
     var clouser: ((String) -> Void) = { _ in }
 
-=======
-    
->>>>>>> main:LDG/Table Cell/NumberOfRoomsTableViewCell.swift
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var twoButton: UIButton!
     @IBOutlet weak var threeButton: UIButton!
@@ -32,11 +28,8 @@ class NumberOfRoomsTableViewCell: UITableViewCell {
         
         sender.isSelected = true
         
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/NumberOfRoomsTableViewCell.swift
         clouser(sender.currentTitle ?? "")
         
-=======
->>>>>>> main:LDG/Table Cell/NumberOfRoomsTableViewCell.swift
     }
     
     static let identifier = "NumberOfRoomsTableViewCell"

@@ -9,10 +9,7 @@ import UIKit
 
 class AvailabilityOfFurnitureTableViewCell: UITableViewCell {
     
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/AvailabilityOfFurnitureTableViewCell.swift
     var clouser: ((String) -> Void) = { _ in }
-=======
->>>>>>> main:LDG/Table Cell/AvailabilityOfFurnitureTableViewCell.swift
     
     @IBOutlet weak var haveButton: UIButton!
     
@@ -24,17 +21,9 @@ class AvailabilityOfFurnitureTableViewCell: UITableViewCell {
         noButton.isSelected = false
         
         sender.isSelected = true
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/AvailabilityOfFurnitureTableViewCell.swift
         
         clouser(sender.currentTitle ?? "")
     }
-=======
-    }
-    
-    
-    
-    
->>>>>>> main:LDG/Table Cell/AvailabilityOfFurnitureTableViewCell.swift
 
     static let identifier = "AvailabilityOfFurnitureTableViewCell"
     

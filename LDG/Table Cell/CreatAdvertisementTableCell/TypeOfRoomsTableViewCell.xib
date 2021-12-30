@@ -24,43 +24,24 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEU-PO-Its">
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfRoomsTableViewCell.xib
-                        <rect key="frame" x="15" y="51" width="79" height="30"/>
+                        <rect key="frame" x="15" y="51" width="98" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="Проходная"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Проходная">
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
                         <connections>
                             <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oLy-e6-AQ0"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBW-yL-hTb">
-                        <rect key="frame" x="109" y="51" width="151" height="31"/>
+                        <rect key="frame" x="128" y="51" width="151" height="31"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="С отдельным входом"/>
                         <connections>
                             <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vyt-R3-pjE"/>
-=======
-                        <rect key="frame" x="15" y="51" width="98" height="31"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="Проходная">
-                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
-                        <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wHV-vL-4Tz"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBW-yL-hTb">
-                        <rect key="frame" x="128" y="51" width="166" height="31"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" title="С отдельным входом">
-                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
-                        <connections>
-                            <action selector="tapedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cox-W1-quo"/>
->>>>>>> main:LDG/Table Cell/TypeOfRoomsTableViewCell.xib
                         </connections>
                     </button>
                 </subviews>
@@ -76,13 +57,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfRoomsTableViewCell.xib
                 <outlet property="walkThroughButton" destination="pEU-PO-Its" id="Ub2-VA-7sG"/>
                 <outlet property="withASeparateEntranceButton" destination="xBW-yL-hTb" id="zfE-FE-4ta"/>
-=======
-                <outlet property="walkThroughButton" destination="pEU-PO-Its" id="MX9-PP-Tkf"/>
-                <outlet property="withASeparateEntranceButton" destination="xBW-yL-hTb" id="S9Q-Tm-Ogh"/>
->>>>>>> main:LDG/Table Cell/TypeOfRoomsTableViewCell.xib
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="98.102678571428569"/>
         </tableViewCell>

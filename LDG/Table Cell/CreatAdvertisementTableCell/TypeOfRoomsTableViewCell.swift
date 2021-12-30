@@ -11,10 +11,6 @@ class TypeOfRoomsTableViewCell: UITableViewCell {
     
     var clouser: ((String) -> Void) = { _ in }
 
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfRoomsTableViewCell.swift
-=======
-    
->>>>>>> main:LDG/Table Cell/TypeOfRoomsTableViewCell.swift
     @IBOutlet weak var walkThroughButton: UIButton!
     @IBOutlet weak var withASeparateEntranceButton: UIButton!
     
@@ -23,20 +19,10 @@ class TypeOfRoomsTableViewCell: UITableViewCell {
         withASeparateEntranceButton.isSelected = false
         
         sender.isSelected = true
-<<<<<<< HEAD:LDG/Table Cell/CreatAdvertisementTableCell/TypeOfRoomsTableViewCell.swift
         
         clouser(sender.currentTitle ?? "")
     }
     
-=======
-    }
-    
-  
-    
-    
-    
-    
->>>>>>> main:LDG/Table Cell/TypeOfRoomsTableViewCell.swift
     static let identifier = "TypeOfRoomsTableViewCell"
     
     static func nib () -> UINib {

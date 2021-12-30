@@ -30,9 +30,7 @@ class FloorTableViewCell: UITableViewCell {
         pickerView.dataSource = self
         
         floorField.inputView = pickerView
-        floorField.textAlignment = .right
-        
-        
+        floorField.textAlignment = .right   
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
