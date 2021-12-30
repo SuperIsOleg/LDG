@@ -42,23 +42,6 @@
                 <outlet property="ceilingHeightField" destination="yYq-V9-rH1" id="5n7-ai-it2"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="98.102678571428569"/>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvW-3Z-ckG">
-                        <rect key="frame" x="15" y="44" width="289" height="18.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="P27-CO-hiS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="DDD-Uh-JHm"/>
-                    <constraint firstItem="P27-CO-hiS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="PAQ-3K-VLE"/>
-                    <constraint firstAttribute="bottom" secondItem="CvW-3Z-ckG" secondAttribute="bottom" constant="12.5" id="Sbm-2f-Jtz"/>
-                    <constraint firstAttribute="trailing" secondItem="CvW-3Z-ckG" secondAttribute="trailing" constant="16" id="fbX-N2-Kpi"/>
-                    <constraint firstItem="CvW-3Z-ckG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="t8T-zJ-8ax"/>
-                    <constraint firstItem="CvW-3Z-ckG" firstAttribute="top" secondItem="P27-CO-hiS" secondAttribute="bottom" constant="8" symbolic="YES" id="xHC-Oh-aWB"/>
-                </constraints>
-            </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="137.68115942028987" y="90.736607142857139"/>
         </tableViewCell>
     </objects>
 </document>

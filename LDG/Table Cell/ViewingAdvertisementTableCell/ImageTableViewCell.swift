@@ -12,15 +12,9 @@ class ImageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-<<<<<<< HEAD
-    @IBOutlet weak var adressTextField: UITextField!
+    @IBOutlet weak var addressLabel: UILabel!
     
-    @IBOutlet weak var priceTextField: UITextField!
-=======
-    @IBOutlet weak var addressLabel: UITextField!
-    
-    @IBOutlet weak var priceLabel: UITextField!
->>>>>>> WIP
+    @IBOutlet weak var priceLabel: UILabel!
     
     static var identifier = "ImageTableViewCell"
 

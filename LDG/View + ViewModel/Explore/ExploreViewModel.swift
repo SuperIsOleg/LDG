@@ -13,11 +13,6 @@ import RealmSwift
 
 final class ExploreViewModel {
     
-    enum Route {
-        case viewingAdvertisement
-        case button
-    }
-    
     private let disposeBag = DisposeBag()
     
     enum Route {

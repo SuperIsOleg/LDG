@@ -15,7 +15,6 @@ class AvailabilityOfFurnitureTableViewCell: UITableViewCell {
     
     @IBOutlet weak var noButton: UIButton!
     
-    
     @IBAction func tapedButton(_ sender: UIButton) {
         haveButton.isSelected = false
         noButton.isSelected = false

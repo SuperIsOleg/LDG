@@ -10,7 +10,6 @@ import UIKit
 
 class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var clouser: (() -> Void) = {  }
     
     var images = [UIImage]()
     
@@ -33,6 +32,7 @@ class PhotoPickerTableViewCell: UITableViewCell, UICollectionViewDelegate, UICol
   
     @IBAction func pickerButton(_ sender: Any) {
         clouser()
+    }
     public func configure(picker: @escaping () -> Void ) {
         collectionView.reloadData()
         clouser = picker
