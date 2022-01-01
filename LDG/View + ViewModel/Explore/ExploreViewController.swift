@@ -47,7 +47,7 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     
     override init() {
         super.init()
-        self.tabBarItem = RAMAnimatedTabBarItem(title: "Explore", image: UIImage(systemName: "magnifyingglass"), tag: 1)
+        self.tabBarItem = RAMAnimatedTabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMFlipRightTransitionItemAnimations()
         
         let layout = UICollectionViewFlowLayout()
