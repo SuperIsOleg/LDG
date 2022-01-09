@@ -76,8 +76,9 @@ final class AdvertisementRepository {
         advertisement.descriptions?.descriptions = descriptions
         
         advertisement.price = Price()
+        advertisement.currency = Price()
         advertisement.price?.price = price
-        advertisement.price?.currency = currency
+        advertisement.currency?.currency = currency
         
         advertisement.address = Address()
         advertisement.address?.address = address

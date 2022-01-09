@@ -82,11 +82,6 @@ final class ExploreViewModel {
                 self.exploreArray.accept(Array($0))
             })
             .disposed(by: disposeBag)
-    }
-    
-    
-    init() {
-        _buttonTapped.asSignal().emit(onNext: { print("NEXT VC") }).disposed(by: disposeBag)
-        
+//        _buttonTapped.asSignal().emit(onNext: { print("NEXT VC") }).disposed(by: disposeBag)
     }
 }

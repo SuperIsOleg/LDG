@@ -30,6 +30,7 @@ class Advertisement: Object {
     @Persisted var condition: Condition?
     @Persisted var descriptions: Description?
     @Persisted var price: Price?
+    @Persisted var currency: Price?
     @Persisted var exchange: Exchange?
     @Persisted var address: Address?
     @Persisted var name: Name?

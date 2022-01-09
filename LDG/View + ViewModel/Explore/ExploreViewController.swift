@@ -40,9 +40,6 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
                         .disposed(by: cell.disposeBag)
             }
             .disposed(by: disposeBag)
-        
-        
-           
     }
     
     override init() {

@@ -24,7 +24,8 @@ class ExploreCoordinator: CoordinatorType {
     
     func showExploreScreen() -> UIViewController {
         let viewController = ExploreViewController()
-        let viewModel = ExploreViewModel()
+        let advertisementRepository = AdvertisementRepository()
+        let viewModel = ExploreViewModel(advertisementRepository: advertisementRepository)
 
         viewController.bind(viewModel: viewModel)
         viewModel.route.emit(onNext: { [weak self] route in
