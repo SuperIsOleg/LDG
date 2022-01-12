@@ -13,7 +13,6 @@ import RxCocoa
 final class CreatAdvertisementViewModel {
     
     enum Route {
-        case adAdvertisement
         case exploreView
     }
     
@@ -230,7 +229,7 @@ final class CreatAdvertisementViewModel {
                         .asSignal(onErrorSignalWith: .never())
                 }
                 .filter { $0 == true }
-                .mapTo(.adAdvertisement)
+                .mapTo(.exploreView)
                 .debug("Add Advertisement")
                 .asSignal(onErrorSignalWith: .never())
         )
