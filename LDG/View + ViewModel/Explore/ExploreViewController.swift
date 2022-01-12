@@ -62,6 +62,8 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
         view.addSubview(collectionView)
         collectionView.frame = view.bounds
         view.backgroundColor = .white
+       
+        collectionView.refreshControl = refreshControl
     }
 
     override func viewDidLoad() {

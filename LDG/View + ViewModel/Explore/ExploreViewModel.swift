@@ -65,7 +65,6 @@ final class ExploreViewModel {
                 .mapTo(.button)
     )
     
-    
     init(advertisementRepository: AdvertisementRepository) {
         
         advertisementRepository.getAdvertisement()
@@ -82,6 +81,5 @@ final class ExploreViewModel {
                 self.exploreArray.accept(Array($0))
             })
             .disposed(by: disposeBag)
-//        _buttonTapped.asSignal().emit(onNext: { print("NEXT VC") }).disposed(by: disposeBag)
     }
 }
