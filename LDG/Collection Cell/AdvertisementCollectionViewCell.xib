@@ -65,10 +65,10 @@
             </constraints>
             <size key="customSize" width="271" height="195"/>
             <connections>
-                <outlet property="addresLabel" destination="o3s-Qh-Tsg" id="cgT-Qs-pJq"/>
+                <outlet property="addresLabel" destination="o3s-Qh-Tsg" id="rfp-tA-Hls"/>
                 <outlet property="imageHouseCell" destination="KF2-Hv-UY8" id="z7g-DR-LWp"/>
                 <outlet property="likeButton" destination="08M-6C-PjR" id="Y3B-so-cUh"/>
-                <outlet property="priceLabel" destination="pw2-c7-RPk" id="DKz-EI-Vin"/>
+                <outlet property="priceLabel" destination="pw2-c7-RPk" id="xBe-6W-uzB"/>
             </connections>
             <point key="canvasLocation" x="296.37681159420293" y="128.23660714285714"/>
         </collectionViewCell>

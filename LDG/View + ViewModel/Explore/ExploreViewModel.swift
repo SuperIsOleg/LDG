@@ -31,7 +31,7 @@ final class ExploreViewModel {
     lazy var cells = exploreArray.asDriver()
         .map {
             $0.map { (advertisement: Advertisement) -> Cell in
-                Cell(addres: advertisement.address?.address ?? "", price: advertisement.price?.price ?? "" )
+                Cell(addres: advertisement.address?.address ?? "Адрес не указан", price: advertisement.price?.price ?? "Цена не указана" )
             }
         }
 

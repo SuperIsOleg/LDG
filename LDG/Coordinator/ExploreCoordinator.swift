@@ -15,7 +15,6 @@ class ExploreCoordinator: CoordinatorType {
     let navigationController = UINavigationController(rootViewController: UIViewController())
     let tabController = RAMAnimatedTabBarController()
   
-    
     func start() -> UIViewController {
            navigationController.setViewControllers([tabController], animated: false)
            tabController.setViewControllers([showExploreScreen(), showSavedScreen(), showCreatAdvertisementScreen()], animated: false)
@@ -26,7 +25,6 @@ class ExploreCoordinator: CoordinatorType {
         let viewController = ExploreViewController()
         let advertisementRepository = AdvertisementRepository()
         let viewModel = ExploreViewModel(advertisementRepository: advertisementRepository)
-
         viewController.bind(viewModel: viewModel)
         viewModel.route.emit(onNext: { [weak self] route in
             guard let self = self else {
@@ -36,7 +34,7 @@ class ExploreCoordinator: CoordinatorType {
             case .button: break
         case .viewingAdvertisement: self.navigationController.pushViewController(self.showViewingAdvertisementScreen(), animated: true)   
             }
-        } ).disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
         return viewController
     }
     
