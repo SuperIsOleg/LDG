@@ -25,12 +25,22 @@ class ViewingAdvertisementViewController: BaseViewController {
     func bind(viewModel: ViewingAdvertisementViewModel) {
         self.viewModel = viewModel
         
+        
         viewModel.cells
                 .drive(tableView.rx.items(cellIdentifier: ImageTableViewCell.identifier, cellType: ImageTableViewCell.self)) { index, model, cell in
                     cell.addressLabel.text = model.address
                     cell.priceLabel.text = model.price
+                    cell.nameLabel.text = model.name
+                    cell.phoneNumberLabel.text = model.phoneNumber
             }
             .disposed(by: disposeBag)
+
+        
+//        viewModel.cells
+//            .drive(tableView.rx.items(cellIdentifier: DescriptionAdvertisementTableViewCell.identifier, cellType: DescriptionAdvertisementTableViewCell.self)) { index, model, cell in
+//                           cell.typeOfTransactionLabel.text = model.typeOfTransaction
+//                   }
+//            .disposed(by: disposeBag)
     }
     
     override init() {
@@ -58,9 +68,7 @@ class ViewingAdvertisementViewController: BaseViewController {
 }
 
 extension ViewingAdvertisementViewController:  UITableViewDataSource, UITableViewDelegate {
-    
-   
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }

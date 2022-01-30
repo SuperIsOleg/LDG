@@ -74,6 +74,8 @@
             <connections>
                 <outlet property="addressLabel" destination="H5X-Ic-BsY" id="2bJ-Dp-aLK"/>
                 <outlet property="collectionView" destination="iXO-iK-T4r" id="GI6-3P-zjZ"/>
+                <outlet property="nameLabel" destination="jFe-Xy-2Qh" id="d2p-qX-IG4"/>
+                <outlet property="phoneNumberLabel" destination="F17-a6-V0A" id="fSc-Jx-lFb"/>
                 <outlet property="priceLabel" destination="hay-Iw-22F" id="lgl-xu-dkd"/>
             </connections>
             <point key="canvasLocation" x="132.60869565217394" y="196.875"/>

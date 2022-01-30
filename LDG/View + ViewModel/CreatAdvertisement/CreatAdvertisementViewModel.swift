@@ -215,6 +215,8 @@ final class CreatAdvertisementViewModel {
     
     lazy var phoneNumberFieldText = _phoneNumberFieldChanged
         .asDriver(onErrorJustReturn: "")
+//        .observe(on: MainScheduler.asyncInstance)
+//        .catchAndReturn("")
         .startWith("")
     
    lazy var arrayFieldText = [inANewBuildingText, exchangeText, typeOfTransactionText, numberOfRoomsText, typeOfRoomsText, balconyText, availabilityOfFurnitureText, wallMaterialText, conditionText, totalAreaFieldText, kitchenAreaFieldText, ceilingHeightFieldText, floorFieldText, floorOfHousFieldText, yearsOfConstructionFieldText, descriptionFieldText, priceFieldText, currencyFieldText, adressFieldText, nameFieldText, phoneNumberFieldText]

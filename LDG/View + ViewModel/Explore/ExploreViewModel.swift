@@ -30,7 +30,7 @@ final class ExploreViewModel {
     
     lazy var cells = exploreArray.asDriver()
         .map {
-            $0.map { (advertisement: Advertisement) -> Cell in
+            $0.map {(advertisement: Advertisement) -> Cell in
                 Cell(addres: advertisement.address?.address ?? "Адрес не указан", price: advertisement.price?.price ?? "Цена не указана" )
             }
         }
@@ -57,7 +57,7 @@ final class ExploreViewModel {
 
     lazy var route: Signal<Route> = Signal
         .merge(_buttonTapped.asSignal()
-                .mapTo(.button),
+                .mapTo(.button), 
                _apartmenetSelected.asSignal()
                 .map({ Index in
             .viewingAdvertisement}),

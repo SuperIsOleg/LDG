@@ -9,9 +9,7 @@ import Foundation
 import RealmSwift
 
 class Advertisement: Object {
-    
     @Persisted(primaryKey: true) var id: ObjectId
-    
     @Persisted var image: Image?
     @Persisted var like: List<Like> = List()
     @Persisted var typeOfTransaction: TypeOfTransaction?
@@ -34,6 +32,5 @@ class Advertisement: Object {
     @Persisted var exchange: Exchange?
     @Persisted var address: Address?
     @Persisted var name: Name?
-    @Persisted var phoneNumber: PhoneNumber?
-  
+    @Persisted var phoneNumber: PhoneNumber?  
 }

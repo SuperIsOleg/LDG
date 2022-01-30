@@ -216,6 +216,23 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="availabilityOfFurnitureLabel" destination="TjJ-0G-vjE" id="suM-ku-LYQ"/>
+                <outlet property="balconyLabel" destination="dgo-d9-SM3" id="UUK-cb-Aq5"/>
+                <outlet property="ceilingHeightLabel" destination="eCB-9G-6bp" id="48X-ln-P6C"/>
+                <outlet property="conditionLabel" destination="Gsi-P3-Tx6" id="Mm1-j0-uzK"/>
+                <outlet property="exchangeLabel" destination="sWl-ll-BgN" id="oEf-94-ITh"/>
+                <outlet property="floorLabel" destination="RIa-yY-meb" id="UuF-18-Mrz"/>
+                <outlet property="floorOfTheHouseLabel" destination="gYi-EY-zSe" id="DBR-de-kY1"/>
+                <outlet property="inANewBuildingLabel" destination="3J9-Gw-kAi" id="Tpt-YM-zbo"/>
+                <outlet property="kitchenAreaLabel" destination="oim-29-SPE" id="oOx-BY-w1y"/>
+                <outlet property="numberOfRoomsLabel" destination="Afu-zr-lgF" id="07C-eD-UbO"/>
+                <outlet property="totalAreaLabel" destination="uSj-Kp-nrE" id="0ov-gG-99c"/>
+                <outlet property="typeOfRoomsLabel" destination="JXW-mi-7RI" id="FvY-xY-gjn"/>
+                <outlet property="typeOfTransactionLabel" destination="bht-AE-QtR" id="pXa-D5-Fs4"/>
+                <outlet property="wallMaterialLabel" destination="q7t-GH-EGY" id="fu9-Id-wH5"/>
+                <outlet property="yearOfConstructionLabel" destination="iBV-wy-dN3" id="h9l-Qn-gH1"/>
+            </connections>
             <point key="canvasLocation" x="132.60869565217394" y="235.04464285714283"/>
         </tableViewCell>
     </objects>

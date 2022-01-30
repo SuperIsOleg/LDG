@@ -28,7 +28,7 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     func bind(viewModel: ExploreViewModel) {
         self.viewModel = viewModel
         
-        viewModel.cells
+        viewModel.cells//.debug("+++++")
             .do(onNext: { [weak self] _ in
                 self?.refreshControl.endRefreshing()
             })
@@ -44,6 +44,7 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     
     override init() {
         super.init()
+        print("+++++\(self)")
         self.tabBarItem = RAMAnimatedTabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMFlipRightTransitionItemAnimations()
         
@@ -79,20 +80,6 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
-    
-    //количество ячеек в секции
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-////        return advertisements.count
-//        return viewModel.cells.count
-//    }
-    
-    //настройка ячейки
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdvertisementCollectionViewCell.identifier, for: indexPath) as! AdvertisementCollectionViewCell
-//        let advertisement = advertisements[indexPath.item]
-//        cell.setupCell(advertisement: advertisement)
-//        return cell
-//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width - 40, height: 350)

@@ -9,12 +9,11 @@ import UIKit
 
 class ImageTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var addressLabel: UILabel!
-    
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     
     static var identifier = "ImageTableViewCell"
 
