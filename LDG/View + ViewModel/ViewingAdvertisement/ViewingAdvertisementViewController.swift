@@ -26,20 +26,33 @@ class ViewingAdvertisementViewController: BaseViewController {
         self.viewModel = viewModel
         
         
-        viewModel.cells
-                .drive(tableView.rx.items(cellIdentifier: ImageTableViewCell.identifier, cellType: ImageTableViewCell.self)) { index, model, cell in
-                    cell.addressLabel.text = model.address
-                    cell.priceLabel.text = model.price
-                    cell.nameLabel.text = model.name
-                    cell.phoneNumberLabel.text = model.phoneNumber
-            }
-            .disposed(by: disposeBag)
-
-        
+//        viewModel.cells
+//                .drive(tableView.rx.items(cellIdentifier: ImageTableViewCell.identifier, cellType: ImageTableViewCell.self)) { index, model, cell in
+//                    cell.addressLabel.text = model.address
+//                    cell.priceLabel.text = model.price
+//                    cell.nameLabel.text = model.name
+//                    cell.phoneNumberLabel.text = model.phoneNumber
+//            }
+//            .disposed(by: disposeBag)
+//        
 //        viewModel.cells
 //            .drive(tableView.rx.items(cellIdentifier: DescriptionAdvertisementTableViewCell.identifier, cellType: DescriptionAdvertisementTableViewCell.self)) { index, model, cell in
-//                           cell.typeOfTransactionLabel.text = model.typeOfTransaction
-//                   }
+//                    cell.typeOfTransactionLabel.text = model.typeOfTransaction
+//                    cell.numberOfRoomsLabel.text = model.numberOfRooms
+//                    cell.typeOfRoomsLabel.text = model.typeOfRooms
+//                    cell.totalAreaLabel.text = model.totalArea
+//                    cell.kitchenAreaLabel.text = model.kitchenArea
+//                    cell.balconyLabel.text = model.balcony
+//                    cell.ceilingHeightLabel.text = model.ceilingHeight
+//                    cell.availabilityOfFurnitureLabel.text = model.availabilityOfFurniture
+//                    cell.floorLabel.text = model.floor
+//                    cell.floorOfTheHouseLabel.text = model.floorOfTheHouse
+//                    cell.wallMaterialLabel.text = model.wallMaterial
+//                    cell.yearOfConstructionLabel.text = model.yearOfConstruction
+//                    cell.inANewBuildingLabel.text = model.inANewBuilding
+//                    cell.conditionLabel.text = model.condition
+//                    cell.exchangeLabel.text = model.exchange
+//            }
 //            .disposed(by: disposeBag)
     }
     

@@ -44,7 +44,6 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     
     override init() {
         super.init()
-        print("+++++\(self)")
         self.tabBarItem = RAMAnimatedTabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
         (self.tabBarItem as? RAMAnimatedTabBarItem)?.animation = RAMFlipRightTransitionItemAnimations()
         
@@ -82,7 +81,7 @@ final class ExploreViewController: BaseViewController, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width - 40, height: 350)
+        return CGSize(width: UIScreen.main.bounds.width - 40, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
